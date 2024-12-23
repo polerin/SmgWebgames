@@ -1,0 +1,13 @@
+{
+  "name": "@shieldmaidengames/multipipe-api-client",
+  "version": "0.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "polerin <polerin@eclexia.net>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {}
+}

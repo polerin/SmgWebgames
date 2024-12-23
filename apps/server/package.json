@@ -1,0 +1,21 @@
+{
+  "name": "@shieldmaidengames/multipipe-server",
+  "version": "0.0.0",
+  "description": "multipipe game server",
+  "license": "ISC",
+  "author": "polerin (polerin@eclexia.net)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Server build (no-op)\"",
+    "start": "echo \"Server start (no-op)\""
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "@shieldmaidengames/multipipe-internal-shared": "0.0.0",
+    "@shieldmaidengames/multipipe-shared": "0.0.0",
+    "@shieldmaidengames/multipipe-game": "0.0.0",
+    "@shieldmaidengames/multipipe-frontend": "0.0.0"
+  }
+}

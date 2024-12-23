@@ -1,0 +1,45 @@
+{
+  "name": "@shieldmaidengames/multipipe",
+  "version": "0.0.0",
+  "description": "Game and server for multipipe",
+  "license": "ISC",
+  "author": "polerin <polerin@eclexia.net>",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    "./tsconfig.json": "./tsconfig.json"
+  },
+  "scripts": {
+    "build": "nx run-many -t build --verbose",
+    "clean": "nx run-many -t clean && nx reset",
+    "publish:shared": "npm run clean && npm run build && npm lerna publish",
+    "start": "npm run build && npm -w @shieldmaidengames/multipipe-server run start",
+    "watch": "nx watch --all -- nx run \\$NX_PROJECT_NAME:build --verbose",
+    "build:frontend": "nx build @themaven-net/commerce-standalone-frontend",
+    "build:api": "nx build @themaven-net/commerce-api-server",
+    "build:tools": "nx build @themaven-net/commerce-tools",
+    "build:internal": "nx build @themaven-net/commerce-internal",
+    "build:cms-integration": "nx build @themaven-net/cms-integration",
+    "build:shared": "nx build @themaven-net/commerce-shared",
+    "test:eslint": "nx run-many -t test:eslint",
+    "test:madge": "nx run-many -t test:madge",
+    "test:unit": "nx run-many -t test",
+    "test:tsc": "nx run-many -t test:tsc",
+    "test": "npm clean && npm build && concurrently 'npm test:tsc' 'npm test:unit' 'npm test:eslint'",
+    "graph": "npm nx graph"
+  },
+  "workspaces": [
+    "apps/*",
+    "lib/*"
+  ],
+  "dependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@rollup/plugin-url": "^8.0.2",
+    "lerna": "^8.1.9",
+    "nx": "^20.3.0",
+    "rollup": "^4.29.1",
+    "typescript": "^5.7.2"
+  }
+}

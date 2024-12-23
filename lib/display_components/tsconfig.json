@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../dist/lib/display_components/",
+        "rootDir": "./src",
+        "plugins": [
+            {
+                "name": "ts-lit-plugin"
+            }
+        ]
+    }
+}

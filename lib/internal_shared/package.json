@@ -1,0 +1,16 @@
+{
+  "name": "@shieldmaidengames/multipipe-internal-shared",
+  "version": "0.0.0",
+  "description": "",
+  "license": "ISC",
+  "private": "true",
+  "author": "polerin <polerin@eclexia.net>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
+    "clean": "rm -rf ../../dist/lib/internal_shared"
+  },
+  "devDependencies": {}
+}

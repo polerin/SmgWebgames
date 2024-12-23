@@ -1,0 +1,25 @@
+{
+    "ts-node": {"files": true},
+    "compilerOptions": {
+        "target": "es2020",
+        "lib": ["es2024"], /* For node14, overwrite for newer node version. Don't include dom definitions */
+        "module": "Node16",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "moduleResolution": "node16",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+    },
+    "exclude": []
+}

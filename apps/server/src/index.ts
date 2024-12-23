@@ -1,0 +1,1 @@
+export const TEST_VALUE_MKAY = "test value ";

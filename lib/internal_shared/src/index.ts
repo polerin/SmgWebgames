@@ -1,0 +1,1 @@
+export const INTERNAL_TEST_CONST = "internal";
