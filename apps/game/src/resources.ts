@@ -1,16 +1,39 @@
-import { ImageSource, Loader } from "excalibur";
-import swordPath from "./images/sword.png"; // for parcelv2 this is configured in the .parcelrc
+import { ImageSource, Loadable, Loader } from "excalibur";
+import swordPath from './images/sword.png';
+
+type ResourceMapKey = 'image' | 'audio';
+
+const loader = new Loader();
+const resourceMap: Record<ResourceMapKey, Record<string, string>> = {
+  image: {
+    Sword: swordPath,
+  },
+  audio: {
+
+  }
+};
+
+const resourceBuffer: Record<string, Loadable<any>> = {};
+
+const addImageDef = (resource:[name: string, path: string]): void => {
+  const constructedPath = (new URL(resource[1])).pathname;
+  console.info(`Adding resource ${resource[0]} : ${constructedPath}`);
+
+  resourceBuffer[resource[0]] = new ImageSource(constructedPath);
+
+  loader.addResource(resourceBuffer[resource[0]]);
+};
+
+Object.entries(resourceMap.image).forEach(addImageDef);
 
 
-// It is convenient to put your resources in one place
-export const Resources = {
-  Sword: new ImageSource(swordPath) // Final bundled/optimized path from parcel
-} as const; // the 'as const' is a neat typescript trick to get strong typing on your resources. 
-// So when you type Resources.Sword -> ImageSource
 
 // We build a loader and add all of our resources to the boot loader
 // You can build your own loader by extending DefaultLoader
-export const loader = new Loader();
-for (const res of Object.values(Resources)) {
+for (const res of Object.values(resourceBuffer)) {
   loader.addResource(res);
 }
+
+// It is convenient to put your resources in one place
+export const Resources = {... resourceBuffer } as const; 
+export const mainLoader = loader;

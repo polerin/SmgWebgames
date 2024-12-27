@@ -1,7 +1,9 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist/lib/shared/",
+        "module": "nodeNext",
+        "declaration": true,
+        "outDir": "./dist/esm",
         "rootDir": "./src",
     }
 }

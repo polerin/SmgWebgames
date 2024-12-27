@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel serve ./index.html",
-    "build": "parcel build ./index.html --dist-dir ./dist --public-url ./",
+    "build": "parcel build ./src/main.ts --dist-dir ./dist --public-url /multipipe/game",
     "test": "npm run build && npx playwright test",
     "test:integration-update": "npx playwright test --update-snapshots"
   },
   "type": "module",
+  "module": "dist/esm/index.js",
   "author": "polerin (polerin@eclexia.net)",
   "license": "",
   "dependencies": {
@@ -19,6 +19,9 @@
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.10.0",
     "parcel": "2.13.3",
+    "@parcel/packager-ts": "^2.13.3",
+    "@parcel/config-default": "^2.13.3",
+    "@parcel/transformer-typescript-tsc": "^2.13.3",
     "typescript": "5.7.2"
   },
   "homepage": "",

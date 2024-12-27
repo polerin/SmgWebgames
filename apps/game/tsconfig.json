@@ -3,5 +3,7 @@
     "compilerOptions": {
         "outDir": "../../dist/apps/game/",
         "rootDir": "./src",
+        "esModuleInterop": true,
+        "lib": ["DOM"]
     }
 }

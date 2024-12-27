@@ -1,7 +1,9 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist/lib/display_components/",
+        "module": "nodeNext",
+        "declaration": true,
+        "outDir": "./dist/esm",
         "rootDir": "./src",
         "plugins": [
             {
