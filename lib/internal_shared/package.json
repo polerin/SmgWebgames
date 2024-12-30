@@ -12,5 +12,7 @@
     "build": "npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
     "clean": "rm -rf ./dist"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "ditox": "^3.0.0"
+  }
 }

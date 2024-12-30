@@ -3,5 +3,6 @@
     "compilerOptions": {
         "outDir": "../../dist/apps/server/",
         "rootDir": "./src",
+        "lib": ["ESNext"]
     }
 }

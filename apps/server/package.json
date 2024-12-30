@@ -10,11 +10,11 @@
     "build": "npm run artifacts:copy",
     "test": "echo \"Error: no test specified\" && exit 1",
     "artifacts:clean": "rm -rf ./artifacts",
-    "artifacts:copy": "npm run artifacts:clean; mkdir ./artifacts; npm run artifacts:copy:game; npm run artifacts:copy:frontend",
+    "artifacts:copy": "npm run artifacts:clean; mkdir ./artifacts; concurrently 'npm run artifacts:copy:game' 'npm run artifacts:copy:frontend'",
     "artifacts:copy:game": "cp -r ../game/dist ./artifacts/game",
     "artifacts:copy:frontend": "cp -r ../frontend/dist ./artifacts/frontend",
     "clean": "npm run build:clean-build-only; npm run artifacts:clean",
-    "start": "npm run artifacts:copy; npm run tsx ./src/index.ts",
+    "start": "npm run artifacts:copy; tsx ./src/index.ts",
     "start:dev": "tsx watch ./src/index.ts"
   },
   "dependencies": {
@@ -22,11 +22,14 @@
     "@shieldmaidengames/multipipe-game": "0.0.0",
     "@shieldmaidengames/multipipe-internal-shared": "0.0.0",
     "@shieldmaidengames/multipipe-shared": "0.0.0",
-    "@types/express": "^5.0.0",
-    "tsx": "^4.19.2",
-    "express": "^4.21.2"
-  },
-  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.10.0",
+    "@types/express-serve-static-core": "^4.10.0",
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "ditox": "^3.0.0",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
   }
-
 }

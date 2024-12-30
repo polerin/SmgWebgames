@@ -35,5 +35,9 @@ for (const res of Object.values(resourceBuffer)) {
 }
 
 // It is convenient to put your resources in one place
-export const Resources = {... resourceBuffer } as const; 
-export const mainLoader = loader;
+const Resources = {... resourceBuffer } as const; 
+
+export {
+  Resources,
+  loader as mainLoader,
+}
