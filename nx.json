@@ -1,26 +1,31 @@
 {
     "extends": "nx/presets/npm.json",
+    "parallel": 3,
     "tasksRunnerOptions": {
         "default": {
             "runner": "nx/tasks-runners/default",
             "options": {
-                "cacheableOperations": ["build"]
+                "cacheableOperations": ["build", "test"]
             }
         }
     },
     "namedInputs": {
-        "default": ["{projectRoot}/**/*.ts", "{projectRoot}/**/*.json"],
-        "frontend": [
-            "default",
-            "{projectRoot}/**/*.html",
-            "{projectRoot}/**/*.css"
-        ]
+        "libs": [ "{projectRoot}/lib/**/*.{ts,json}" ],
+        "apps": [ "{projectRoot}/apps/**/*.{ts,json}" ]
     },
     "targetDefaults": {
         "build": {
             "dependsOn": ["^build"],
-            "inputs": ["default", "^default"],
-            "outputs": ["{projectRoot}/dist"]
+            "inputs": ["libs", "apps"]
+        }
+    },
+    "targets": {
+        "build": {
+            "dependencies": true,
+            "dependsOn": ["^build"]
+        },
+        "test": {
+            "dependsOn": ["build"]
         }
     }
 }

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "multipipe game server",
   "license": "ISC",
+  "type": "module",
   "author": "polerin (polerin@eclexia.net)",
   "scripts": {
     "build": "parcel build ./markup/index.html --dist-dir ./dist --public-url /multipipe",
@@ -10,7 +11,11 @@
   },
   "dependencies": {
     "ditox": "^3.0.0",
-    "lit": "^3.2.1"
+    "lit": "^3.2.1",
+    "@shieldmaidengames/multipipe-internal-shared": "0.0.0",
+    "@shieldmaidengames/multipipe-shared": "0.0.0",
+    "@shieldmaidengames/multipipe-display-components": "0.0.0"
+
   },
   "devDependencies": {
     "@parcel/config-default": "^2.13.3",

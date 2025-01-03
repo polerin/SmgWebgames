@@ -1,9 +1,10 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist/apps/game/",
+        "outDir": "./dist/",
         "rootDir": "./src",
         "esModuleInterop": true,
-        "lib": ["DOM"]
+        "lib": ["DOM"],
+        "experimentalDecorators": true
     }
 }

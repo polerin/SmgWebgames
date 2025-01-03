@@ -6,13 +6,18 @@
   "private": "true",
   "author": "polerin <polerin@eclexia.net>",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    "default": "./dist/esm/index.js",
+    "import": "./dist/esm/index.js",
+    "typescript": "./src/index.ts"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "clean": "rm -rf ./dist"
   },
   "dependencies": {
-    "ditox": "^3.0.0"
+    "ditox": "^3.0.0",
+    "@shieldmaidengames/multipipe-shared": "0.0.0"
   }
 }

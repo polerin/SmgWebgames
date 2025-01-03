@@ -5,10 +5,7 @@
         "declaration": true,
         "outDir": "./dist/esm",
         "rootDir": "./src",
-        "plugins": [
-            {
-                "name": "ts-lit-plugin"
-            }
-        ]
+        "lib": ["DOM"],
+        "experimentalDecorators": true
     }
 }

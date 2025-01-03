@@ -5,7 +5,6 @@
   "license": "ISC",
   "author": "polerin <polerin@eclexia.net>",
   "type": "module",
-  "main": "index.js",
   "exports": {
     "./tsconfig.json": "./tsconfig.json"
   },
