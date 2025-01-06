@@ -9,6 +9,7 @@ declare global {
 }
 
 export function registerMenuElements() {
+    console.log('registering multipipe menu elements');
     WelcomeMenu.prototype;
 }
 

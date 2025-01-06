@@ -7,14 +7,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npm run artifacts:copy",
     "test": "echo \"Error: no test specified\" && exit 1",
     "artifacts:clean": "rm -rf ./artifacts",
-    "artifacts:copy": "npm run artifacts:clean; mkdir ./artifacts; concurrently 'npm run artifacts:copy:game' 'npm run artifacts:copy:frontend'",
-    "artifacts:copy:game": "cp -r ../game/dist ./artifacts/game",
-    "artifacts:copy:frontend": "cp -r ../frontend/dist ./artifacts/frontend",
-    "clean": "npm run build:clean-build-only; npm run artifacts:clean",
-    "start": "npm run artifacts:copy; tsx ./src/index.ts",
+    "start": "yarn run artifacts:copy; tsx ./src/index.ts --verbose",
     "start:dev": "tsx watch ./src/index.ts"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ export default class WelcomeController implements ReactiveController {
     }
 
     addHost(host: ReactiveControllerHost): void {
-        if (this.menuHost === undefined) {
+        if (this.menuHost !== undefined) {
             throw new Error('Attempting to add host to a controller that already has one');
         }
 

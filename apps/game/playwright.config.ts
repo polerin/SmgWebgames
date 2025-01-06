@@ -14,7 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   webServer: {
-    command: 'npm run start',
+    command: 'yarn run start',
     timeout: 240 * 1000, // linux takes a long time
     url: 'http://localhost:1234',
     reuseExistingServer: !process.env.CI,
@@ -80,7 +80,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   // webServer: {
-  //   command: 'npm run start',
+  //   command: 'yarn run start',
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },

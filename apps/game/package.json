@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "parcel build ./src/main.ts --dist-dir ./dist --public-url /multipipe/game",
-    "test": "npm run build && npx playwright test",
+    "build": "parcel build --no-cache ./src/main.ts --dist-dir ./dist --public-url /multipipe/game",
+    "test": "yarn run build && npx playwright test",
     "test:integration-update": "npx playwright test --update-snapshots"
   },
   "type": "module",

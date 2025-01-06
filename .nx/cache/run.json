@@ -1,0 +1,76 @@
+{
+  "run": {
+    "command": "nx run-many -t build --verbose --skipNxCache",
+    "startTime": "2025-01-04T21:58:11.138Z",
+    "endTime": "2025-01-04T21:58:15.372Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@shieldmaidengames/multipipe-shared:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-shared",
+      "hash": "8842243769610413400",
+      "startTime": "2025-01-04T21:58:11.145Z",
+      "endTime": "2025-01-04T21:58:12.508Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-internal-shared:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-internal-shared",
+      "hash": "1251210802398818080",
+      "startTime": "2025-01-04T21:58:12.509Z",
+      "endTime": "2025-01-04T21:58:13.875Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-display-components:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-display-components",
+      "hash": "6174517184700513311",
+      "startTime": "2025-01-04T21:58:12.509Z",
+      "endTime": "2025-01-04T21:58:14.062Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-api-client:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-api-client",
+      "hash": "1805718580346019190",
+      "startTime": "2025-01-04T21:58:12.509Z",
+      "endTime": "2025-01-04T21:58:14.330Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-game:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-game",
+      "hash": "9712324812895066339",
+      "startTime": "2025-01-04T21:58:14.063Z",
+      "endTime": "2025-01-04T21:58:15.171Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-frontend:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/multipipe-frontend",
+      "hash": "9870584045599242426",
+      "startTime": "2025-01-04T21:58:14.063Z",
+      "endTime": "2025-01-04T21:58:15.372Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

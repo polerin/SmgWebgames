@@ -7,7 +7,6 @@ const server = app.listen({ port: port }, () => {
     console.log(`Server ready at http://localhost:${port}`);
 });
 
-
 // Close the socket after N milliseconds of inactivity. This can be shorter than
 // the idle timeout of ALB. When this happends, if this is shorter than idle
 // timeout of ALB, ALB will return a 502 error. Otherwise, a 504 error will

@@ -17,20 +17,26 @@ export default class WelcomeMenu extends BaseMenu {
     protected nameInput: Ref<HTMLInputElement> = createRef();
 
     public override connectedCallback(): void {
+        super.connectedCallback();
+
         requestDependencies(this, WelcomeMenuToken)
         .then((deps: WelcomeMenuDeps) => this.inject(deps))
         .catch((e: unknown) => console.error("Unable to retrieve dependencies for Welcome Menu", e));
     }
     
     protected inject(deps: WelcomeMenuDeps): void {
+        console.info('inject called');
         this.controller = deps.welcomeController;
 
         // end of deps assignment, address any lifecycle callbacks
         this.controller?.addHost(this);
         this.controller?.hostConnected();
+
+        this.controllerStatus = (this.controller !== undefined);
     };
 
     protected override render(): TemplateResult {
+        console.log('render called?');
         if (this.controllerStatus === false) {
             return html`<div>No Menu Controller</div>`;
         }

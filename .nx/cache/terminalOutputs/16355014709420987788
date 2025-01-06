@@ -1,0 +1,8 @@
+[2K[1G[33mwarning[39m package.json: License should be a valid SPDX license expression
+[2K[1G[2m$ parcel build --no-cache ./src/main.ts --dist-dir ./dist --public-url /multipipe/game run-many[22m
+🚨 [31m[1mBuild failed.[22m[39m
+
+[31m[1munknown[22m: Entry /Users/erin.mccargar/prj/TsMultiPipe/apps/game/run-many does not 
+exist[39m
+[2K[1G[31merror[39m Command failed with exit code 1.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.

@@ -6,8 +6,8 @@
   "type": "module",
   "author": "polerin (polerin@eclexia.net)",
   "scripts": {
-    "build": "parcel build ./markup/index.html --dist-dir ./dist --public-url /multipipe",
-    "test": "npm run build && npx playwright test"
+    "build": "parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /multipipe",
+    "test": "yarn run build && npx playwright test"
   },
   "dependencies": {
     "ditox": "^3.0.0",

@@ -11,7 +11,7 @@
     },
     "namedInputs": {
         "libs": [ "{projectRoot}/lib/**/*.{ts,json}" ],
-        "apps": [ "{projectRoot}/apps/**/*.{ts,json}" ]
+        "apps": [ "{projectRoot}/apps/*/!(dist)/**/*.{ts,json}" ]
     },
     "targetDefaults": {
         "build": {

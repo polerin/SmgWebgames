@@ -5,6 +5,7 @@
   "license": "ISC",
   "author": "polerin <polerin@eclexia.net>",
   "type": "module",
+  "module": "./dist/esm/index.js",
   "exports": {
     "default": "./dist/esm/index.js",
     "import": "./dist/esm/index.js",

@@ -10,6 +10,6 @@ export default class InjectionRequest<
     public constructor(
         public token: TokenType,
         public callback: (deps: DepType | PromiseLike<DepType>) => void) {
-        super(InjectionRequest.EVENT_NAME);
+        super(InjectionRequest.EVENT_NAME, {bubbles: true});
     }
 }
