@@ -7,6 +7,8 @@ import { MyLevel } from "./level.js";
 const game = new Engine({
   width: 800, // Logical width and height in game pixels
   height: 600,
+  canvasElementId: 'multipipe-game-canvas',
+  enableCanvasTransparency: true,
   displayMode: DisplayMode.FitScreenAndFill, // Display mode tells excalibur how to fill the window
   pixelArt: true, // pixelArt will turn on the correct settings to render pixel art without jaggies or shimmering artifacts
   scenes: {
@@ -24,7 +26,6 @@ game.start('start', { // name of the start scene 'start'
   inTransition: new FadeInOut({ // Optional in transition
     duration: 1000,
     direction: 'in',
-    color: Color.ExcaliburBlue
   })
 }).then(() => {
   // Do something after the game starts

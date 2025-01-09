@@ -1,0 +1,19 @@
+[2K[1G[2m$ concurrently 'yarn build:index' 'yarn build:multipipe'[22m
+[0m[0][0m [2K[1G[2m$ parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /multipipe[22m
+[0m[1][0m [2K[1G[2m$ parcel build --no-cache ./markup/game_container.html --dist-dir ./dist --public-url /multipipe[22m
+[0m[0][0m Building...
+[0m[1][0m Building...
+[0m[0][0m Bundling...
+[0m[1][0m Bundling...
+[0m[0][0m Packaging & Optimizing...
+[0m[1][0m Packaging & Optimizing...
+[0m[1][0m ✨ [32m[1mBuilt in 375ms[22m[39m
+[0m[1][0m 
+[0m[1][0m [2mdist/[22m[36m[1mgame_container.html[22m[39m           [1m[35m391 B[39m[22m    [32m[1m65ms[22m[39m
+[0m[1][0m [2mdist/[22m[36m[1mgame_container.b2ecd853.js[22m[39m    [1m[35m164 B[39m[22m    [32m[1m66ms[22m[39m
+[0m[0][0m ✨ [32m[1mBuilt in 638ms[22m[39m
+[0m[0][0m 
+[0m[0][0m [2mdist/[22m[36m[1mindex.html[22m[39m              [1m[35m317 B[39m[22m    [32m[1m65ms[22m[39m
+[0m[0][0m [2mdist/[22m[36m[1mindex.cdc4a1d4.js[22m[39m    [1m[35m51.26 kB[39m[22m    [32m[1m93ms[22m[39m
+[0m[1][0m [0myarn build:multipipe exited with code 0[0m
+[0m[0][0m [0myarn build:index exited with code 0[0m

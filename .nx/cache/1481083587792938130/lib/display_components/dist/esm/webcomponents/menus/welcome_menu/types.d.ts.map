@@ -1,1 +1,0 @@
-{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../../src/webcomponents/menus/welcome_menu/types.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,qBAAqB,EAAE,MAAM,yBAAyB,CAAC;AAEhE,OAAO,iBAAiB,MAAM,yBAAyB,CAAC;AAExD,MAAM,MAAM,eAAe,GAAG,qBAAqB,GAAG;IAClD,iBAAiB,EAAE,iBAAiB,CAAC;CACxC,CAAA;AAED,eAAO,MAAM,gBAAgB;uBAHN,iBAAiB;EAG2C,CAAC"}

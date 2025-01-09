@@ -1,4 +1,0 @@
-[2K[1G[2m$ rollup -c rollup.config.js --bundleConfigAsCjs --no-cache[22m
-[36m
-[1m./src/index.ts[22m → [1m./dist/esm[22m...[39m
-[32mcreated [1m./dist/esm[22m in [1m760ms[22m[39m

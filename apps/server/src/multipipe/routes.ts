@@ -12,9 +12,7 @@ console.info('setting multipipe artifact path to', artifactPath);
 const frontendRouter =  express.static(artifactPath + '/frontend', {
     index: ['index.html']
 });
-const gameRouter = express.static(artifactPath + '/games', {
-    index: ['index.html']
-});
+const gameRouter = express.static(artifactPath + '/game');
 
 multipipeRouter.use('/', frontendRouter);
 multipipeRouter.use('/game', gameRouter);

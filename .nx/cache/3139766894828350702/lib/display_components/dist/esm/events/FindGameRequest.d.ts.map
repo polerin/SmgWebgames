@@ -1,1 +1,0 @@
-{"version":3,"file":"FindGameRequest.d.ts","sourceRoot":"","sources":["../../../src/events/FindGameRequest.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,qCAAqC,CAAC;AAEhE,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,KAAK;IAGpB,MAAM,EAAE,SAAS;IAF3C,OAAc,UAAU,EAAG,iBAAiB,CAAU;gBAE5B,MAAM,EAAE,SAAS;CAG9C"}

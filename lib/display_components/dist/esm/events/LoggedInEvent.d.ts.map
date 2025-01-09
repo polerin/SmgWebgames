@@ -1,0 +1,1 @@
+{"version":3,"file":"LoggedInEvent.d.ts","sourceRoot":"","sources":["../../../src/events/LoggedInEvent.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,qCAAqC,CAAC;AAEhE,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,KAAK;aAGT,MAAM,EAAE,SAAS;IAFpD,OAAc,UAAU,EAAG,eAAe,CAAU;gBAEjB,MAAM,EAAE,SAAS;CAGvD"}

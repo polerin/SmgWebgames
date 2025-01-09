@@ -1,9 +1,0 @@
-[2K[1G[2m$ parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /multipipe --no-cache[22m
-Building...
-Bundling...
-Packaging & Optimizing...
-✨ [32m[1mBuilt in 442ms[22m[39m
-
-[2mdist/[22m[36m[1mindex.html[22m[39m                [1m[35m460 B[39m[22m    [32m[1m54ms[22m[39m
-[2mdist/[22m[36m[1mgame_container.html[22m[39m       [1m[35m347 B[39m[22m    [32m[1m56ms[22m[39m
-[2mdist/[22m[36m[1mindex.ca6a9ce3.js[22m[39m      [1m[35m19.63 kB[39m[22m    [32m[1m96ms[22m[39m

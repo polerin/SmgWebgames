@@ -1,25 +1,24 @@
-import { ReactiveController, ReactiveControllerHost } from 'lit';
+import { LoggedInEvent, LogInCue } from '../../../events/index.js';
+import BaseInjectableController from '../../base_injectable_controller.js';
+import { WelcomeMenuDeps } from './definitions.js';
+import WelcomeMenu from './welcome_menu.js';
 
-export default class WelcomeController implements ReactiveController {
-    protected menuHost?: ReactiveControllerHost;
+export default class WelcomeController 
+    extends BaseInjectableController<WelcomeMenuDeps>
+{
+    protected override host?: WelcomeMenu;
 
-    public constructor() {
+    protected override addListeners(): void {
+        this.addEventListener(LogInCue.EVENT_NAME, this.handleLogInCue);
     }
 
-    addHost(host: ReactiveControllerHost): void {
-        if (this.menuHost !== undefined) {
-            throw new Error('Attempting to add host to a controller that already has one');
+    protected handleLogInCue = (e: Event) => {
+        if (!(e instanceof LogInCue)) {
+            return;
         }
 
-        this.menuHost = host;
-        this.menuHost.addController(this);
+        // Temp, replace when we actually have a log in flow
+        this.host?.dispatchEvent(new LoggedInEvent({name: e.playerName}));
     }
 
-    hostConnected(): void {
-        
-    }
-
-    hostDisconnected(): void {
-        this.menuHost = undefined;        
-    }
 }

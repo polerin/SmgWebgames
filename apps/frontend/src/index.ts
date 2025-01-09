@@ -1,24 +1,23 @@
-import { InjectionRequest, injectionResolverFactory, registerMenuElements, WelcomeMenu } from '@shieldmaidengames/multipipe-display-components';
+import { InjectionCue, injectionResolverFactory, registerAllComponents } from '@shieldmaidengames/multipipe-display-components';
 import { FrontendContainer } from './frontend_deps.js';
+import { ApplicationRoot, registerApplicationRoot } from './webcomponents/index.js';
 
-const applicationContainer = document.getElementById('application-container');
-
-if (applicationContainer === null) {
-    throw new Error('unable to identify application container');
-}
-
-console.log('bootstrapping');
 const resolver = injectionResolverFactory(FrontendContainer);
-window.addEventListener(InjectionRequest.EVENT_NAME, (e) => {
-    if (!(e instanceof InjectionRequest)) {
+registerAllComponents();
+registerApplicationRoot();
+
+const Application = new ApplicationRoot();
+
+document.addEventListener(InjectionCue.EVENT_NAME, (e) => {
+    if (!(e instanceof InjectionCue)) {
         console.log('Non-injection request caught in handler');
         return;
     }
+    console.log('trying to resolve for token', e.token);
 
     e.preventDefault();
     resolver(e);
 });
-registerMenuElements();
 
 console.log('attaching');
-applicationContainer.appendChild(new WelcomeMenu());
+document.body.appendChild(Application);

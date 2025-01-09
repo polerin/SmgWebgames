@@ -34,7 +34,7 @@ constructor or `connectedCallback()`, dependencies should be injected through th
 
 1) Component is created (not adopted into the DOM)
 2) Component is adopted into the dom (connectedCallback is called)
-3) In the connectedCallback() the Component issues an InjectionRequest event asking for a ComponentInjector of the correct type by token, suppling a promise resolution function to be called by the resolving code.
+3) In the connectedCallback() the Component issues an InjectionCue event asking for a ComponentInjector of the correct type by token, suppling a promise resolution function to be called by the resolving code.
 4) An event listener (of some type) should catch the event, use the token to obtain the correct ComponentInjector using a dependency injection container (ditox by default), and then use the supplied resolution callback to return it to the Component.
 5) The Component will then use the properties of the returned Injector to fill out the Component dependencies
 

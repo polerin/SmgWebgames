@@ -1,6 +1,0 @@
-[2K[1G[33mwarning[39m package.json: License should be a valid SPDX license expression
-[2K[1G[2m$ parcel build ./src/main.ts --dist-dir ./dist --public-url /multipipe/game[22m
-✨ [32m[1mBuilt in 181ms[22m[39m
-
-[2mdist/esm/[22m[36m[1mindex.js[22m[39m               [1m[35m5 kB[39m[22m    [32m[1m2.14s[22m[39m
-[2mdist/esm/[22m[36m[1msword.0b40f6ad.png[22m[39m    [1m[35m370 B[39m[22m     [32m[1m18ms[22m[39m

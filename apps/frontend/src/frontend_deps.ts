@@ -1,9 +1,13 @@
 import { createContainer } from 'ditox';
-import { FRONTEND_TOKENS } from './frontend_tokens.js';
-import { WelcomeController } from '@shieldmaidengames/multipipe-display-components';
+import { WelcomeController, WelcomeMenuToken } from '@shieldmaidengames/multipipe-display-components';
+import { ApplicationRootController, ApplicationRootToken } from './webcomponents/index.js';
 
 export const FrontendContainer = createContainer();
 
-FrontendContainer.bindFactory(FRONTEND_TOKENS.WelcomeMenu, () => ({
+FrontendContainer.bindFactory(WelcomeMenuToken, () => ({
      welcomeController: new WelcomeController()
+}));
+
+FrontendContainer.bindFactory(ApplicationRootToken, () => ({
+     controller: new ApplicationRootController()
 }));

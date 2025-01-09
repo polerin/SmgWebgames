@@ -333,6 +333,15 @@
         "hash": "sha512-wx4aBmgeGvFmOKucFKY+8VFJSYZxs9poN3SDNQFF6lT6NrQUnHiPB2PWz2sc4ieEcAaYYzN+1uWahEeTq2aRIQ=="
       }
     },
+    "npm:@lit/context": {
+      "type": "npm",
+      "name": "npm:@lit/context",
+      "data": {
+        "version": "1.1.3",
+        "packageName": "@lit/context",
+        "hash": "sha512-Auh37F4S0PZM93HTDfZWs97mmzaQ7M3vnTc9YvxAGyP3UItSK/8Fs0vTOGT+njuvOwbKio/l8Cx/zWL4vkutpQ=="
+      }
+    },
     "npm:@lit/reactive-element": {
       "type": "npm",
       "name": "npm:@lit/reactive-element",
@@ -8188,6 +8197,16 @@
     {
       "source": "npm:@lezer/lr",
       "target": "npm:@lezer/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@lit/context",
+      "target": "npm:@lit/reactive-element",
+      "type": "static"
+    },
+    {
+      "source": "npm:@lit/reactive-element",
+      "target": "npm:@lit-labs/ssr-dom-shim",
       "type": "static"
     },
     {

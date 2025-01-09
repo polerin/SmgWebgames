@@ -1,7 +1,0 @@
-[2K[1G[2m$ yarn run artifacts:copy[22m
-[2K[1G[2m$ yarn run artifacts:clean; mkdir ./artifacts; concurrently 'yarn run artifacts:copy:game' 'yarn run artifacts:copy:frontend'[22m
-[2K[1G[2m$ rm -rf ./artifacts[22m
-[0m[1][0m [2K[1G[2m$ cp -r ../frontend/dist ./artifacts/frontend[22m
-[0m[0][0m [2K[1G[2m$ cp -r ../game/dist ./artifacts/game[22m
-[0m[1][0m [0myarn run artifacts:copy:frontend exited with code 0[0m
-[0m[0][0m [0myarn run artifacts:copy:game exited with code 0[0m

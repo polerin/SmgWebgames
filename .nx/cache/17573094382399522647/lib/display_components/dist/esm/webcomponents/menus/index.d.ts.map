@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/webcomponents/menus/index.ts"],"names":[],"mappings":"AAAA,OAAO,WAAW,MAAM,gCAAgC,CAAC;AAGzD,OAAO,CAAC,MAAM,CAAC;IAEb,UAAU,qBAAqB;QAC7B,cAAc,EAAE,WAAW,CAAC;KAC7B;CACF;AAED,wBAAgB,oBAAoB,SAGnC;AAED,OAAO,EAAE,OAAO,IAAI,QAAQ,EAAE,MAAM,gBAAgB,CAAC;AACrD,cAAc,yBAAyB,CAAC"}

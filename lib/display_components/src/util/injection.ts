@@ -1,27 +1,31 @@
 import { Container, Token } from 'ditox';
-import { ResolutionRequestSubject, TokenSubject } from '../types/index.js';
-import { InjectionRequest } from '../events/index.js';
+import { TokenSubject } from '../types/index.js';
+import { InjectionCue } from '../events/index.js';
+import IInjectableHost from '../interfaces/injectable_host.js';
 
-export function requestDependencies<
-    TokenType extends Token<any>
+export function injectDependencies<
+    TokenType extends Token<any>,
+    DepsType extends TokenSubject<TokenType> = TokenSubject<TokenType>
 >(
-    element: HTMLElement,
+    element: IInjectableHost<DepsType>,
     requestedToken: TokenType
-): Promise<TokenSubject<TokenType>> {
-    return new Promise<TokenSubject<TokenType>>((resolve, reject) => {
-        try {
-                element.dispatchEvent(new InjectionRequest(requestedToken, resolve));
-        } catch (e: unknown) {
-                reject(e);
-        }
+): Promise<void> {
+    const injectionPromise = new Promise<DepsType>((resolve, reject) => {
+            try {
+                element.dispatchEvent(new InjectionCue(requestedToken, resolve));
+            } catch (e: unknown) {
+                    reject(e);
+            }
     });
+    
+    return injectionPromise
+        .then((deps: DepsType) => element.inject(deps))
+        .catch((e: unknown) => console.error("Unable to retrieve dependencies", e));
 }
 
-export function injectionResolverFactory(container: Container): (r: InjectionRequest<any>) => void {
-    console.info('creating injection resolver for container', container);
-
-    return (request: InjectionRequest<any>): void => {
-        if (!(request instanceof InjectionRequest)) {
+export function injectionResolverFactory(container: Container): (r: InjectionCue<any>) => void {
+    return (request: InjectionCue<any>): void => {
+        if (!(request instanceof InjectionCue)) {
             console.log('Non-injection request supplied to injection resolver');
             return;
         }
@@ -33,7 +37,6 @@ export function injectionResolverFactory(container: Container): (r: InjectionReq
             throw new Error("Unable to satisfy injection request: " + request.token);
         }
 
-        console.info("Resolving Injection request: ", request.token);
         const resolved = container.resolve(request.token);
 
         request.callback(resolved);

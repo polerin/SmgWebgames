@@ -1,0 +1,1 @@
+{"version":3,"file":"base_activity_container.d.ts","sourceRoot":"","sources":["../../../../src/webcomponents/activity_container/base_activity_container.ts"],"names":[],"mappings":"AAAA,OAAO,EAAQ,UAAU,EAAE,kBAAkB,EAAE,cAAc,EAAE,MAAM,KAAK,CAAC;AAE3E,MAAM,CAAC,OAAO,CAAC,QAAQ,OAAO,qBAAsB,SAAQ,UAAU;IAElE,SAAS,CAAC,UAAU,CAAC,EAAE,kBAAkB,CAAC;cAEvB,MAAM,IAAI,cAAc;CAG9C"}
