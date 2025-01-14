@@ -1,7 +1,7 @@
 import { LitElement, TemplateResult } from 'lit';
-import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 export default class GameList extends LitElement {
-    gameDefinition?: SmgGameDefinition;
+    gameDefinition?: SmgHostedAppDefinition;
     gameList: GameInstance[];
     devList: DevInstance[];
     player?: SmgPlayer;

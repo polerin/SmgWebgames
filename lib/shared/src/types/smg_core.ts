@@ -3,7 +3,7 @@ export type SmgPlayer = {
     name: string;
 }
 
-export type SmgGameDefinition = {
+export type SmgHostedAppDefinition = {
     name: string;
     slug: string;
     description: string;

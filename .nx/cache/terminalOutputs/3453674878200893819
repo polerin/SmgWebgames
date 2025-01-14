@@ -3,7 +3,7 @@
 Building...
 Bundling...
 Packaging & Optimizing...
-✨ [32m[1mBuilt in 625ms[22m[39m
+✨ [32m[1mBuilt in 757ms[22m[39m
 
-[2mdist/[22m[36m[1mindex.html[22m[39m              [1m[35m307 B[39m[22m    [32m[1m40ms[22m[39m
-[2mdist/[22m[36m[1mindex.b86b2c11.js[22m[39m    [1m[35m36.82 kB[39m[22m    [32m[1m88ms[22m[39m
+[2mdist/[22m[36m[1mindex.html[22m[39m              [1m[35m307 B[39m[22m    [32m[1m61ms[22m[39m
+[2mdist/[22m[36m[1mindex.b86b2c11.js[22m[39m    [1m[35m36.82 kB[39m[22m    [32m[1m93ms[22m[39m

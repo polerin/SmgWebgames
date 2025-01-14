@@ -1,6 +1,6 @@
-import { SmgGameDefinition } from './types/smg_core.js';
+import { SmgHostedAppDefinition } from './types/smg_core.js';
 
-const GameRegistry: Record<string, SmgGameDefinition> = {
+const HostedAppRegistry: Record<string, SmgHostedAppDefinition> = {
     'Multipipe': {
         name: 'Multipipe',
         slug: 'Multipipe',
@@ -11,6 +11,6 @@ const GameRegistry: Record<string, SmgGameDefinition> = {
     },
 } as const;
 
-export type SmgGameSlug = keyof typeof GameRegistry;
+export type SmgHostedAppSlug = keyof typeof HostedAppRegistry;
 
-export { GameRegistry };
+export { HostedAppRegistry };

@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run-many -t artifacts:copy:package --projects=tag:artifact",
-    "startTime": "2025-01-14T19:27:24.205Z",
-    "endTime": "2025-01-14T19:27:28.760Z",
+    "startTime": "2025-01-14T22:57:06.693Z",
+    "endTime": "2025-01-14T22:57:07.346Z",
     "inner": false
   },
   "tasks": [
@@ -11,10 +11,10 @@
       "target": "build",
       "projectName": "@shieldmaidengames/webgames-shared",
       "hash": "575534488219208370",
-      "startTime": "2025-01-14T19:27:24.212Z",
-      "endTime": "2025-01-14T19:27:25.312Z",
+      "startTime": "2025-01-14T22:57:06.705Z",
+      "endTime": "2025-01-14T22:57:06.709Z",
       "params": "",
-      "cacheStatus": "cache-miss",
+      "cacheStatus": "local-cache-hit",
       "status": 0
     },
     {
@@ -22,21 +22,10 @@
       "target": "build",
       "projectName": "@shieldmaidengames/webgames-display-components",
       "hash": "7102315146497250037",
-      "startTime": "2025-01-14T19:27:25.314Z",
-      "endTime": "2025-01-14T19:27:26.520Z",
+      "startTime": "2025-01-14T22:57:06.714Z",
+      "endTime": "2025-01-14T22:57:06.721Z",
       "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@shieldmaidengames/webgames-frontend:build",
-      "target": "build",
-      "projectName": "@shieldmaidengames/webgames-frontend",
-      "hash": "3453674878200893819",
-      "startTime": "2025-01-14T19:27:26.522Z",
-      "endTime": "2025-01-14T19:27:28.288Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
+      "cacheStatus": "local-cache-hit",
       "status": 0
     },
     {
@@ -44,8 +33,30 @@
       "target": "build",
       "projectName": "@shieldmaidengames/multipipe-game",
       "hash": "2915607173760095016",
-      "startTime": "2025-01-14T19:27:26.522Z",
-      "endTime": "2025-01-14T19:27:28.372Z",
+      "startTime": "2025-01-14T22:57:06.725Z",
+      "endTime": "2025-01-14T22:57:06.729Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/webgames-frontend:build",
+      "target": "build",
+      "projectName": "@shieldmaidengames/webgames-frontend",
+      "hash": "3453674878200893819",
+      "startTime": "2025-01-14T22:57:06.725Z",
+      "endTime": "2025-01-14T22:57:06.733Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@shieldmaidengames/multipipe-game:artifacts:copy:package",
+      "target": "artifacts:copy:package",
+      "projectName": "@shieldmaidengames/multipipe-game",
+      "hash": "5706451572309622794",
+      "startTime": "2025-01-14T22:57:06.737Z",
+      "endTime": "2025-01-14T22:57:07.318Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
@@ -55,19 +66,8 @@
       "target": "artifacts:copy:package",
       "projectName": "@shieldmaidengames/webgames-frontend",
       "hash": "11863312180919627938",
-      "startTime": "2025-01-14T19:27:28.289Z",
-      "endTime": "2025-01-14T19:27:28.729Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@shieldmaidengames/multipipe-game:artifacts:copy:package",
-      "target": "artifacts:copy:package",
-      "projectName": "@shieldmaidengames/multipipe-game",
-      "hash": "5706451572309622794",
-      "startTime": "2025-01-14T19:27:28.373Z",
-      "endTime": "2025-01-14T19:27:28.759Z",
+      "startTime": "2025-01-14T22:57:06.741Z",
+      "endTime": "2025-01-14T22:57:07.345Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

@@ -1,6 +1,6 @@
-import { SmgGameDefinition, SmgPlayer } from './smg_core.js';
+import { SmgHostedAppDefinition, SmgPlayer } from './smg_core.js';
 export type GameInstance = {
-    game: SmgGameDefinition;
+    game: SmgHostedAppDefinition;
     gameInstanceId: string;
     gameName: string;
     state: unknown;

@@ -11,83 +11,147 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslintrc.json",
-        "hash": "336574147488737848"
-      },
-      {
-        "file": "apps/.gitignore",
-        "hash": "1555267546270736420"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "209065022352006878"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "15867870652843575155"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "5646627309843741577"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "1634974196854738770"
-      },
-      {
-        "file": "package.json",
-        "hash": "2955474152227014006"
+        "file": ".nvmrc",
+        "hash": "13196120833186808503"
       },
       {
         "file": "nx.json",
         "hash": "1010700445380980450"
       },
       {
-        "file": ".nvmrc",
-        "hash": "13196120833186808503"
+        "file": "lerna.json",
+        "hash": "5625340537102064555"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "336574147488737848"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "209065022352006878"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5646627309843741577"
+      },
+      {
+        "file": "package.json",
+        "hash": "2955474152227014006"
       },
       {
         "file": "README.md",
         "hash": "18111839340899772153"
       },
       {
-        "file": "lerna.json",
-        "hash": "5625340537102064555"
+        "file": "apps/.gitignore",
+        "hash": "1555267546270736420"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1634974196854738770"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "15867870652843575155"
       }
     ],
     "projectFileMap": {
       "@shieldmaidengames/webgames-internal-server-shared": [
         {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/IHostedApplication.d.ts",
+          "hash": "6283621547691178710"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/IHostedApplication.d.ts.map",
+          "hash": "15527423694111114391"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/IHostedApplication.js",
+          "hash": "17298551684260595484"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/IHostedApplication.js.map",
+          "hash": "196964776077275022"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/baseHostedApplication.d.ts",
+          "hash": "11445380266853537546"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/baseHostedApplication.d.ts.map",
+          "hash": "16442234590303274469"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/baseHostedApplication.js",
+          "hash": "7143078363666007178"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/baseHostedApplication.js.map",
+          "hash": "3477132223477745174"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/index.d.ts",
+          "hash": "12470875698944289180"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/index.d.ts.map",
+          "hash": "690058794409969563"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/index.js",
+          "hash": "16957902908486615631"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/index.js.map",
+          "hash": "5782551697611843007"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/types.d.ts",
+          "hash": "10486040511080406339"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/types.d.ts.map",
+          "hash": "6889456336643712123"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/types.js",
+          "hash": "14712619198338248242"
+        },
+        {
+          "file": "lib/internal_server_shared/dist/esm/hostedApplications/types.js.map",
+          "hash": "11343873237583247146"
+        },
+        {
           "file": "lib/internal_server_shared/dist/esm/index.d.ts",
-          "hash": "14840473259894512618"
+          "hash": "1150318066165365709"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/index.d.ts.map",
-          "hash": "12423881846373171086"
+          "hash": "11605553689684366086"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/index.js",
-          "hash": "5976967560842080606"
+          "hash": "4921472956074605981"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/index.js.map",
-          "hash": "13149945777484779701"
+          "hash": "13515897306536061425"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/tokens/index.d.ts",
-          "hash": "2030711690390559063"
+          "hash": "375820877595286520"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/tokens/index.d.ts.map",
-          "hash": "2614401649230753171"
+          "hash": "11421837876067976478"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/tokens/index.js",
-          "hash": "14719353947805505382"
+          "hash": "6453614510550520077"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/tokens/index.js.map",
-          "hash": "15123561091158378550"
+          "hash": "13824647839926759017"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/types/index.d.ts",
@@ -107,11 +171,11 @@
         },
         {
           "file": "lib/internal_server_shared/dist/esm/types/routes.d.ts",
-          "hash": "692433931794592117"
+          "hash": "2538914246073938210"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/types/routes.d.ts.map",
-          "hash": "14604128582978410721"
+          "hash": "13563286929474370123"
         },
         {
           "file": "lib/internal_server_shared/dist/esm/types/routes.js",
@@ -166,12 +230,24 @@
           "hash": "5083519363596240581"
         },
         {
+          "file": "lib/internal_server_shared/src/hostedApplications/IHostedApplication.ts",
+          "hash": "1607527135438079431"
+        },
+        {
+          "file": "lib/internal_server_shared/src/hostedApplications/baseHostedApplication.ts",
+          "hash": "12412476740350668164"
+        },
+        {
+          "file": "lib/internal_server_shared/src/hostedApplications/index.ts",
+          "hash": "2390279247961092385"
+        },
+        {
           "file": "lib/internal_server_shared/src/index.ts",
-          "hash": "6116633526399533463"
+          "hash": "2873706094494222689"
         },
         {
           "file": "lib/internal_server_shared/src/tokens/index.ts",
-          "hash": "813595366849713578"
+          "hash": "13617745947371318796"
         },
         {
           "file": "lib/internal_server_shared/src/types/index.ts",
@@ -179,7 +255,7 @@
         },
         {
           "file": "lib/internal_server_shared/src/types/routes.ts",
-          "hash": "6797446467347113093"
+          "hash": "195865744437652224"
         },
         {
           "file": "lib/internal_server_shared/src/utility/index.ts",
@@ -194,22 +270,133 @@
           "hash": "15761770823085465414"
         }
       ],
+      "@shieldmaidengames/multipipe-game": [
+        {
+          "file": "games/multipipe/game/.gitignore",
+          "hash": "1545249673092756513"
+        },
+        {
+          "file": "games/multipipe/game/.parcelrc",
+          "hash": "10085065217787930652"
+        },
+        {
+          "file": "games/multipipe/game/dist/index.94985e83.js",
+          "hash": "5072763071886910538"
+        },
+        {
+          "file": "games/multipipe/game/dist/index.94985e83.js.map",
+          "hash": "10879745959747081655"
+        },
+        {
+          "file": "games/multipipe/game/dist/index.html",
+          "hash": "15491176675644282931"
+        },
+        {
+          "file": "games/multipipe/game/dist/sword.3bb7992f.png",
+          "hash": "14131675812075116847"
+        },
+        {
+          "file": "games/multipipe/game/markup/index.html",
+          "hash": "3311717909975432213"
+        },
+        {
+          "file": "games/multipipe/game/package.json",
+          "hash": "11663373865193618699",
+          "deps": [
+            "npm:@parcel/config-default",
+            "npm:@parcel/packager-ts",
+            "npm:@parcel/transformer-typescript-tsc",
+            "npm:@playwright/test",
+            "npm:@types/node",
+            "npm:parcel",
+            "npm:typescript",
+            "npm:@lit/context",
+            "npm:ditox",
+            "npm:excalibur",
+            "npm:lit"
+          ]
+        },
+        {
+          "file": "games/multipipe/game/playwright-report/index.html",
+          "hash": "9282756805457318585"
+        },
+        {
+          "file": "games/multipipe/game/playwright.config.ts",
+          "hash": "10477937739701975363"
+        },
+        {
+          "file": "games/multipipe/game/project.json",
+          "hash": "2003317870948761820"
+        },
+        {
+          "file": "games/multipipe/game/readme.md",
+          "hash": "18082699871784593698"
+        },
+        {
+          "file": "games/multipipe/game/renovate.json",
+          "hash": "4457935836015770355"
+        },
+        {
+          "file": "games/multipipe/game/src/files.d.ts",
+          "hash": "18120196141939052727"
+        },
+        {
+          "file": "games/multipipe/game/src/images/sword.png",
+          "hash": "1115874774757734061"
+        },
+        {
+          "file": "games/multipipe/game/src/level.ts",
+          "hash": "4483658858546803596"
+        },
+        {
+          "file": "games/multipipe/game/src/main.ts",
+          "hash": "6686234444937657906"
+        },
+        {
+          "file": "games/multipipe/game/src/player.ts",
+          "hash": "1531611917408068771"
+        },
+        {
+          "file": "games/multipipe/game/src/resources.ts",
+          "hash": "12020351084076868352"
+        },
+        {
+          "file": "games/multipipe/game/test-results/.last-run.json",
+          "hash": "11141884120100644736"
+        },
+        {
+          "file": "games/multipipe/game/tests/main.spec.ts",
+          "hash": "7746710460917555746"
+        },
+        {
+          "file": "games/multipipe/game/tests/main.spec.ts-snapshots/main-page-looks-correct-1-chromium-linux.png",
+          "hash": "15342708029355220301"
+        },
+        {
+          "file": "games/multipipe/game/tests/main.spec.ts-snapshots/main-page-looks-correct-1-chromium-win32.png",
+          "hash": "15342708029355220301"
+        },
+        {
+          "file": "games/multipipe/game/tsconfig.json",
+          "hash": "13086399927098561294"
+        }
+      ],
       "@shieldmaidengames/webgames-shared": [
         {
           "file": "lib/shared/dist/esm/gameRegistry.d.ts",
-          "hash": "12014077120268938073"
+          "hash": "3680821506395277714"
         },
         {
           "file": "lib/shared/dist/esm/gameRegistry.d.ts.map",
-          "hash": "2905350299075840968"
+          "hash": "17872535908525612968"
         },
         {
           "file": "lib/shared/dist/esm/gameRegistry.js",
-          "hash": "7027870540897204186"
+          "hash": "5388715896316482637"
         },
         {
           "file": "lib/shared/dist/esm/gameRegistry.js.map",
-          "hash": "13941386278004784820"
+          "hash": "9726618480301702988"
         },
         {
           "file": "lib/shared/dist/esm/index.d.ts",
@@ -229,11 +416,11 @@
         },
         {
           "file": "lib/shared/dist/esm/types/game.d.ts",
-          "hash": "16773453756651518342"
+          "hash": "11734285854829137430"
         },
         {
           "file": "lib/shared/dist/esm/types/game.d.ts.map",
-          "hash": "13167339987414305020"
+          "hash": "15097965679983393600"
         },
         {
           "file": "lib/shared/dist/esm/types/game.js",
@@ -261,11 +448,11 @@
         },
         {
           "file": "lib/shared/dist/esm/types/smg_core.d.ts",
-          "hash": "16520066987841293615"
+          "hash": "5036399045197300617"
         },
         {
           "file": "lib/shared/dist/esm/types/smg_core.d.ts.map",
-          "hash": "16924553999706386804"
+          "hash": "13965233226083020005"
         },
         {
           "file": "lib/shared/dist/esm/types/smg_core.js",
@@ -276,36 +463,52 @@
           "hash": "6027198065047568484"
         },
         {
+          "file": "lib/shared/dist/esm/utility/errors.d.ts",
+          "hash": "8977571082422373997"
+        },
+        {
+          "file": "lib/shared/dist/esm/utility/errors.d.ts.map",
+          "hash": "18407669793413594716"
+        },
+        {
+          "file": "lib/shared/dist/esm/utility/errors.js",
+          "hash": "9300530934018099446"
+        },
+        {
+          "file": "lib/shared/dist/esm/utility/errors.js.map",
+          "hash": "7301178905747618409"
+        },
+        {
           "file": "lib/shared/dist/esm/utility/game_data.d.ts",
-          "hash": "15306252316684346482"
+          "hash": "15800631539149088611"
         },
         {
           "file": "lib/shared/dist/esm/utility/game_data.d.ts.map",
-          "hash": "7395189549170850397"
+          "hash": "3592179908306927400"
         },
         {
           "file": "lib/shared/dist/esm/utility/game_data.js",
-          "hash": "16507133430645797530"
+          "hash": "2503452708346823817"
         },
         {
           "file": "lib/shared/dist/esm/utility/game_data.js.map",
-          "hash": "6317413239864581788"
+          "hash": "15655734781527031139"
         },
         {
           "file": "lib/shared/dist/esm/utility/index.d.ts",
-          "hash": "3351769292235329620"
+          "hash": "6963690736662327067"
         },
         {
           "file": "lib/shared/dist/esm/utility/index.d.ts.map",
-          "hash": "13911368594035135506"
+          "hash": "10908161147191680898"
         },
         {
           "file": "lib/shared/dist/esm/utility/index.js",
-          "hash": "1200403856116235401"
+          "hash": "13055623134782128965"
         },
         {
           "file": "lib/shared/dist/esm/utility/index.js.map",
-          "hash": "15270131403136882688"
+          "hash": "14473466135300947696"
         },
         {
           "file": "lib/shared/package.json",
@@ -317,7 +520,7 @@
         },
         {
           "file": "lib/shared/src/gameRegistry.ts",
-          "hash": "5945041302271611946"
+          "hash": "13582570262306500605"
         },
         {
           "file": "lib/shared/src/index.ts",
@@ -325,7 +528,7 @@
         },
         {
           "file": "lib/shared/src/types/game.ts",
-          "hash": "2827705104781955355"
+          "hash": "18418535098126575518"
         },
         {
           "file": "lib/shared/src/types/index.ts",
@@ -333,69 +536,129 @@
         },
         {
           "file": "lib/shared/src/types/smg_core.ts",
-          "hash": "8053019020424244436"
+          "hash": "4910338853574844108"
+        },
+        {
+          "file": "lib/shared/src/utility/errors.ts",
+          "hash": "3244421341483603138"
         },
         {
           "file": "lib/shared/src/utility/game_data.ts",
-          "hash": "9329207637485446384"
+          "hash": "2679399155044930081"
         },
         {
           "file": "lib/shared/src/utility/index.ts",
-          "hash": "10523522653482114269"
+          "hash": "7026005888374864945"
         },
         {
           "file": "lib/shared/tsconfig.json",
           "hash": "9915773627180498225"
         }
       ],
-      "@shieldmaidengames/webgames-server": [
+      "@shieldmaidengames/webgames-frontend": [
         {
-          "file": "apps/server/.gitignore",
-          "hash": "8934247800044973499"
+          "file": "apps/frontend/.parcelrc",
+          "hash": "14065942699252358173"
         },
         {
-          "file": "apps/server/package.json",
-          "hash": "135595336323483719",
+          "file": "apps/frontend/markup/game_container.html",
+          "hash": "15407219477146829966"
+        },
+        {
+          "file": "apps/frontend/markup/index.html",
+          "hash": "3386803806509172101"
+        },
+        {
+          "file": "apps/frontend/package.json",
+          "hash": "7269291573008870401",
           "deps": [
-            "@shieldmaidengames/webgames-frontend",
-            "npm:@types/compression",
-            "npm:@types/cors",
-            "npm:@types/express",
-            "npm:@types/express-serve-static-core",
-            "npm:compression",
-            "npm:cors",
+            "npm:@parcel/config-default",
+            "npm:@parcel/packager-ts",
+            "npm:@parcel/transformer-typescript-tsc",
+            "npm:@playwright/test",
+            "npm:@types/node",
+            "npm:parcel",
+            "npm:typescript",
+            "npm:@lit/context",
             "npm:ditox",
-            "npm:express",
-            "npm:tsx"
+            "npm:lit"
           ]
         },
         {
-          "file": "apps/server/project.json",
-          "hash": "14691825196589280290"
+          "file": "apps/frontend/project.json",
+          "hash": "377474622219071509"
         },
         {
-          "file": "apps/server/src/index.ts",
-          "hash": "14014733396897942197"
+          "file": "apps/frontend/src/app.ts",
+          "hash": "688528247803070346"
         },
         {
-          "file": "apps/server/src/routes.ts",
-          "hash": "9451232136416686067"
+          "file": "apps/frontend/src/frontend_deps.ts",
+          "hash": "16251924259368952279"
         },
         {
-          "file": "apps/server/src/server.ts",
-          "hash": "8819476723246264566"
+          "file": "apps/frontend/src/index.ts",
+          "hash": "9486225886386846530"
         },
         {
-          "file": "apps/server/src/serverBindings.ts",
-          "hash": "12087876847996520310"
+          "file": "apps/frontend/src/injection/index.ts",
+          "hash": "10820072816857641514"
         },
         {
-          "file": "apps/server/src/utility/index.ts",
-          "hash": "3734985910164381814"
+          "file": "apps/frontend/src/injection/multipipe_frontend_deps.ts",
+          "hash": "6357279438024207743"
         },
         {
-          "file": "apps/server/tsconfig.json",
-          "hash": "7335001872499190597"
+          "file": "apps/frontend/src/injection/multipipe_frontend_tokens.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/frontend/src/multipipe_entry.ts",
+          "hash": "1077480667677013318"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/find_game.template.ts",
+          "hash": "14002818267125639233"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/index.ts",
+          "hash": "10222487288013173556"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/join_game.template.ts",
+          "hash": "13416377080778335459"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/start_game.template.ts",
+          "hash": "13010709063391511319"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/welcome.template.ts",
+          "hash": "16501949306582697977"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/application_root.ts",
+          "hash": "1754349069827779475"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/application_root_controller.ts",
+          "hash": "1981756509949402012"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/definitions.ts",
+          "hash": "12954365621137387009"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/application_root/index.ts",
+          "hash": "12157776732270911702"
+        },
+        {
+          "file": "apps/frontend/src/webcomponents/index.ts",
+          "hash": "17785780313623578346"
+        },
+        {
+          "file": "apps/frontend/tsconfig.json",
+          "hash": "13194110681605373410"
         }
       ],
       "@shieldmaidengames/webgames-display-components": [
@@ -501,11 +764,11 @@
         },
         {
           "file": "lib/display_components/dist/esm/events/LoadGameCue.d.ts",
-          "hash": "1196528998009616494"
+          "hash": "14868481390044408035"
         },
         {
           "file": "lib/display_components/dist/esm/events/LoadGameCue.d.ts.map",
-          "hash": "4405039912659785419"
+          "hash": "6774821326048651232"
         },
         {
           "file": "lib/display_components/dist/esm/events/LoadGameCue.js",
@@ -513,7 +776,7 @@
         },
         {
           "file": "lib/display_components/dist/esm/events/LoadGameCue.js.map",
-          "hash": "4926807241796323558"
+          "hash": "7284118234168785262"
         },
         {
           "file": "lib/display_components/dist/esm/events/LogInCue.d.ts",
@@ -549,11 +812,11 @@
         },
         {
           "file": "lib/display_components/dist/esm/events/StartNewGameCue.d.ts",
-          "hash": "7742001949565438748"
+          "hash": "11915662568469748623"
         },
         {
           "file": "lib/display_components/dist/esm/events/StartNewGameCue.d.ts.map",
-          "hash": "10349554362473736382"
+          "hash": "8923871211956971918"
         },
         {
           "file": "lib/display_components/dist/esm/events/StartNewGameCue.js",
@@ -561,7 +824,7 @@
         },
         {
           "file": "lib/display_components/dist/esm/events/StartNewGameCue.js.map",
-          "hash": "10131704707334355664"
+          "hash": "5116728551369507850"
         },
         {
           "file": "lib/display_components/dist/esm/events/SwapActivityCue.d.ts",
@@ -805,11 +1068,11 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/activity_container/find_game_activity/find_game_activity.d.ts",
-          "hash": "3486872753683937660"
+          "hash": "5402268782708466921"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/activity_container/find_game_activity/find_game_activity.d.ts.map",
-          "hash": "14540018482240527046"
+          "hash": "11790227060620435435"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/activity_container/find_game_activity/find_game_activity.js",
@@ -817,7 +1080,7 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/activity_container/find_game_activity/find_game_activity.js.map",
-          "hash": "7499161059572103975"
+          "hash": "2602432185536055201"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/activity_container/find_game_activity/find_game_activity_controller.d.ts",
@@ -1093,11 +1356,11 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/lists/game_list/game_list.d.ts",
-          "hash": "7745960502174718132"
+          "hash": "13237734414510741647"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/lists/game_list/game_list.d.ts.map",
-          "hash": "14365844836949422159"
+          "hash": "15274760950194508712"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/lists/game_list/game_list.js",
@@ -1105,7 +1368,7 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/lists/game_list/game_list.js.map",
-          "hash": "14983812862810286934"
+          "hash": "4533993516240181177"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/lists/game_list/index.d.ts",
@@ -1157,11 +1420,11 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/menus/find_game/find_game_menu.d.ts",
-          "hash": "5866164581182047847"
+          "hash": "12400350914673352037"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/menus/find_game/find_game_menu.d.ts.map",
-          "hash": "17464165493779797479"
+          "hash": "9377222812443430180"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/menus/find_game/find_game_menu.js",
@@ -1169,7 +1432,7 @@
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/menus/find_game/find_game_menu.js.map",
-          "hash": "11646047113143843524"
+          "hash": "2724041123440267498"
         },
         {
           "file": "lib/display_components/dist/esm/webcomponents/menus/find_game/index.d.ts",
@@ -1305,7 +1568,7 @@
         },
         {
           "file": "lib/display_components/src/events/LoadGameCue.ts",
-          "hash": "1549058323499191329"
+          "hash": "13483962044317394374"
         },
         {
           "file": "lib/display_components/src/events/LogInCue.ts",
@@ -1317,7 +1580,7 @@
         },
         {
           "file": "lib/display_components/src/events/StartNewGameCue.ts",
-          "hash": "3043660601995304127"
+          "hash": "5014431542902848016"
         },
         {
           "file": "lib/display_components/src/events/SwapActivityCue.ts",
@@ -1381,7 +1644,7 @@
         },
         {
           "file": "lib/display_components/src/webcomponents/activity_container/find_game_activity/find_game_activity.ts",
-          "hash": "13256486076943699057"
+          "hash": "3154615239902184310"
         },
         {
           "file": "lib/display_components/src/webcomponents/activity_container/find_game_activity/find_game_activity_controller.ts",
@@ -1453,7 +1716,7 @@
         },
         {
           "file": "lib/display_components/src/webcomponents/lists/game_list/game_list.ts",
-          "hash": "15390347182252623289"
+          "hash": "6945322859070297821"
         },
         {
           "file": "lib/display_components/src/webcomponents/lists/game_list/index.ts",
@@ -1469,7 +1732,7 @@
         },
         {
           "file": "lib/display_components/src/webcomponents/menus/find_game/find_game_menu.ts",
-          "hash": "8019382889282070067"
+          "hash": "7573348045684754597"
         },
         {
           "file": "lib/display_components/src/webcomponents/menus/find_game/index.ts",
@@ -1498,6 +1761,80 @@
         {
           "file": "lib/display_components/tsconfig.json",
           "hash": "14554669098080499802"
+        }
+      ],
+      "@shieldmaidengames/webgames-server": [
+        {
+          "file": "apps/server/.gitignore",
+          "hash": "8934247800044973499"
+        },
+        {
+          "file": "apps/server/package.json",
+          "hash": "135595336323483719",
+          "deps": [
+            "@shieldmaidengames/webgames-frontend",
+            "npm:@types/compression",
+            "npm:@types/cors",
+            "npm:@types/express",
+            "npm:@types/express-serve-static-core",
+            "npm:compression",
+            "npm:cors",
+            "npm:ditox",
+            "npm:express",
+            "npm:tsx"
+          ]
+        },
+        {
+          "file": "apps/server/project.json",
+          "hash": "14691825196589280290"
+        },
+        {
+          "file": "apps/server/src/hostedApps/applicationHost.ts",
+          "hash": "17604124940396603710"
+        },
+        {
+          "file": "apps/server/src/hostedApps/index.ts",
+          "hash": "15602136140409760300"
+        },
+        {
+          "file": "apps/server/src/hostedApps/types.ts",
+          "hash": "14570683813176866411"
+        },
+        {
+          "file": "apps/server/src/hostedApps/utility.ts",
+          "hash": "4707733556480018967"
+        },
+        {
+          "file": "apps/server/src/index.ts",
+          "hash": "14014733396897942197"
+        },
+        {
+          "file": "apps/server/src/injection/index.ts",
+          "hash": "2304409977952839404"
+        },
+        {
+          "file": "apps/server/src/injection/serverContainer.ts",
+          "hash": "10778578355273953"
+        },
+        {
+          "file": "apps/server/src/injection/tokens.ts",
+          "hash": "14488890439455091928"
+        },
+        {
+          "file": "apps/server/src/routes.ts",
+          "hash": "17743799902771765985"
+        },
+        {
+          "file": "apps/server/src/server.ts",
+          "hash": "12836306604885936238"
+        },
+        {
+          "file": "apps/server/src/utility/index.ts",
+          "hash": "3734985910164381814"
+        },
+        {
+          "file": "apps/server/tsconfig.json",
+          "hash": "7335001872499190597"
         }
       ],
       "@shieldmaidengames/webgames-api-client": [
@@ -1534,164 +1871,90 @@
           "hash": "15761770823085465414"
         }
       ],
-      "@shieldmaidengames/webgames-frontend": [
-        {
-          "file": "apps/frontend/.parcelrc",
-          "hash": "14065942699252358173"
-        },
-        {
-          "file": "apps/frontend/markup/game_container.html",
-          "hash": "15407219477146829966"
-        },
-        {
-          "file": "apps/frontend/markup/index.html",
-          "hash": "3386803806509172101"
-        },
-        {
-          "file": "apps/frontend/package.json",
-          "hash": "7269291573008870401",
-          "deps": [
-            "npm:@parcel/config-default",
-            "npm:@parcel/packager-ts",
-            "npm:@parcel/transformer-typescript-tsc",
-            "npm:@playwright/test",
-            "npm:@types/node",
-            "npm:parcel",
-            "npm:typescript",
-            "npm:@lit/context",
-            "npm:ditox",
-            "npm:lit"
-          ]
-        },
-        {
-          "file": "apps/frontend/project.json",
-          "hash": "377474622219071509"
-        },
-        {
-          "file": "apps/frontend/src/app.ts",
-          "hash": "688528247803070346"
-        },
-        {
-          "file": "apps/frontend/src/frontend_deps.ts",
-          "hash": "16251924259368952279"
-        },
-        {
-          "file": "apps/frontend/src/index.ts",
-          "hash": "9486225886386846530"
-        },
-        {
-          "file": "apps/frontend/src/injection/index.ts",
-          "hash": "10820072816857641514"
-        },
-        {
-          "file": "apps/frontend/src/injection/multipipe_frontend_deps.ts",
-          "hash": "6357279438024207743"
-        },
-        {
-          "file": "apps/frontend/src/injection/multipipe_frontend_tokens.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/frontend/src/multipipe_entry.ts",
-          "hash": "1077480667677013318"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/find_game.template.ts",
-          "hash": "14002818267125639233"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/index.ts",
-          "hash": "10222487288013173556"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/join_game.template.ts",
-          "hash": "13416377080778335459"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/start_game.template.ts",
-          "hash": "13010709063391511319"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/activity_templates/welcome.template.ts",
-          "hash": "16501949306582697977"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/application_root.ts",
-          "hash": "1754349069827779475"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/application_root_controller.ts",
-          "hash": "1981756509949402012"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/definitions.ts",
-          "hash": "12954365621137387009"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/application_root/index.ts",
-          "hash": "12157776732270911702"
-        },
-        {
-          "file": "apps/frontend/src/webcomponents/index.ts",
-          "hash": "17785780313623578346"
-        },
-        {
-          "file": "apps/frontend/tsconfig.json",
-          "hash": "13194110681605373410"
-        }
-      ],
       "@shieldmaidengames/multipipe-server": [
         {
           "file": "games/multipipe/server_module/.gitignore",
           "hash": "3244421341483603138"
         },
         {
+          "file": "games/multipipe/server_module/dist/esm/application.d.ts",
+          "hash": "11114171393024978323"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/application.d.ts.map",
+          "hash": "12571612716401711050"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/application.js",
+          "hash": "911390659586593557"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/application.js.map",
+          "hash": "10951858395308160345"
+        },
+        {
           "file": "games/multipipe/server_module/dist/esm/index.d.ts",
-          "hash": "10808306584070110568"
+          "hash": "18109536785234873471"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/index.d.ts.map",
-          "hash": "2246983322518805849"
+          "hash": "11908791525689124754"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/index.js",
-          "hash": "962668220687197891"
+          "hash": "2810296966621092574"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/index.js.map",
-          "hash": "11888162543842736686"
+          "hash": "4572807429779836775"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/binding.d.ts",
-          "hash": "6353609602122704913"
+          "hash": "1331656575812465053"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/binding.d.ts.map",
-          "hash": "13896769560526221837"
+          "hash": "1849665475843173276"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/binding.js",
-          "hash": "8161709594910798216"
+          "hash": "17310489351729846844"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/binding.js.map",
-          "hash": "11251654407509415167"
+          "hash": "8233663187913240409"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/injection/factories.d.ts",
+          "hash": "7712706648984249471"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/injection/factories.d.ts.map",
+          "hash": "10565470617945863568"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/injection/factories.js",
+          "hash": "16092331847212723349"
+        },
+        {
+          "file": "games/multipipe/server_module/dist/esm/injection/factories.js.map",
+          "hash": "13340115324663393300"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/index.d.ts",
-          "hash": "2557518386020401819"
+          "hash": "6707533158748289618"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/index.d.ts.map",
-          "hash": "10813174373288520236"
+          "hash": "3843967329409977433"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/index.js",
-          "hash": "2199235945310983022"
+          "hash": "15185978257397175772"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/index.js.map",
-          "hash": "18036834422895322923"
+          "hash": "5735257614613158629"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/injection/tokens.d.ts",
@@ -1743,35 +2006,35 @@
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/index.d.ts",
-          "hash": "9284205530051945301"
+          "hash": "3490005470925642500"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/index.d.ts.map",
-          "hash": "18396211670964241586"
+          "hash": "964640689514346679"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/index.js",
-          "hash": "17686262936511565246"
+          "hash": "16599072057674319375"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/index.js.map",
-          "hash": "7158691709122283361"
+          "hash": "5519162068883237249"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/routing.d.ts",
-          "hash": "9952176526489434173"
+          "hash": "5804058845847294790"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/routing.d.ts.map",
-          "hash": "16187967635044744578"
+          "hash": "16044870975813615415"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/routing.js",
-          "hash": "10269531944292970679"
+          "hash": "13423568895097504392"
         },
         {
           "file": "games/multipipe/server_module/dist/esm/server/routing.js.map",
-          "hash": "2219252920644727552"
+          "hash": "17693002525861662711"
         },
         {
           "file": "games/multipipe/server_module/package.json",
@@ -1790,16 +2053,24 @@
           "hash": "12414487876342613073"
         },
         {
+          "file": "games/multipipe/server_module/src/application.ts",
+          "hash": "10499406904249780433"
+        },
+        {
           "file": "games/multipipe/server_module/src/index.ts",
-          "hash": "12748062376071265498"
+          "hash": "17910182900811296093"
         },
         {
           "file": "games/multipipe/server_module/src/injection/binding.ts",
-          "hash": "10955529291351319168"
+          "hash": "15625699778536506347"
+        },
+        {
+          "file": "games/multipipe/server_module/src/injection/factories.ts",
+          "hash": "9064774315081922764"
         },
         {
           "file": "games/multipipe/server_module/src/injection/index.ts",
-          "hash": "8897778763354999130"
+          "hash": "17105454393908420765"
         },
         {
           "file": "games/multipipe/server_module/src/injection/tokens.ts",
@@ -1815,11 +2086,7 @@
         },
         {
           "file": "games/multipipe/server_module/src/server/index.ts",
-          "hash": "10092308093090927546"
-        },
-        {
-          "file": "games/multipipe/server_module/src/server/routing.ts",
-          "hash": "11913494559922411029"
+          "hash": "14346066661982082615"
         },
         {
           "file": "games/multipipe/server_module/tsconfig.json",
@@ -1844,20 +2111,68 @@
           "hash": "3547765850661710928"
         },
         {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/consts.d.ts",
+          "hash": "953297821451554637"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/consts.d.ts.map",
+          "hash": "8399907861499711207"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/consts.js",
+          "hash": "6677394881671593102"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/consts.js.map",
+          "hash": "11154311635165464922"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/index.d.ts",
+          "hash": "13444705697566174519"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/index.d.ts.map",
+          "hash": "8463323435076301716"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/index.js",
+          "hash": "3581654323890429192"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/index.js.map",
+          "hash": "995271654496454311"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/types.d.ts",
+          "hash": "8220623787330845113"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/types.d.ts.map",
+          "hash": "12658679943831825040"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/types.js",
+          "hash": "14712619198338248242"
+        },
+        {
+          "file": "lib/internal_shared/dist/esm/hostedApplications/types.js.map",
+          "hash": "11343873237583247146"
+        },
+        {
           "file": "lib/internal_shared/dist/esm/index.d.ts",
-          "hash": "3622708021491884262"
+          "hash": "11207030267360957207"
         },
         {
           "file": "lib/internal_shared/dist/esm/index.d.ts.map",
-          "hash": "16549927148946757742"
+          "hash": "15606474546995875210"
         },
         {
           "file": "lib/internal_shared/dist/esm/index.js",
-          "hash": "18368236456784212400"
+          "hash": "3225860915754745019"
         },
         {
           "file": "lib/internal_shared/dist/esm/index.js.map",
-          "hash": "5722134094121075364"
+          "hash": "8944188697618685913"
         },
         {
           "file": "lib/internal_shared/dist/esm/types/index.d.ts",
@@ -1897,15 +2212,15 @@
         },
         {
           "file": "lib/internal_shared/dist/esm/utility/injection.d.ts.map",
-          "hash": "6472019461991861012"
+          "hash": "1603316141506274483"
         },
         {
           "file": "lib/internal_shared/dist/esm/utility/injection.js",
-          "hash": "14778702292643444475"
+          "hash": "968130863691122668"
         },
         {
           "file": "lib/internal_shared/dist/esm/utility/injection.js.map",
-          "hash": "2362170576142686868"
+          "hash": "16399894735274433582"
         },
         {
           "file": "lib/internal_shared/package.json",
@@ -1923,8 +2238,20 @@
           "hash": "3244421341483603138"
         },
         {
+          "file": "lib/internal_shared/src/hostedApplications/consts.ts",
+          "hash": "16853490075820682256"
+        },
+        {
+          "file": "lib/internal_shared/src/hostedApplications/index.ts",
+          "hash": "806692794091834270"
+        },
+        {
+          "file": "lib/internal_shared/src/hostedApplications/types.ts",
+          "hash": "16819673485917914186"
+        },
+        {
           "file": "lib/internal_shared/src/index.ts",
-          "hash": "7084651916098222996"
+          "hash": "10588732163040937823"
         },
         {
           "file": "lib/internal_shared/src/types/index.ts",
@@ -1941,117 +2268,6 @@
         {
           "file": "lib/internal_shared/tsconfig.json",
           "hash": "4800259101407289058"
-        }
-      ],
-      "@shieldmaidengames/multipipe-game": [
-        {
-          "file": "games/multipipe/game/.gitignore",
-          "hash": "1545249673092756513"
-        },
-        {
-          "file": "games/multipipe/game/.parcelrc",
-          "hash": "10085065217787930652"
-        },
-        {
-          "file": "games/multipipe/game/dist/index.94985e83.js",
-          "hash": "5072763071886910538"
-        },
-        {
-          "file": "games/multipipe/game/dist/index.94985e83.js.map",
-          "hash": "10879745959747081655"
-        },
-        {
-          "file": "games/multipipe/game/dist/index.html",
-          "hash": "15491176675644282931"
-        },
-        {
-          "file": "games/multipipe/game/dist/sword.3bb7992f.png",
-          "hash": "14131675812075116847"
-        },
-        {
-          "file": "games/multipipe/game/markup/index.html",
-          "hash": "3311717909975432213"
-        },
-        {
-          "file": "games/multipipe/game/package.json",
-          "hash": "11663373865193618699",
-          "deps": [
-            "npm:@parcel/config-default",
-            "npm:@parcel/packager-ts",
-            "npm:@parcel/transformer-typescript-tsc",
-            "npm:@playwright/test",
-            "npm:@types/node",
-            "npm:parcel",
-            "npm:typescript",
-            "npm:@lit/context",
-            "npm:ditox",
-            "npm:excalibur",
-            "npm:lit"
-          ]
-        },
-        {
-          "file": "games/multipipe/game/playwright-report/index.html",
-          "hash": "9282756805457318585"
-        },
-        {
-          "file": "games/multipipe/game/playwright.config.ts",
-          "hash": "10477937739701975363"
-        },
-        {
-          "file": "games/multipipe/game/project.json",
-          "hash": "2003317870948761820"
-        },
-        {
-          "file": "games/multipipe/game/readme.md",
-          "hash": "18082699871784593698"
-        },
-        {
-          "file": "games/multipipe/game/renovate.json",
-          "hash": "4457935836015770355"
-        },
-        {
-          "file": "games/multipipe/game/src/files.d.ts",
-          "hash": "18120196141939052727"
-        },
-        {
-          "file": "games/multipipe/game/src/images/sword.png",
-          "hash": "1115874774757734061"
-        },
-        {
-          "file": "games/multipipe/game/src/level.ts",
-          "hash": "4483658858546803596"
-        },
-        {
-          "file": "games/multipipe/game/src/main.ts",
-          "hash": "6686234444937657906"
-        },
-        {
-          "file": "games/multipipe/game/src/player.ts",
-          "hash": "1531611917408068771"
-        },
-        {
-          "file": "games/multipipe/game/src/resources.ts",
-          "hash": "12020351084076868352"
-        },
-        {
-          "file": "games/multipipe/game/test-results/.last-run.json",
-          "hash": "11141884120100644736"
-        },
-        {
-          "file": "games/multipipe/game/tests/main.spec.ts",
-          "hash": "7746710460917555746"
-        },
-        {
-          "file": "games/multipipe/game/tests/main.spec.ts-snapshots/main-page-looks-correct-1-chromium-linux.png",
-          "hash": "15342708029355220301"
-        },
-        {
-          "file": "games/multipipe/game/tests/main.spec.ts-snapshots/main-page-looks-correct-1-chromium-win32.png",
-          "hash": "15342708029355220301"
-        },
-        {
-          "file": "games/multipipe/game/tsconfig.json",
-          "hash": "13086399927098561294"
         }
       ]
     }

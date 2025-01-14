@@ -1,1 +1,1 @@
-{"version":3,"file":"game_data.d.ts","sourceRoot":"","sources":["../../../src/utility/game_data.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,mBAAmB,CAAC;AAEtD,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,oBAAoB,CAAC;AAGtD,wBAAgB,cAAc,CAAC,IAAI,EAAE,WAAW,GAAG,iBAAiB,GAAG,SAAS,CAE/E"}
+{"version":3,"file":"game_data.d.ts","sourceRoot":"","sources":["../../../src/utility/game_data.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,sBAAsB,EAAE,MAAM,mBAAmB,CAAC;AAE3D,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,oBAAoB,CAAC;AAG3D,wBAAgB,cAAc,CAAC,IAAI,EAAE,gBAAgB,GAAG,sBAAsB,GAAG,SAAS,CAEzF"}

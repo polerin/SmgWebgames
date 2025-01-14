@@ -1,8 +1,8 @@
-import { SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 export default class StartNewGameCue extends Event {
     readonly player: SmgPlayer;
-    readonly game: SmgGameDefinition;
+    readonly game: SmgHostedAppDefinition;
     static EVENT_NAME: "StartNewGameCue";
-    constructor(player: SmgPlayer, game: SmgGameDefinition);
+    constructor(player: SmgPlayer, game: SmgHostedAppDefinition);
 }
 //# sourceMappingURL=StartNewGameCue.d.ts.map

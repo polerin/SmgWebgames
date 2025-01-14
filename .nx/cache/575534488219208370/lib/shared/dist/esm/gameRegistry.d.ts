@@ -1,5 +1,5 @@
-import { SmgGameDefinition } from './types/smg_core.js';
-declare const GameRegistry: Record<string, SmgGameDefinition>;
-export type SmgGameSlug = keyof typeof GameRegistry;
-export { GameRegistry };
+import { SmgHostedAppDefinition } from './types/smg_core.js';
+declare const HostedAppRegistry: Record<string, SmgHostedAppDefinition>;
+export type SmgHostedAppSlug = keyof typeof HostedAppRegistry;
+export { HostedAppRegistry };
 //# sourceMappingURL=gameRegistry.d.ts.map

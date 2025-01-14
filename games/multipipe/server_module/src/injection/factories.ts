@@ -1,10 +1,15 @@
-import express from 'express';
-import { multipipeApiRouter } from './api/index.js';
-import { Container } from 'ditox';
-import { SMG_GAME_SERVER_ARTIFACT_ROOT_TOKEN, SmgGameRouterDefinition } from '@shieldmaidengames/webgames-internal-server-shared';
 
-export const multipipeRouterFactory = (container: Container): SmgGameRouterDefinition => {
-    const artifactRoot = container.resolve(SMG_GAME_SERVER_ARTIFACT_ROOT_TOKEN);
+import express from 'express';
+import { Container } from 'ditox';
+import {
+    SMG_HOSTED_APP_SERVER_ARTIFACT_ROOT_TOKEN,
+    type SmgHostedAppRouterDefinition
+} from '@shieldmaidengames/webgames-internal-server-shared';
+
+import { multipipeApiRouter } from '../server/index.js';
+
+export const multipipeRouterFactory = (container: Container): SmgHostedAppRouterDefinition => {
+    const artifactRoot = container.resolve(SMG_HOSTED_APP_SERVER_ARTIFACT_ROOT_TOKEN);
 
     const multipipeRouter = express.Router();
     const artifactPath = artifactRoot + '/multipipe';
@@ -16,7 +21,7 @@ export const multipipeRouterFactory = (container: Container): SmgGameRouterDefin
     multipipeRouter.use('/api', multipipeApiRouter);
 
     return {
-        gameName: 'multipipe',
+        appName: 'multipipe',
         router: multipipeRouter,
     };
-} 
+}

@@ -1,8 +1,8 @@
-import { SmgGameDefinition } from '../types/index.js';
+import { SmgHostedAppDefinition } from '../types/index.js';
 
-import type { SmgGameSlug } from '../gameRegistry.js';
-import { GameRegistry } from '../gameRegistry.js';
+import type { SmgHostedAppSlug } from '../gameRegistry.js';
+import { HostedAppRegistry } from '../gameRegistry.js';
 
-export function gameDataBySlug(slug: SmgGameSlug): SmgGameDefinition | undefined {
-    return GameRegistry[slug];
+export function gameDataBySlug(slug: SmgHostedAppSlug): SmgHostedAppDefinition | undefined {
+    return HostedAppRegistry[slug];
 }

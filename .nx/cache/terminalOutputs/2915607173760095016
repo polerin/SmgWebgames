@@ -3,8 +3,8 @@
 Building...
 Bundling...
 Packaging & Optimizing...
-✨ [32m[1mBuilt in 900ms[22m[39m
+✨ [32m[1mBuilt in 1.04s[22m[39m
 
-[2mdist/[22m[36m[1mindex.html[22m[39m                [1m[35m369 B[39m[22m     [32m[1m65ms[22m[39m
-[2mdist/[22m[36m[1mindex.94985e83.js[22m[39m     [1m[35m539.31 kB[39m[22m    [32m[1m319ms[22m[39m
-[2mdist/[22m[36m[1msword.3bb7992f.png[22m[39m        [1m[35m248 B[39m[22m     [32m[1m60ms[22m[39m
+[2mdist/[22m[36m[1mindex.html[22m[39m                [1m[35m369 B[39m[22m     [32m[1m74ms[22m[39m
+[2mdist/[22m[36m[1mindex.94985e83.js[22m[39m     [1m[35m539.31 kB[39m[22m    [32m[1m320ms[22m[39m
+[2mdist/[22m[36m[1msword.3bb7992f.png[22m[39m        [1m[35m248 B[39m[22m     [32m[1m53ms[22m[39m

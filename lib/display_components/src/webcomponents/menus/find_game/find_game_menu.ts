@@ -1,4 +1,4 @@
-import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 import { StartNewGameCue } from '../../../events/index.js';
 import BaseMenu from '../base_menu.js';
 import { html, TemplateResult } from 'lit';
@@ -8,7 +8,7 @@ import { customElement, property } from 'lit/decorators.js';
 @customElement('find-game-menu')
 export default class FindGameMenu extends BaseMenu {
     @property()
-    public gameDefinition?: SmgGameDefinition;
+    public gameDefinition?: SmgHostedAppDefinition;
 
     @property()
     public gameList: GameInstance[] = [];

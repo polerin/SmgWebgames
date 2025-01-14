@@ -1,8 +1,8 @@
-import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 import BaseMenu from '../base_menu.js';
 import { TemplateResult } from 'lit';
 export default class FindGameMenu extends BaseMenu {
-    gameDefinition?: SmgGameDefinition;
+    gameDefinition?: SmgHostedAppDefinition;
     gameList: GameInstance[];
     devList: DevInstance[];
     player?: SmgPlayer;
