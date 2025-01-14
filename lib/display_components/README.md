@@ -8,7 +8,7 @@ adding a basic web source in OBS, but may be useful for more advanced integratio
 OBS Scenes and other such funtimes.
 
 If you are looking to consume events related to the game's progress in your overlay,
-you should probably look at the documentation for `@shieldmaidengames/multipipe-shared`.
+you should probably look at the documentation for `@shieldmaidengames/webgames-shared`.
 
 
 ## Background

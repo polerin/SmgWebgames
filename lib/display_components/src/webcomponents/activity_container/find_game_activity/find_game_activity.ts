@@ -6,7 +6,7 @@ import { html, TemplateResult } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { IInjectableHost } from '../../../interfaces/index.js';
 import BaseActivityContainer from '../base_activity_container.js';
-import { GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 
 @customElement('find-game-activity')
 export default class FindGameActivity extends BaseActivityContainer implements IInjectableHost<FindGameActivityDeps> {

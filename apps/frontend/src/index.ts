@@ -1,4 +1,4 @@
-import { InjectionCue, injectionResolverFactory, registerAllComponents } from '@shieldmaidengames/multipipe-display-components';
+import { InjectionCue, injectionResolverFactory, registerAllComponents } from '@shieldmaidengames/webgames-display-components';
 import { FrontendContainer } from './frontend_deps.js';
 import { ApplicationRoot, registerApplicationRoot } from './webcomponents/index.js';
 

@@ -1,4 +1,4 @@
-import { SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
 
 export default class LoggedInEvent extends Event {
     public static EVENT_NAME = 'LoggedInEvent' as const;

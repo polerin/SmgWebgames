@@ -1,4 +1,4 @@
-import { RegisteredActivity } from '@shieldmaidengames/multipipe-display-components';
+import { RegisteredActivity } from '@shieldmaidengames/webgames-display-components';
 import find_game from './find_game.template.js';
 import join_game from './join_game.template.js';
 import start_game from './start_game.template.js';

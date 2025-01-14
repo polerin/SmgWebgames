@@ -1,7 +1,9 @@
 {
-    "name": "@shieldmaidengames/multipipe-api-client",
+    "name": "@shieldmaidengames/webgames-api-client",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "library",
-    "implicitDependencies": ["@shieldmaidengames/multipipe-shared"]
-
+    "implicitDependencies": [
+        "@shieldmaidengames/webgames-shared"
+    ],
+    "tags": ["api", "library", "core"]
 }

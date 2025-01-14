@@ -1,5 +1,5 @@
 {
-  "name": "@shieldmaidengames/multipipe-display-components",
+  "name": "@shieldmaidengames/webgames-display-components",
   "version": "0.0.0",
   "description": "",
   "license": "ISC",
@@ -13,12 +13,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./dist"
   },
   "dependencies": {
     "lit": "^3.2.1",
     "ditox": "^3.0.0",
-    "@shieldmaidengames/multipipe-shared": "0.0.0"
+    "@shieldmaidengames/webgames-shared": "0.0.0"
   }
 }

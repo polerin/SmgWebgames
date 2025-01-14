@@ -297,6 +297,15 @@
         "hash": "sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA=="
       }
     },
+    "npm:@jridgewell/sourcemap-codec": {
+      "type": "npm",
+      "name": "npm:@jridgewell/sourcemap-codec",
+      "data": {
+        "version": "1.5.0",
+        "packageName": "@jridgewell/sourcemap-codec",
+        "hash": "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ=="
+      }
+    },
     "npm:@lerna/create": {
       "type": "npm",
       "name": "npm:@lerna/create",
@@ -1537,6 +1546,15 @@
         "version": "1.49.1",
         "packageName": "@playwright/test",
         "hash": "sha512-Ky+BVzPz8pL6PQxHqNRW1k3mIyv933LML7HktS8uik0bUXNCdPhoS/kLihiO1tMf/egaJb4IutXd7UywvXEW+g=="
+      }
+    },
+    "npm:@rollup/plugin-commonjs": {
+      "type": "npm",
+      "name": "npm:@rollup/plugin-commonjs",
+      "data": {
+        "version": "28.0.2",
+        "packageName": "@rollup/plugin-commonjs",
+        "hash": "sha512-BEFI2EDqzl+vA1rl97IDRZ61AIwGH093d9nz8+dThxJNH8oSoB7MjWvPCX3dkaK1/RCJ/1v/R1XB15FuSs0fQw=="
       }
     },
     "npm:@rollup/plugin-json": {
@@ -2835,6 +2853,15 @@
         "hash": "sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w=="
       }
     },
+    "npm:commondir": {
+      "type": "npm",
+      "name": "npm:commondir",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "commondir",
+        "hash": "sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg=="
+      }
+    },
     "npm:compare-func": {
       "type": "npm",
       "name": "npm:compare-func",
@@ -3652,6 +3679,15 @@
         "version": "1.18.0",
         "packageName": "fastq",
         "hash": "sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw=="
+      }
+    },
+    "npm:fdir": {
+      "type": "npm",
+      "name": "npm:fdir",
+      "data": {
+        "version": "6.4.2",
+        "packageName": "fdir",
+        "hash": "sha512-KnhMXsKSPZlAhp7+IjUkRZKPb4fUyccpDrdFXbi4QL1qkmFh9kVY09Yox+n4MaOb3lHZ1Tv829C3oaaXoMYPDQ=="
       }
     },
     "npm:figures": {
@@ -4491,6 +4527,15 @@
         "hash": "sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q=="
       }
     },
+    "npm:is-reference": {
+      "type": "npm",
+      "name": "npm:is-reference",
+      "data": {
+        "version": "1.2.1",
+        "packageName": "is-reference",
+        "hash": "sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ=="
+      }
+    },
     "npm:is-ssh": {
       "type": "npm",
       "name": "npm:is-ssh",
@@ -5020,6 +5065,15 @@
         "version": "6.0.0",
         "packageName": "lru-cache",
         "hash": "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
+      }
+    },
+    "npm:magic-string": {
+      "type": "npm",
+      "name": "npm:magic-string",
+      "data": {
+        "version": "0.30.17",
+        "packageName": "magic-string",
+        "hash": "sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA=="
       }
     },
     "npm:make-dir": {
@@ -10650,6 +10704,41 @@
       "type": "static"
     },
     {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:@rollup/pluginutils",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:commondir",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:estree-walker",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:fdir",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:is-reference",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:magic-string",
+      "type": "static"
+    },
+    {
+      "source": "npm:@rollup/plugin-commonjs",
+      "target": "npm:picomatch",
+      "type": "static"
+    },
+    {
       "source": "npm:@rollup/plugin-json",
       "target": "npm:@rollup/pluginutils",
       "type": "static"
@@ -13255,6 +13344,11 @@
       "type": "static"
     },
     {
+      "source": "npm:is-reference",
+      "target": "npm:@types/estree",
+      "type": "static"
+    },
+    {
       "source": "npm:is-ssh",
       "target": "npm:protocols",
       "type": "static"
@@ -14057,6 +14151,11 @@
     {
       "source": "npm:lru-cache@6.0.0",
       "target": "npm:yallist",
+      "type": "static"
+    },
+    {
+      "source": "npm:magic-string",
+      "target": "npm:@jridgewell/sourcemap-codec",
       "type": "static"
     },
     {

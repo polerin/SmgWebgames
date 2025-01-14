@@ -15,7 +15,7 @@ export default class FindGameActivityController extends BaseInjectableController
         this.host?.dispatchEvent(new SwapActivityCue('join_game'));
     }
 
-    protected handleJoinGameCue(e: Event): void {
+    protected handleJoinGameCue(_e: Event): void {
         this.host?.dispatchEvent(new SwapActivityCue('join_game'));
     }
 }

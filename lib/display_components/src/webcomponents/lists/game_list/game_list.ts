@@ -1,7 +1,7 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { LoadGameCue, StartNewGameCue } from '../../../events/index.js';
-import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 import { map } from 'lit/directives/map.js';
 
 @customElement('game-list')

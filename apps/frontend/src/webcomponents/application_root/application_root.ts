@@ -1,10 +1,10 @@
-import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, playerContext } from '@shieldmaidengames/multipipe-display-components';
+import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, playerContext } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps, ApplicationRootToken } from './definitions.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
 import { html, LitElement, TemplateResult } from 'lit';
 import { activity_templates } from './activity_templates/index.js';
-import { SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
 
 @customElement('application-root')
 export default class ApplicationRoot 

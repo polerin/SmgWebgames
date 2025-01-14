@@ -1,0 +1,1 @@
+{"version":3,"file":"SwapActivityCue.d.ts","sourceRoot":"","sources":["../../../src/events/SwapActivityCue.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,mBAAmB,CAAC;AAEvD,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,KAAK;aAI1B,YAAY,EAAE,kBAAkB;IAHpD,OAAc,UAAU,EAAG,iBAAiB,CAAU;gBAGlC,YAAY,EAAE,kBAAkB;CAIvD"}

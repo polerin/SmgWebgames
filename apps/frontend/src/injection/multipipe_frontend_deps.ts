@@ -1,5 +1,5 @@
 import { Container, createContainer, injectable } from 'ditox';
-import { MultipipeGameContainerToken, MultipipeGameController, MultipipeGameControllerConfigToken, MultipipeGameControllerToken } from '@shieldmaidengames/multipipe-display-components';
+import { MultipipeGameContainerToken, MultipipeGameController, MultipipeGameControllerConfigToken, MultipipeGameControllerToken } from '@shieldmaidengames/webgames-display-components';
 // import { MULTIPIPE_GAME_TOKENS } from './multipipe_game_tokens.js';
 
 export function buildMutipipeFrontendDeps(parent: Container): Container {

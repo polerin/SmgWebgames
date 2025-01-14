@@ -1,4 +1,4 @@
-import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { DevInstance, GameInstance, SmgGameDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
 import { StartNewGameCue } from '../../../events/index.js';
 import BaseMenu from '../base_menu.js';
 import { html, TemplateResult } from 'lit';

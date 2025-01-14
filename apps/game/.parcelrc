@@ -1,6 +1,0 @@
-{
-  "extends": "../../node_modules/@parcel/config-default/index.json",
-  "transformers": {
-    "*.{jpg,png,bmp}": ["@parcel/transformer-raw"]
-  }
-}

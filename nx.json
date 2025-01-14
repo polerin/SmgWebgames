@@ -11,19 +11,21 @@
     },
     "namedInputs": {
         "libs": [ "{projectRoot}/lib/**/*.{ts,json}" ],
-        "apps": [ "{projectRoot}/apps/*/!(dist)/**/*.{ts,json}" ]
+        "apps": [ "{projectRoot}/apps/*/!(dist)/**/*.{ts,json}" ],
+        "games": [ "{projectRoot}/games/*/*/!(dist)/**/*.{ts,json}"]
     },
     "targetDefaults": {
         "build": {
             "dependsOn": ["^build"],
-            "inputs": ["libs", "apps"]
+            "inputs": ["libs", "apps", "games"]
+        },
+        "artifacts:copy:package": {
+            "dependsOn": ["build"],
+            "inputs": ["apps", "games"]
         }
     },
     "targets": {
-        "build": {
-            "dependencies": true,
-            "dependsOn": ["^build"]
-        },
+
         "test": {
             "dependsOn": ["build"]
         }

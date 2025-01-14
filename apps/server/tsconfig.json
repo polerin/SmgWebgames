@@ -1,8 +1,12 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../dist",
+        "outDir": "./dist",
+        "module": "nodeNext",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true,
         "rootDir": "./src",
+        "noEmit": true,
         "lib": ["ESNext"]
     }
 }

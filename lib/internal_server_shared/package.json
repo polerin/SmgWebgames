@@ -1,0 +1,24 @@
+{
+  "name": "@shieldmaidengames/webgames-internal-server-shared",
+  "version": "0.0.0",
+  "description": "",
+  "license": "ISC",
+  "private": "true",
+  "author": "polerin <polerin@eclexia.net>",
+  "type": "module",
+  "exports": {
+    "default": "./dist/esm/index.js",
+    "import": "./dist/esm/index.js",
+    "typescript": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "ditox": "^3.0.0",
+    "express": "^4.21.2",
+    "@shieldmaidengames/webgames-shared": "0.0.0"
+  }
+}

@@ -1,4 +1,4 @@
-import { SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
 
 export default class FindGameCue extends Event {
     public static EVENT_NAME = 'FindGameCue' as const;

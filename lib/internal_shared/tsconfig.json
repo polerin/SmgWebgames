@@ -2,10 +2,12 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "module": "nodeNext",
+        "moduleResolution": "node16",
+        "esModuleInterop": true,
         "declaration": true,
         "outDir": "./dist/esm",
         "rootDir": "./src",
     },
     "include": ["./src/**/*.ts"],
-    "exclude": ["./dist/**/*"]
+    "exclude": ["./dist"]
 }

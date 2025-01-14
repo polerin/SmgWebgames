@@ -5,7 +5,7 @@ import { html, PropertyValues, TemplateResult } from 'lit';
 import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { customElement, state } from 'lit/decorators.js';
 import { IInjectableController, IInjectableHost } from '../../../interfaces/index.js';
-import { SmgPlayer } from '@shieldmaidengames/multipipe-shared';
+import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
 import { consume } from '@lit/context';
 import { playerContext } from '../../../contexts/index.js';
 import { LogInCue } from '../../../events/index.js';

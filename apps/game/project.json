@@ -1,7 +1,0 @@
-{
-    "name": "@shieldmaidengames/multipipe-game",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "projectType": "application",
-    "implicitDependencies": ["@shieldmaidengames/multipipe-shared", "@shieldmaidengames/multipipe-display-components"]
-
-}

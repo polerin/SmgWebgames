@@ -1,5 +1,5 @@
 {
-  "name": "@shieldmaidengames/multipipe",
+  "name": "@shieldmaidengames/webgames",
   "version": "0.0.0",
   "description": "Game and server for multipipe",
   "license": "ISC",
@@ -12,13 +12,12 @@
   "scripts": {
     "build": "nx run-many -t build --verbose --skipNxCache",
     "clean": "yarn artifacts:clean && nx run-many -t clean && nx reset",
-    "start": "yarn build && yarn artifacts:copy yarn workspace @shieldmaidengames/multipipe-server start",
-    "start:dev": "yarn build && yarn artifacts:copy && concurrently 'yarn workspace @shieldmaidengames/multipipe-server start:dev'",
+    "start": "yarn build && yarn artifacts:copy yarn workspace @shieldmaidengames/webgames-server start",
+    "start:dev": "yarn build && yarn artifacts:copy && concurrently 'yarn workspace @shieldmaidengames/webgames-server start:dev'",
     "watch": "yarn nx -- watch --all -- 'yarn build --verbose' && 'yarn artifacts:copy'",
+    "artifacts:copy": "yarn run artifacts:clean; mkdir ./apps/server/artifacts; yarn artifacts:copy:all",
     "artifacts:clean": "rm -rf ./apps/server/artifacts",
-    "artifacts:copy": "yarn run artifacts:clean; mkdir ./apps/server/artifacts; concurrently 'yarn run artifacts:copy:game' 'yarn run artifacts:copy:frontend'",
-    "artifacts:copy:game": "cp -r ./apps/game/dist/ ./apps/server/artifacts/game",
-    "artifacts:copy:frontend": "cp -r ./apps/frontend/dist ./apps/server/artifacts/frontend",
+    "artifacts:copy:all": "nx run-many -t artifacts:copy:package --projects=tag:artifact",
     "test:eslint": "nx run-many -t test:eslint",
     "test:madge": "nx run-many -t test:madge",
     "test:unit": "nx run-many -t test",
@@ -28,7 +27,8 @@
   },
   "workspaces": [
     "apps/*",
-    "lib/*"
+    "lib/*",
+    "games/*/*"
   ],
   "dependencies": {
     "@rollup/plugin-json": "^6.1.0",

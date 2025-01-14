@@ -1,11 +1,12 @@
 {
-    "name": "@shieldmaidengames/multipipe-server",
+    "name": "@shieldmaidengames/webgames-server",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
     "implicitDependencies": [
-        "@shieldmaidengames/multipipe-shared",
-        "@shieldmaidengames/multipipe-frontend",
+        "@shieldmaidengames/webgames-shared",
+        "@shieldmaidengames/webgames-frontend",
+        "@shieldmaidengames/webgames-internal-server-shared",
         "@shieldmaidengames/multipipe-game"
-    ]
-
+    ],
+    "tags": ["server", "api", "core"]
 }

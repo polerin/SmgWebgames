@@ -1,4 +1,4 @@
-import { SwapActivityCue, BaseInjectableController, LoggedInEvent } from '@shieldmaidengames/multipipe-display-components';
+import { SwapActivityCue, BaseInjectableController, LoggedInEvent } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps } from './definitions.js';
 import ApplicationRoot from './application_root.js';
 

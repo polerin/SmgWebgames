@@ -1,7 +1,11 @@
 {
-    "name": "@shieldmaidengames/multipipe-frontend",
+    "name": "@shieldmaidengames/webgames-frontend",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
-    "implicitDependencies": ["@shieldmaidengames/multipipe-shared", "@shieldmaidengames/multipipe-display-components"]
+    "implicitDependencies": [
+        "@shieldmaidengames/webgames-shared",
+        "@shieldmaidengames/webgames-display-components"
+    ],
+    "tags": ["webcomponents", "core", "artifact", "frontend"]
 
 }

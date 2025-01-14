@@ -1,18 +1,54 @@
 # MonoRepo for publishing a combo of packages and applications aimed at web based multiplayer game development
 
+
 ## Applications
-* API: Express for the API/Game Cooridinator/File Server
-* Game: (currently but can be swapped out) Excalibur TS for game engine
-* Frontend: A Lit web component base for the frontend find/join game.  Eventually I might even build this out to be a multi-game interface, but for now it will be focused on serving one game at a time.
+### API
+Express for the API/Game Cooridinator/File Server.  Games __MUST__ register themsevlves with it
+
+### Frontend
+A Lit web component base for the frontend find/join game. Games __SHOULD__ register themselves with it (TBD).
+
 
 ## Libraries
-* Api Client: Used by the frontend and game, potentially integratable into other things like stream overlays
-* Display Components: Lit Webcomponents used to build the frontend and other things like it, provided for stream integration as well as reuse in both the game and frontend
-* Internal Shared: Shared functionality and types that are only intended to be consumed by the game/frontend/api
-* Shared: Shared functionality and types that are intended to be consumed by the applications as well as external applications.
+### Api Client
+Used by the frontend and games, potentially integratable into other things like stream overlays
+
+### Display Components
+Lit Webcomponents used to build the frontend and other things like it, provided for stream integration as well as reuse in both the games and frontend
+
+### Internal Shared
+Shared functionality and types that are only intended to be consumed by the games/frontend/api.  This __MUST__ only contain code that is applicable in both dom and server contentexts.
+
+### Internal Server Shared
+Shared server side only functionality for server and games.  This lib also includes express, so __MUST__ never be served up to the frontend.
+
+### Shared
+Publicly shared functionality and types that are intended to be consumed by the internal applications as well as external applications (eg custom OBS integrations)
+
+
+# Game layout
+Games should be implemented as a set of packages/artifacts that live inside of the `/games/` root directory.  These directories should contain a set of packages that implement (at a minimum) the game frontend artifact and the server route registration to serve those artifacts.  They __MAY__ also include packages to augment the API client (TBD) and Frontend (TBD), internally shared logic (eg for multiplayer server logic), and externally shared code/types/etc.
+
+## Games Package structure
+
+### Frontend Game Code
+_Package Naming Convention: `@shieldmaidengames/${gameName}-game`_
+
+This is the frontend "game" code. This can be whatever engine, but needs to have everything bundled into an index.html entry point that can be iframed in.  The main frontend _MUST_ supply any needed config to the game via an iframe property or callback (TBD).
+
+This entry point must be made available via an `artifacts:copy:package` yarn command in the game's `package.json`, and the game's `project.json` (nx) definition _MUST_ include the `artifact` and `game` tags.  The copy command _MUST_ copy all required files to the server's artifact path (`/apps/server/artifacts/${gameName}).
+
+### Server module
+_Package Naming Convention: `@shieldmaidengames/${gameName}-server`_
+
+This is the package responsible for registering the game's routing with the server.  For multiplayer games where a websocket server is started for the instance, that code __SHOULD__ also be exposed here (TBD).
+
+The server code __MUST__ expose a function that registers a route factory via the `GameServerModuleRouter` token defined in the core `@shieldmaidengames/webgames-internal-server-shared` package.  These factories __WILL BE__ supplied the artifact root directory so they may properly build the router, which will be consumed by the core server.
+
 
 ## Naming Conventions:
 
+### Events and Messaging
 * Request/Response
     * Reserved for API interactions so as to not cause confusion between DOM/EventBridge events and API interactions
     * Examples:

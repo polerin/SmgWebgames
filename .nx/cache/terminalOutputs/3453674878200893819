@@ -1,0 +1,9 @@
+[2K[1G[2m$ yarn build:index[22m
+[2K[1G[2m$ parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /[22m
+Building...
+Bundling...
+Packaging & Optimizing...
+✨ [32m[1mBuilt in 625ms[22m[39m
+
+[2mdist/[22m[36m[1mindex.html[22m[39m              [1m[35m307 B[39m[22m    [32m[1m40ms[22m[39m
+[2mdist/[22m[36m[1mindex.b86b2c11.js[22m[39m    [1m[35m36.82 kB[39m[22m    [32m[1m88ms[22m[39m

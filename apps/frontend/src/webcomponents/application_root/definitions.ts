@@ -1,4 +1,4 @@
-import { ComponentDependencies } from '@shieldmaidengames/multipipe-display-components';
+import { ComponentDependencies } from '@shieldmaidengames/webgames-display-components';
 import { token } from 'ditox';
 import ApplicationRootController from './application_root_controller.js';
 

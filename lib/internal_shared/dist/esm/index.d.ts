@@ -1,2 +1,2 @@
-export declare const INTERNAL_TEST_CONST = "internal";
+export * from './utility/index.js';
 //# sourceMappingURL=index.d.ts.map
