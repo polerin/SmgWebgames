@@ -15,6 +15,12 @@ export const addServerRoutes = (
         })
     );
 
+    app.use('/worker/',
+        express.static(artifactRoot + '/shared_worker', {
+            index: ['index.js']
+        })
+    );
+
     // register all hosted applincation routes (injected from SMG_HOSTED_APP_SERVER_ROUTERS_TOKEN)
     hostedAppRoutes.forEach((routeDef) => app.use(`/${routeDef.appName}`, routeDef.router));
 }

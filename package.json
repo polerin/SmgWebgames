@@ -10,7 +10,7 @@
     "./tsconfig.json": "./tsconfig.json"
   },
   "scripts": {
-    "build": "nx run-many -t build --verbose --skipNxCache",
+    "build": "nx run-many -t build --verbose --skipNxCache; yarn artifacts:copy",
     "clean": "yarn artifacts:clean && nx run-many -t clean && nx reset",
     "start": "yarn build && yarn artifacts:copy yarn workspace @shieldmaidengames/webgames-server start",
     "start:dev": "yarn build && yarn artifacts:copy && concurrently 'yarn workspace @shieldmaidengames/webgames-server start:dev'",

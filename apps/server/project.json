@@ -6,6 +6,7 @@
         "@shieldmaidengames/webgames-shared",
         "@shieldmaidengames/webgames-frontend",
         "@shieldmaidengames/webgames-internal-server-shared",
+        "@shieldmaidengames/webgames-shared-worker",
         "@shieldmaidengames/multipipe-game"
     ],
     "tags": ["server", "api", "core"]

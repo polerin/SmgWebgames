@@ -465,6 +465,114 @@
         ]
       }
     },
+    "@shieldmaidengames/webgames-shared-worker": {
+      "name": "@shieldmaidengames/webgames-shared-worker",
+      "type": "app",
+      "data": {
+        "root": "apps/shared_worker",
+        "sourceRoot": "apps/shared_worker",
+        "name": "@shieldmaidengames/webgames-shared-worker",
+        "tags": [
+          "npm:public",
+          "core",
+          "artifact",
+          "worker"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build:old",
+              "build",
+              "artifacts:copy:package",
+              "test"
+            ]
+          },
+          "description": "web worker for the webgames frontend",
+          "js": {
+            "packageName": "@shieldmaidengames/webgames-shared-worker"
+          }
+        },
+        "targets": {
+          "build:old": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:old"
+            },
+            "metadata": {
+              "scriptContent": "parcel build --no-cache ./src/index.ts --dist-dir ./dist --public-url /",
+              "runCommand": "yarn build:old"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "rollup -c rollup.config.js --bundleConfigAsCjs",
+              "runCommand": "yarn build"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "libs",
+              "apps",
+              "games"
+            ]
+          },
+          "artifacts:copy:package": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "artifacts:copy:package"
+            },
+            "metadata": {
+              "scriptContent": "cp -r ./dist ../server/artifacts/shared_worker",
+              "runCommand": "yarn artifacts:copy:package"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "build"
+            ],
+            "inputs": [
+              "apps",
+              "games"
+            ]
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "yarn run build && npx playwright test",
+              "runCommand": "yarn test"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "implicitDependencies": [
+          "@shieldmaidengames/webgames-shared"
+        ]
+      }
+    },
     "@shieldmaidengames/webgames-api-client": {
       "name": "@shieldmaidengames/webgames-api-client",
       "type": "lib",
@@ -577,11 +685,12 @@
             "NPM Scripts": [
               "build",
               "build:index",
+              "clean",
               "artifacts:copy:package",
               "test"
             ]
           },
-          "description": "multipipe game server",
+          "description": "frontend for the webgames host",
           "js": {
             "packageName": "@shieldmaidengames/webgames-frontend"
           }
@@ -593,7 +702,7 @@
               "script": "build"
             },
             "metadata": {
-              "scriptContent": "yarn build:index",
+              "scriptContent": "concurrently 'yarn build:index'",
               "runCommand": "yarn build"
             },
             "configurations": {},
@@ -613,8 +722,20 @@
               "script": "build:index"
             },
             "metadata": {
-              "scriptContent": "parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /",
+              "scriptContent": "parcel build ./markup/index.html --no-cache --dist-dir ./dist --public-url /",
               "runCommand": "yarn build:index"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rm -rf ./dist",
+              "runCommand": "yarn clean"
             },
             "configurations": {},
             "parallelism": true
@@ -664,7 +785,8 @@
         "projectType": "application",
         "implicitDependencies": [
           "@shieldmaidengames/webgames-shared",
-          "@shieldmaidengames/webgames-display-components"
+          "@shieldmaidengames/webgames-display-components",
+          "@shieldmaidengames/webgames-shared-worker"
         ]
       }
     },
@@ -760,6 +882,7 @@
           "@shieldmaidengames/webgames-shared",
           "@shieldmaidengames/webgames-frontend",
           "@shieldmaidengames/webgames-internal-server-shared",
+          "@shieldmaidengames/webgames-shared-worker",
           "@shieldmaidengames/multipipe-game"
         ]
       }
@@ -3023,6 +3146,15 @@
         "version": "1.15.7",
         "packageName": "@types/serve-static",
         "hash": "sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw=="
+      }
+    },
+    "npm:@types/sharedworker": {
+      "type": "npm",
+      "name": "npm:@types/sharedworker",
+      "data": {
+        "version": "0.0.141",
+        "packageName": "@types/sharedworker",
+        "hash": "sha512-C4DWcG4GPLn4mbo5dSig19fJX713yR1rF+cy5XcpJFJf7eA89oipcdToRDG0lozLqR412u75ZdC2AvJrRZKWXQ=="
       }
     },
     "npm:@types/trusted-types": {
@@ -8844,6 +8976,48 @@
         "type": "static"
       }
     ],
+    "@shieldmaidengames/webgames-shared-worker": [
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "@shieldmaidengames/webgames-shared",
+        "type": "implicit"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:@parcel/config-default",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:@parcel/packager-ts",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:@parcel/transformer-typescript-tsc",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:@types/sharedworker",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:parcel",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-shared-worker",
+        "target": "npm:ditox",
+        "type": "static"
+      }
+    ],
     "@shieldmaidengames/webgames-api-client": [
       {
         "source": "@shieldmaidengames/webgames-api-client",
@@ -8860,6 +9034,11 @@
       {
         "source": "@shieldmaidengames/webgames-frontend",
         "target": "@shieldmaidengames/webgames-display-components",
+        "type": "implicit"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-frontend",
+        "target": "@shieldmaidengames/webgames-shared-worker",
         "type": "implicit"
       },
       {
@@ -8927,6 +9106,11 @@
       {
         "source": "@shieldmaidengames/webgames-server",
         "target": "@shieldmaidengames/webgames-internal-server-shared",
+        "type": "implicit"
+      },
+      {
+        "source": "@shieldmaidengames/webgames-server",
+        "target": "@shieldmaidengames/webgames-shared-worker",
         "type": "implicit"
       },
       {

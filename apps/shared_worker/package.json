@@ -1,0 +1,35 @@
+{
+  "name": "@shieldmaidengames/webgames-shared-worker",
+  "version": "0.0.0",
+  "description": "web worker for the webgames frontend",
+  "license": "ISC",
+  "type": "module",
+  "author": "polerin (polerin@eclexia.net)",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build:old": "parcel build --no-cache ./src/index.ts --dist-dir ./dist --public-url /",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "artifacts:copy:package": "cp -r ./dist ../server/artifacts/shared_worker",
+    "test": "yarn run build && npx playwright test"
+  },
+  "dependencies": {
+    "@shieldmaidengames/webgames-internal-shared": "0.0.0",
+    "@shieldmaidengames/webgames-shared": "0.0.0",
+    "ditox": "^3.0.0"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.13.3",
+    "@parcel/packager-ts": "^2.13.3",
+    "@parcel/transformer-typescript-tsc": "^2.13.3",
+    "@types/sharedworker": "^0.0.141",
+    "parcel": "2.13.3",
+    "typescript": "5.7.2"
+  },
+  "targets": {
+    "main": {
+      "context": "service-worker",
+      "includeNodeModules": true
+    }
+  }
+}

@@ -26,4 +26,6 @@ addServerRoutes(
     serverContainer.resolve(SMG_HOSTED_APP_SERVER_ROUTERS_TOKEN),
 );
 
+console.info("!!! Server online!");
+
 export default app;

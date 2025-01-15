@@ -8,5 +8,6 @@
         "rootDir": "./src",
         "noEmit": true,
         "lib": ["ESNext"]
-    }
+    },
+    "exclude": ["./dist"]
 }

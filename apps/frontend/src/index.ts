@@ -1,5 +1,9 @@
+/**
+ * Entry point for the core application host frontend
+ */
+
 import { InjectionCue, injectionResolverFactory, registerAllComponents } from '@shieldmaidengames/webgames-display-components';
-import { FrontendContainer } from './frontend_deps.js';
+import { FrontendContainer } from './injection/index.js';
 import { ApplicationRoot, registerApplicationRoot } from './webcomponents/index.js';
 
 const resolver = injectionResolverFactory(FrontendContainer);

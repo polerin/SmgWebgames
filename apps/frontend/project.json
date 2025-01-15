@@ -4,7 +4,8 @@
     "projectType": "application",
     "implicitDependencies": [
         "@shieldmaidengames/webgames-shared",
-        "@shieldmaidengames/webgames-display-components"
+        "@shieldmaidengames/webgames-display-components",
+        "@shieldmaidengames/webgames-shared-worker"
     ],
     "tags": ["webcomponents", "core", "artifact", "frontend"]
 

@@ -6,4 +6,5 @@ export type ApplicationRootDeps = ComponentDependencies & {
     controller: ApplicationRootController;
 }
 
-export const ApplicationRootToken = token<ApplicationRootDeps>('Application Root Dependencies');
+export const APPLICATION_ROOT_TOKEN = token<ApplicationRootDeps>('Application Root Dependencies');
+export const APPLICATION_ROOT_CONTROLLER_TOKEN = token<ApplicationRootController>('Application Root Controller dependencies');

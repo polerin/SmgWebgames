@@ -1,0 +1,10 @@
+{
+    "name": "@shieldmaidengames/webgames-shared-worker",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "implicitDependencies": [
+        "@shieldmaidengames/webgames-shared"
+    ],
+    "tags": ["core", "artifact", "worker"]
+
+}

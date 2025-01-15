@@ -1927,6 +1927,11 @@
     "@types/node" "*"
     "@types/send" "*"
 
+"@types/sharedworker@^0.0.141":
+  version "0.0.141"
+  resolved "https://registry.yarnpkg.com/@types/sharedworker/-/sharedworker-0.0.141.tgz#f63bac18991340d38f9581724ddfd51161d860ab"
+  integrity sha512-C4DWcG4GPLn4mbo5dSig19fJX713yR1rF+cy5XcpJFJf7eA89oipcdToRDG0lozLqR412u75ZdC2AvJrRZKWXQ==
+
 "@types/trusted-types@^2.0.2":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"

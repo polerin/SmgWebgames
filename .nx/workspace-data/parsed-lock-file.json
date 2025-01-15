@@ -2169,6 +2169,15 @@
         "hash": "sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw=="
       }
     },
+    "npm:@types/sharedworker": {
+      "type": "npm",
+      "name": "npm:@types/sharedworker",
+      "data": {
+        "version": "0.0.141",
+        "packageName": "@types/sharedworker",
+        "hash": "sha512-C4DWcG4GPLn4mbo5dSig19fJX713yR1rF+cy5XcpJFJf7eA89oipcdToRDG0lozLqR412u75ZdC2AvJrRZKWXQ=="
+      }
+    },
     "npm:@types/trusted-types": {
       "type": "npm",
       "name": "npm:@types/trusted-types",

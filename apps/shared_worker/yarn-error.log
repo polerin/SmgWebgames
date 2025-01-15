@@ -1,0 +1,65 @@
+Arguments: 
+  /Users/erin.mccargar/.nvm/versions/node/v22.12.0/bin/node /Users/erin.mccargar/.nvm/versions/node/v16.16.0/bin/yarn build
+
+PATH: 
+  /var/folders/8z/s2flkrq96cn4mchvx_w4m3s40000gp/T/yarn--1736901032538-0.11893385024960068:/Users/erin.mccargar/.config/yarn/link/node_modules/.bin:/Users/erin.mccargar/.yarn/bin:/Users/erin.mccargar/.nvm/versions/node/v22.12.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/erin.mccargar/.nvm/versions/node/v22.12.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/erin.mccargar/.nvm/versions/node/v22.12.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/erin.mccargar/.nvm/versions/node/v22.12.0/bin:/Users/erin.mccargar/.pyenv/shims:/Users/erin.mccargar/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/erin.mccargar/.vscode-server/cli/servers/Stable-91fbdddc47bc9c09064bf7acf133d22631cbf083/server/bin/remote-cli:/Users/erin.mccargar/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  22.12.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/erin.mccargar/prj/TsMultiPipe/apps/shared_worker/package.json: Expected double-quoted property name in JSON at position 1050 (line 33 column 5)
+      at JSON.parse (<anonymous>)
+      at /Users/erin.mccargar/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/erin.mccargar/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/erin.mccargar/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@shieldmaidengames/webgames-shared-worker",
+    "version": "0.0.0",
+    "description": "web worker for the webgames frontend",
+    "license": "ISC",
+    "type": "module",
+    "author": "polerin (polerin@eclexia.net)",
+    "source": "./src/index.ts",
+    "scripts": {
+      "build": "parcel build --no-cache ./src/index.js --dist-dir ./dist --public-url /",
+      "artifacts:copy:package": "cp -r ./dist ../server/artifacts/shared_worker",
+      "test": "yarn run build && npx playwright test"
+    },
+    "dependencies": {
+      "@shieldmaidengames/webgames-internal-shared": "0.0.0",
+      "@shieldmaidengames/webgames-shared": "0.0.0",
+      "ditox": "^3.0.0"
+    },
+    "devDependencies": {
+      "@parcel/config-default": "^2.13.3",
+      "@parcel/packager-ts": "^2.13.3",
+      "@parcel/transformer-typescript-tsc": "^2.13.3",
+      "@types/shared-worker": "^0.0.141",
+      "parcel": "2.13.3",
+      "typescript": "5.7.2"
+    },
+    "targets": {
+      "main": false,
+      "module": {
+        "context": "service-worker",
+        "engine": "esmodule",
+        "includeNodeModules": true,
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

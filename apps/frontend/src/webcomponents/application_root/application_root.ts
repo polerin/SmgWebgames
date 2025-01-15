@@ -1,5 +1,5 @@
 import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, playerContext } from '@shieldmaidengames/webgames-display-components';
-import { ApplicationRootDeps, ApplicationRootToken } from './definitions.js';
+import { ApplicationRootDeps, APPLICATION_ROOT_TOKEN } from './definitions.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
 import { html, LitElement, TemplateResult } from 'lit';
@@ -25,7 +25,7 @@ export default class ApplicationRoot
     public override connectedCallback(): void {
         super.connectedCallback();
 
-        injectDependencies(this, ApplicationRootToken);
+        injectDependencies(this, APPLICATION_ROOT_TOKEN);
     }
 
     public inject(deps: ApplicationRootDeps): void {
@@ -39,7 +39,7 @@ export default class ApplicationRoot
 
         // end of deps assignment, address any lifecycle callbacks
         this.controller?.addHost(this);
-        this.controller?.hostConnected?.();
+        // this.controller?.hostConnected?.();
 
         this.controllerStatus = (this.controller !== undefined);
     };

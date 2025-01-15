@@ -1,0 +1,10 @@
+[2K[1G[33mwarning[39m package.json: License should be a valid SPDX license expression
+[2K[1G[2m$ parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /multipipe[22m
+Building...
+Bundling...
+Packaging & Optimizing...
+✨ [32m[1mBuilt in 893ms[22m[39m
+
+[2mdist/[22m[36m[1mindex.html[22m[39m                [1m[35m369 B[39m[22m     [32m[1m56ms[22m[39m
+[2mdist/[22m[36m[1mindex.94985e83.js[22m[39m     [1m[35m539.31 kB[39m[22m    [32m[1m327ms[22m[39m
+[2mdist/[22m[36m[1msword.3bb7992f.png[22m[39m        [1m[35m248 B[39m[22m     [32m[1m17ms[22m[39m

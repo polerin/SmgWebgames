@@ -3,7 +3,11 @@
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "lib": ["DOM"],
-        "experimentalDecorators": true
-    }
+        "lib": ["DOM", "WebWorker"],
+        "experimentalDecorators": true,
+        "paths": {
+            "~*": ["./*"]
+        } 
+    },
+    "exclude": ["./dist"]
 }

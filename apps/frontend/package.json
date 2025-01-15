@@ -1,13 +1,14 @@
 {
   "name": "@shieldmaidengames/webgames-frontend",
   "version": "0.0.0",
-  "description": "multipipe game server",
+  "description": "frontend for the webgames host",
   "license": "ISC",
   "type": "module",
   "author": "polerin (polerin@eclexia.net)",
   "scripts": {
-    "build": "yarn build:index",
-    "build:index": "parcel build --no-cache ./markup/index.html --dist-dir ./dist --public-url /",
+    "build": "concurrently 'yarn build:index'",
+    "build:index": "parcel build ./markup/index.html --no-cache --dist-dir ./dist --public-url /",
+    "clean": "rm -rf ./dist",
     "artifacts:copy:package": "cp -r ./dist ../server/artifacts/frontend",
     "test": "yarn run build && npx playwright test"
   },
