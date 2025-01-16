@@ -18,14 +18,18 @@ app.use(express.json());
 bindHosted(serverContainer);
 
 const applicationHost = serverContainer.resolve(SMG_APPLICATION_HOST);
-applicationHost.boostrapAllApps(serverContainer);
+applicationHost.boostrapAllApps(serverContainer)
+.then((report) => {
+    console.info("Hosted applications bootstrapped, status", report)
+    addServerRoutes(
+        app,
+        serverContainer.resolve(SMG_HOSTED_APP_SERVER_ARTIFACT_ROOT_TOKEN),
+        serverContainer.resolve(SMG_HOSTED_APP_SERVER_ROUTERS_TOKEN),
+    );
 
-addServerRoutes(
-    app,
-    serverContainer.resolve(SMG_HOSTED_APP_SERVER_ARTIFACT_ROOT_TOKEN),
-    serverContainer.resolve(SMG_HOSTED_APP_SERVER_ROUTERS_TOKEN),
-);
+    console.info("!!! Server online!");
+});
 
-console.info("!!! Server online!");
+
 
 export default app;

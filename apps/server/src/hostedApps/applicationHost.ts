@@ -16,14 +16,14 @@ export default class ApplicationHost {
     /**
      * Bootstrap all supplied applications
      */
-    public async boostrapAllApps(container: Container): Promise<void> {
+    public async boostrapAllApps(container: Container): Promise<HostedAppStatusReport[]> {
         await Promise.all(
             Object.values(this.knownApps).map(
                 (appEntry) => this.bootstrapApp(appEntry.app, container)
             )
         );
 
-        this.reportHostedStatus();
+        return this.reportHostedStatus();
     }
 
     public reportHostedStatus(slug?: SmgHostedAppSlug): HostedAppStatusReport[] {

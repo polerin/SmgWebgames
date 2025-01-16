@@ -1,4 +1,4 @@
-import { SwapActivityCue, BaseInjectableController, LoggedInEvent } from '@shieldmaidengames/webgames-display-components';
+import { SwapActivityCue, BaseInjectableController, LoggedInEvent, RegisteredActivity } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps } from './definitions.js';
 import ApplicationRoot from './application_root.js';
 
@@ -11,11 +11,9 @@ export default class ApplicationRootController extends BaseInjectableController<
 
         this.sharedWorker.port.addEventListener('message', this.workerMessageReceived)
         this.sharedWorker.port.start();
-        console.log("Did we get the shared worker?", this.sharedWorker);
     }
 
     public override hostConnected(): void {
-        this.sharedWorker.port.postMessage({yep: "This is a host connected message"});
     }
 
     protected workerMessageReceived(message: MessageEvent): void {
@@ -23,7 +21,7 @@ export default class ApplicationRootController extends BaseInjectableController<
             console.warn('Received a non-MessageEvent argument somehow');
         }
 
-        console.log("heeeeeey yup.", message);
+        console.log("Main app received message.", message);
     }
 
     protected override addListeners(): void {
@@ -31,9 +29,6 @@ export default class ApplicationRootController extends BaseInjectableController<
         this.addEventListener(LoggedInEvent.EVENT_NAME, (e) => this.handleLoggedInEvent(e));
     }
 
-    protected handleSwapActivityCue(e: Event): void {
-       console.info('Start new activity cue received', e); 
-    }
 
     protected handleLoggedInEvent(e: Event): void {
         console.log('in handle loggeadsfalsdkfjalj', e, this);
@@ -41,8 +36,18 @@ export default class ApplicationRootController extends BaseInjectableController<
             return;
         }
 
-        console.log("setting player", e.player);
-        this.sharedWorker.port.postMessage({yep: "Current player set to " + e.player.name});
-        this.host.currentPlayer = e.player;
+        console.log("setting user", e.user);
+        this.sharedWorker.port.postMessage({yep: "Current user set to " + e.user.name});
+        this.host.currentUser = e.user;
+
+        this.swapActivity('home');
+    }
+
+    protected handleSwapActivityCue(e: Event): void {
+       console.info('Start new activity cue received', e); 
+    }
+
+    protected swapActivity(newActivity: RegisteredActivity) {
+        this.host?.setActivity(newActivity);
     }
 }

@@ -1,7 +1,7 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { LoadGameCue, StartNewGameCue } from '../../../events/index.js';
-import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgUser } from '@shieldmaidengames/webgames-shared';
 import { map } from 'lit/directives/map.js';
 
 @customElement('game-list')
@@ -16,7 +16,7 @@ export default class GameList extends LitElement {
     public devList: DevInstance[] = [];
 
     @property()
-    public player?: SmgPlayer;
+    public user?: SmgUser;
     
     protected override render(): TemplateResult {
         return html`${this.renderNormalGames()} ${this.renderDevGames()}`;
@@ -53,17 +53,17 @@ export default class GameList extends LitElement {
             return;
         }
 
-        if (!this.player || !this.gameDefinition) {
-            console.error("Attempting to dispatch a StartNewGameCue without player/game information");
+        if (!this.user || !this.gameDefinition) {
+            console.error("Attempting to dispatch a StartNewGameCue without user/game information");
 
             return;
         }
 
-        this.dispatchEvent(new StartNewGameCue(this.player, this.gameDefinition));
+        this.dispatchEvent(new StartNewGameCue(this.user, this.gameDefinition));
     }
 
     protected handleJoinGameClick(gameInfo: GameInstance): void {
-        if (!this.gameDefinition || !this.player) {
+        if (!this.gameDefinition || !this.user) {
             console.error('Not enough information to fire join game event');
 
             return;
@@ -71,7 +71,7 @@ export default class GameList extends LitElement {
 
         const loadCue = new LoadGameCue(
             this.gameDefinition.slug,
-            this.player,
+            this.user,
             gameInfo
         );
 

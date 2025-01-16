@@ -1,4 +1,4 @@
-import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgUser } from '@shieldmaidengames/webgames-shared';
 import { StartNewGameCue } from '../../../events/index.js';
 import BaseMenu from '../base_menu.js';
 import { html, TemplateResult } from 'lit';
@@ -17,7 +17,7 @@ export default class FindGameMenu extends BaseMenu {
     public devList: DevInstance[] = [];
 
     @property()
-    public player?: SmgPlayer;
+    public user?: SmgUser;
     
     protected override render(): TemplateResult {
         return html`<div class="menu_container menu_container--find-game">
@@ -33,12 +33,12 @@ export default class FindGameMenu extends BaseMenu {
             return;
         }
 
-        if (!this.player || !this.gameDefinition) {
-            console.error("Attempting to dispatch a StartNewGameCue without player/game information");
+        if (!this.user || !this.gameDefinition) {
+            console.error("Attempting to dispatch a StartNewGameCue without user/game information");
 
             return;
         }
 
-        this.dispatchEvent(new StartNewGameCue(this.player, this.gameDefinition));
+        this.dispatchEvent(new StartNewGameCue(this.user, this.gameDefinition));
     }
 }

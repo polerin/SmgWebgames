@@ -10,8 +10,9 @@
         }
     },
     "namedInputs": {
+        "core_server": [ "{projectRoot}/apps/server/**/*.{ts,json}"],
         "libs": [ "{projectRoot}/lib/**/*.{ts,json}" ],
-        "apps": [ "{projectRoot}/apps/*/!(dist)/**/*.{ts,json}" ],
+        "apps": [ "{projectRoot}/apps/!(server)/!(dist|artifacts)/**/*.{ts,json}" ],
         "games": [ "{projectRoot}/games/*/*/!(dist)/**/*.{ts,json}"]
     },
     "targetDefaults": {
@@ -22,6 +23,10 @@
         "artifacts:copy:package": {
             "dependsOn": ["build"],
             "inputs": ["apps", "games"]
+        },
+        "watch": {
+            "dependsOn": ["bulid"],
+            "inputs": ["^core_server", "libs", "apps", "games"]
         }
     },
     "targets": {

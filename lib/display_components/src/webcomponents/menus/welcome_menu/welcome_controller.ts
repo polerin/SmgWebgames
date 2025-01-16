@@ -18,7 +18,7 @@ export default class WelcomeController
         }
 
         // Temp, replace when we actually have a log in flow
-        this.host?.dispatchEvent(new LoggedInEvent({name: e.playerName}));
+        this.host?.dispatchEvent(new LoggedInEvent({name: e.userName}));
     }
 
 }

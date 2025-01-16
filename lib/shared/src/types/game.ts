@@ -1,4 +1,4 @@
-import { SmgHostedAppDefinition, SmgPlayer } from './smg_core.js';
+import { SmgHostedAppDefinition, SmgUser } from './smg_core.js';
 
 export type GameInstance = {
     game: SmgHostedAppDefinition;
@@ -6,7 +6,7 @@ export type GameInstance = {
     gameName: string;
     state: unknown;
     gameData: unknown;
-    players: SmgPlayer[];
+    players: SmgUser[];
 }
 
 export type DevInstance = GameInstance & {

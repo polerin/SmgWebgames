@@ -1,10 +1,10 @@
-import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, playerContext } from '@shieldmaidengames/webgames-display-components';
+import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, userContext } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps, APPLICATION_ROOT_TOKEN } from './definitions.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
 import { html, LitElement, TemplateResult } from 'lit';
 import { activity_templates } from './activity_templates/index.js';
-import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { SmgUser } from '@shieldmaidengames/webgames-shared';
 
 @customElement('application-root')
 export default class ApplicationRoot 
@@ -19,8 +19,8 @@ export default class ApplicationRoot
     @state()
     protected currentActivity: RegisteredActivity = 'welcome';
 
-    @provide({ context: playerContext })
-    public currentPlayer?: SmgPlayer;
+    @provide({ context: userContext })
+    public currentUser?: SmgUser;
 
     public override connectedCallback(): void {
         super.connectedCallback();
@@ -39,10 +39,19 @@ export default class ApplicationRoot
 
         // end of deps assignment, address any lifecycle callbacks
         this.controller?.addHost(this);
-        // this.controller?.hostConnected?.();
-
         this.controllerStatus = (this.controller !== undefined);
     };
+
+    public setActivity(newActivity: RegisteredActivity): void {
+        if (this.currentActivity === newActivity) {
+            // don't trigger any rerender or anything
+            console.info('Specified activity is already active');
+
+            return;
+        }
+
+        this.currentActivity = newActivity;
+    }
 
     protected override render(): TemplateResult {
         const activity = activity_templates[this.currentActivity];

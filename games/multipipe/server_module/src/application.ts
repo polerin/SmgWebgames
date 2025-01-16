@@ -28,5 +28,9 @@ export default class MultipipeApplication extends BaseHostedApplication {
 
         return Promise.resolve();
     }
+
+    protected override registerScenes(_container: Container): Promise<void> {
+        return Promise.resolve();
+    }
     
 }

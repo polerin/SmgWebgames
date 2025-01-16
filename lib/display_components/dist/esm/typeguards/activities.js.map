@@ -1,1 +1,0 @@
-{"version":3,"file":"activities.js","sourceRoot":"","sources":["../../../src/typeguards/activities.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAAE,MAAM,uBAAuB,CAAC;AAG7D;;GAEG;AACH,MAAM,UAAU,oBAAoB,CAAC,OAAgB;IACjD,OAAO,OAAO,OAAO,KAAK,QAAQ,IAAI,oBAAoB,CAAC,QAAQ,CAAC,OAA6B,CAAC,CAAC;AACvG,CAAC"}

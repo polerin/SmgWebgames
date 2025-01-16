@@ -1,1 +1,0 @@
-{"version":3,"file":"gameRegistry.d.ts","sourceRoot":"","sources":["../../src/gameRegistry.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,sBAAsB,EAAE,MAAM,qBAAqB,CAAC;AAE7D,QAAA,MAAM,iBAAiB,EAAE,MAAM,CAAC,MAAM,EAAE,sBAAsB,CASpD,CAAC;AAEX,MAAM,MAAM,gBAAgB,GAAG,MAAM,OAAO,iBAAiB,CAAC;AAE9D,OAAO,EAAE,iBAAiB,EAAE,CAAC"}

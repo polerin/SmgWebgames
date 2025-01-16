@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/webcomponents/activity_container/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,+BAA+B,CAAC;AAQjE,MAAM,UAAU,0BAA0B;IACtC,OAAO,CAAC,IAAI,CAAC,iCAAiC,CAAC,CAAC;IAChD,gBAAgB,CAAC,SAAS,CAAC;AAC/B,CAAC;AAED,OAAO,EAAC,OAAO,IAAI,qBAAqB,EAAE,MAAM,8BAA8B,CAAC;AAE/E,cAAc,+BAA+B,CAAC"}

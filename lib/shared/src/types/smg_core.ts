@@ -1,5 +1,5 @@
 
-export type SmgPlayer = {
+export type SmgUser = {
     name: string;
 }
 

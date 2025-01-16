@@ -5,9 +5,9 @@ import { html, PropertyValues, TemplateResult } from 'lit';
 import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { customElement, state } from 'lit/decorators.js';
 import { IInjectableController, IInjectableHost } from '../../../interfaces/index.js';
-import { SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { SmgUser } from '@shieldmaidengames/webgames-shared';
 import { consume } from '@lit/context';
-import { playerContext } from '../../../contexts/index.js';
+import { userContext } from '../../../contexts/index.js';
 import { LogInCue } from '../../../events/index.js';
 
 @customElement('welcome-menu')
@@ -17,13 +17,13 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
     @state()
     public controllerStatus = false;
 
-    public get playerName () {
+    public get userName () {
         return this.nameInput.value?.value
     };
 
-    @consume({context: playerContext, subscribe: true})
+    @consume({context: userContext, subscribe: true})
     @state()
-    public currentPlayer?: SmgPlayer;
+    public currentUser?: SmgUser;
 
     protected nameInput: Ref<HTMLInputElement> = createRef();
 
@@ -54,7 +54,7 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
             return html`<div>No Menu Controller</div>`;
         }
 
-        if (this.currentPlayer === undefined) {
+        if (this.currentUser === undefined) {
             return this.renderLoginMenu();
         }
 
@@ -69,7 +69,7 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
     }
 
     protected renderWelcomeChoices(): TemplateResult {
-        return html`<div>Currently logged in as: ${this.currentPlayer?.name}</div>`
+        return html`<div>Currently logged in as: ${this.currentUser?.name}</div>`
     }
 
     protected override firstUpdated(_changedProperties: PropertyValues): void {
@@ -83,8 +83,8 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
 
         e.preventDefault();
 
-        if (this.playerName !== undefined) {
-            this.dispatchEvent(new LogInCue(this.playerName));
+        if (this.userName !== undefined) {
+            this.dispatchEvent(new LogInCue(this.userName));
         }
     }
 }

@@ -6,7 +6,7 @@ import { html, TemplateResult } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { IInjectableHost } from '../../../interfaces/index.js';
 import BaseActivityContainer from '../base_activity_container.js';
-import { GameInstance, SmgHostedAppDefinition, SmgPlayer } from '@shieldmaidengames/webgames-shared';
+import { GameInstance, SmgHostedAppDefinition, SmgUser } from '@shieldmaidengames/webgames-shared';
 
 @customElement('find-game-activity')
 export default class FindGameActivity extends BaseActivityContainer implements IInjectableHost<FindGameActivityDeps> {
@@ -16,7 +16,7 @@ export default class FindGameActivity extends BaseActivityContainer implements I
     public gameDefinition?: SmgHostedAppDefinition;
 
     @property()
-    public player?: SmgPlayer;
+    public user?: SmgUser;
     
     @state()
     public controllerStatus = false;
@@ -55,14 +55,14 @@ export default class FindGameActivity extends BaseActivityContainer implements I
             return html`No Game definition supplied`;
         }
 
-        if (this.player === undefined) {
+        if (this.user === undefined) {
             return html`No Player information supplied`;
         }
 
         return html`<div class="activity_container activity_container--find-game related-to--${this.gameDefinition.slug}">
             <h3>Find a game: ${this.gameDefinition.slug}</h3> 
-            <find-game-menu .player=${this.player} .gameDefinition=${this.gameDefinition}></find-game-menu>
-            <game-list .player=${this.player} .gameDefinition=${this.gameDefinition} .gameList=${this.gameList}></game-list>
+            <find-game-menu .user=${this.user} .gameDefinition=${this.gameDefinition}></find-game-menu>
+            <game-list .user=${this.user} .gameDefinition=${this.gameDefinition} .gameList=${this.gameList}></game-list>
         </div>`;
     }
 }
