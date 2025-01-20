@@ -1,5 +1,5 @@
 import { Container } from 'ditox';
-import { HostedAppStatus, SmgHostedAppDefinition } from './types.js';
+import { HostedAppStatus, SmgHostedAppDefinition } from '@shieldmaidengames/webgames-shared';
 
 export default interface IHostedApplication {
     get slug(): string;

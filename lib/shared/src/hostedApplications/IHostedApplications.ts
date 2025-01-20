@@ -1,5 +1,5 @@
-import IHostedApplication from './IHostedApplication.js';
+import { SmgHostedAppDefinition } from './types.js';
 
 export default interface IHostedApplications {
-    [appSlug: string]: IHostedApplication;
+    [appSlug: string]: SmgHostedAppDefinition;
 };

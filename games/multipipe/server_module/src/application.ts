@@ -1,16 +1,17 @@
 import { BaseHostedApplication } from '@shieldmaidengames/webgames-internal-server-shared';
-import { SmgHostedAppSlug } from '@shieldmaidengames/webgames-shared';
 
 import { bindMultiValue, Container } from 'ditox';
 import {
     SMG_HOSTED_APP_SERVER_ROUTER_FACTORY_TOKEN,
 } from '@shieldmaidengames/webgames-internal-server-shared';
 
+import { multipipeAppDefinition } from '@shieldmaidengames/multipipe-lib';
+
 import { multipipeRouterFactory } from './index.js';
 
 export default class MultipipeApplication extends BaseHostedApplication {
     
-    protected override _definition = {};
+    protected override _definition = multipipeAppDefinition;
 
     public override async start(): Promise<void> {
         this._status = 'Running';

@@ -1,6 +1,6 @@
-import { Container } from 'ditox';
+import { HostedAppStatus, SmgHostedAppDefinition } from '@shieldmaidengames/webgames-shared';
 import IHostedApplication from './IHostedApplication.js';
-import { HostedAppStatus, SmgHostedAppDefinition } from './types.js';
+import { Container } from 'ditox';
 
 export default abstract class BaseHostedApplication implements IHostedApplication {
     protected _status: HostedAppStatus = 'Fresh';
@@ -8,10 +8,10 @@ export default abstract class BaseHostedApplication implements IHostedApplicatio
     /**
      * Implement in child classes.
      */
-    protected abstract _description: SmgHostedAppDefinition;
+    protected abstract _definition: SmgHostedAppDefinition;
     
     public get slug() {
-        return this._description.slug;
+        return this._definition.slug;
     }
 
     public get status() {
@@ -19,7 +19,7 @@ export default abstract class BaseHostedApplication implements IHostedApplicatio
     }
 
     public get definition() {
-        return this._description;
+        return this._definition;
     }
     
     public abstract start(): Promise<void>;

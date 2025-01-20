@@ -1,12 +1,12 @@
 import ICommandHandler from '../interfaces/ICommandHandler.js';
 import { isPaginatedDefinition } from './typeguards.js';
-import { BaseCommandDefinition, BaseCommandResult, PaginatedCommandResult, PaginatedCommandDefinition } from './types.js';
+import { BaseCommandDefinition, BaseCommandResult, PaginatedCommandDefinition } from './types.js';
 import { InvalidCommandDefintion, Typeguard } from '@shieldmaidengames/webgames-shared';
 
 export default abstract class BaseCommandHandler<
-    DefinitionType extends BaseCommandDefinition<any>,
-    ResultType extends DefinitionType extends PaginatedCommandDefinition<any> ? PaginatedCommandResult<any> : BaseCommandResult<any>
-> implements ICommandHandler<DefinitionType, ResultType>
+    CommandDefinitionType extends BaseCommandDefinition<any>,
+    CommandResultType extends BaseCommandResult<any>
+> implements ICommandHandler<CommandDefinitionType, CommandResultType>
 {
     /**
      * What is this command handler's name?
@@ -20,14 +20,14 @@ export default abstract class BaseCommandHandler<
     /**
      * Specify this in order to automatically typecheck the supplied command definition
      */
-    protected typeGuard?: Typeguard<DefinitionType>;
+    protected typeGuard?: Typeguard<CommandDefinitionType>;
 
     /**
      * Template method, this should contain the execution logic for any child class
      */
-    protected abstract handle(def: DefinitionType): Promise<ResultType>;
+    protected abstract handle(def: CommandDefinitionType): Promise<CommandResultType>;
 
-    public execute(command: DefinitionType): Promise<ResultType> {
+    public execute(command: CommandDefinitionType): Promise<CommandResultType> {
         // !! undefined typeguard will not fail this check, only explicit fails
         if (this.typeGuard?.(command) !== false) {
             return Promise.reject(new InvalidCommandDefintion(
@@ -42,25 +42,28 @@ export default abstract class BaseCommandHandler<
     }
 
 
-    protected buildCommandResult(def: DefinitionType, resultData: ResultType["data"]): ResultType {
-        const buffer: Partial<ResultType> = {
+    protected buildCommandResult(
+        def: CommandDefinitionType,
+        resultData: CommandResultType["data"]
+):  CommandResultType {
+        const buffer = {
             commandName: def.commandName,
             commandHandler: this.commandHandlerName,
             data: resultData,
-        };
+        } as CommandResultType;
 
         if (isPaginatedDefinition(def)) {
             return this.addPagination(def, buffer);
         }
 
-        return buffer as ResultType;
+        return buffer as CommandResultType;
     }
 
     protected addPagination<DefinitionType extends PaginatedCommandDefinition<any>>(
         def: DefinitionType,
-        buffer: Partial<ResultType>
-    ): ResultType {
-        return <ResultType><unknown>{
+        buffer: Partial<CommandResultType>
+    ): CommandResultType {
+        return <CommandResultType><unknown>{
             ...buffer,
             page: def.page
         };

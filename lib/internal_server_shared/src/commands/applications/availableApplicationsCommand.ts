@@ -1,7 +1,8 @@
 import { AvailableApplicationsDefinition, AvailableApplicationsResult } from './definitions.js';
 import {isAvailableApplicationsDefinition } from './typeguards.js';
 import BaseCommandHandler from '../baseCommandHandler.js';
-import { IHostedApplication } from '@shieldmaidengames/webgames-shared';
+import { IHostedApplication } from '@shieldmaidengames/webgames-internal-server-shared';
+import { SmgHostedAppDefinition } from '@shieldmaidengames/webgames-shared';
 
 export default class ListHostedApplications extends BaseCommandHandler<AvailableApplicationsDefinition, AvailableApplicationsResult>
 {
@@ -9,13 +10,14 @@ export default class ListHostedApplications extends BaseCommandHandler<Available
 
     protected override typeGuard = isAvailableApplicationsDefinition;
 
-    protected applications: SmgHostedApplicationDescription[] = [];
+    protected applications: SmgHostedAppDefinition[] = [];
 
     public constructor(hosted: IHostedApplication[]) {
-
+        super();
+        this.applications = hosted.map((app) => app.definition);
     }
 
     protected handle(command: AvailableApplicationsDefinition): Promise<AvailableApplicationsResult> {
-        return Promise.resolve(this.buildCommandResult(command, this.hosted));
+        return Promise.resolve(this.buildCommandResult(command, this.applications));
     }
 }

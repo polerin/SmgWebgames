@@ -20,6 +20,7 @@
     "@shieldmaidengames/webgames-internal-server-shared": "0.0.0",
     "@shieldmaidengames/webgames-internal-shared": "0.0.0",
     "@shieldmaidengames/webgames-shared": "0.0.0",
+    "@shieldmaidengames/multipipe-lib": "0.0.0",
     "@types/express": "^4.10.0",
     "@types/express-serve-static-core": "^4.10.0",
     "ditox": "^3.0.0",

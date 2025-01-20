@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
+    "@shieldmaidengames/multipipe-lib": "0.0.0",
     "@shieldmaidengames/webgames-internal-shared": "0.0.0",
     "@shieldmaidengames/webgames-shared": "0.0.0",
     "ditox": "^3.0.0",
