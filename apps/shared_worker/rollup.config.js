@@ -13,10 +13,10 @@ export default {
   },
   plugins: [
     url(),
-    resolve(),
-        typescript({tsconfig: './tsconfig.json'}),,
+    resolve({'browser': true}),
+    typescript({tsconfig: './tsconfig.json'}),,
     json({
       compact: true
     }),
-  ]
+  ],
 };

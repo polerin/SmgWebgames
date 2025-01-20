@@ -1,1 +1,0 @@
-export { default as GameList } from './game_list.js';

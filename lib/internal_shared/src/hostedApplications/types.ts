@@ -1,7 +1,4 @@
-import { hostedAppStatusNames } from './consts.js';
-import { SmgHostedAppSlug } from '@shieldmaidengames/webgames-shared';
-
-export type HostedAppStatus = typeof hostedAppStatusNames[number];
+import { SmgHostedAppSlug, HostedAppStatus } from '@shieldmaidengames/webgames-shared';
 
 export type HostedAppStatusReport = {
     appName: SmgHostedAppSlug;

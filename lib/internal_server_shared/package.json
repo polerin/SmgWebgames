@@ -19,6 +19,7 @@
   "dependencies": {
     "ditox": "^3.0.0",
     "express": "^4.21.2",
-    "@shieldmaidengames/webgames-shared": "0.0.0"
+    "@shieldmaidengames/webgames-shared": "0.0.0",
+    "@shieldmaidengames/webgames-internal-shared": "0.0.0"
   }
 }

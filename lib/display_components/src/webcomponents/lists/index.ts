@@ -1,14 +1,20 @@
-import { GameList } from './game_list/index.js';
+import { ApplicationList } from './application_list/index.js';
+import { GameInstanceList } from './game_instance_list/index.js';
 
 // Register all of the components with the window object
 declare global {
 
   interface HTMLElementTagNameMap {
-    "game-list": GameList;
+    "application-list": ApplicationList;
+    "game-instance-list": GameInstanceList;
   }
 }
 
 export function registerListElements() {
     console.log('registering list elements');
-    GameList.prototype;
+    GameInstanceList.prototype;
+    ApplicationList.prototype;
 }
+
+export * from './application_list/index.js';
+export * from './game_instance_list/index.js';

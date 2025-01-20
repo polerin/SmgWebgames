@@ -1,0 +1,1 @@
+export type Typeguard<DesiredType> = (subject: unknown) => subject is DesiredType; 

@@ -1,12 +1,12 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { LoadGameCue, StartNewGameCue } from '../../../events/index.js';
+import { StartNewGameCue } from '../../../events/index.js';
 import { DevInstance, GameInstance, SmgHostedAppDefinition, SmgUser } from '@shieldmaidengames/webgames-shared';
 import { map } from 'lit/directives/map.js';
 
-@customElement('game-list')
-export default class GameList extends LitElement {
-        @property()
+@customElement('game-instance-list')
+export default class GameInstanceList extends LitElement {
+    @property()
     public gameDefinition?: SmgHostedAppDefinition;
 
     @property()
@@ -62,19 +62,18 @@ export default class GameList extends LitElement {
         this.dispatchEvent(new StartNewGameCue(this.user, this.gameDefinition));
     }
 
-    protected handleJoinGameClick(gameInfo: GameInstance): void {
+    protected handleJoinGameClick(_gameInfo: GameInstance): void {
         if (!this.gameDefinition || !this.user) {
             console.error('Not enough information to fire join game event');
 
             return;
         }
 
-        const loadCue = new LoadGameCue(
-            this.gameDefinition.slug,
-            this.user,
-            gameInfo
-        );
+        // Swap this to a JoinGameCue when that is created
+        // const loadCue = new LoadGameCue(
+        //     gameInfo
+        // );
 
-        this.dispatchEvent(loadCue);
+        // this.dispatchEvent(loadCue);
     }
 }

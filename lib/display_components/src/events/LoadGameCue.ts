@@ -1,12 +1,10 @@
-import { SmgUser, SmgHostedAppSlug, GameInstance } from '@shieldmaidengames/webgames-shared';
+import { SmgHostedAppDefinition } from '@shieldmaidengames/webgames-shared';
 
 export default class LoadGameCue extends Event {
     public static EVENT_NAME = 'LoadGameCue' as const;
 
     public constructor(
-        public readonly game: SmgHostedAppSlug,
-        public readonly user: SmgUser,
-        public readonly gameInstance: GameInstance
+        public readonly game: SmgHostedAppDefinition,
     ) {
         super(LoadGameCue.EVENT_NAME, {bubbles: true});
     }

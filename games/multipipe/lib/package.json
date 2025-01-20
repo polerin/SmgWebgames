@@ -1,0 +1,25 @@
+{
+  "name": "@shieldmaidengames/multipipe-lib",
+  "version": "0.0.0",
+  "description": "multipipe game and server shared code",
+  "license": "ISC",
+  "author": "polerin (polerin@eclexia.net)",
+  "type": "module",
+  "exports": {
+    "default": "./dist/esm/index.js",
+    "import": "./dist/esm/index.js",
+    "typescript": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@shieldmaidengames/webgames-internal-shared": "0.0.0",
+    "@shieldmaidengames/webgames-shared": "0.0.0",
+    "ditox": "^3.0.0",
+    "tsx": "^4.19.2"
+  }
+}

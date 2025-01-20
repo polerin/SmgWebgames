@@ -2,7 +2,7 @@ import { token } from 'ditox';
 import type { Express } from 'express';
 import { SmgHostedAppRouterDefinition } from '../types/index.js';
 import { DitoxFactoryFunctionSet } from '@shieldmaidengames/webgames-internal-shared';
-import { IHostedApplication } from '../hostedApplications/index.js';
+import { IHostedApplication } from '../../../shared/src/hostedApplications/index.js';
 
 export const SMG_HOSTED_APPS_TOKEN = token<IHostedApplication[]>('Multifactory for all hosted applications');
 export const SMG_HOSTED_APP_FACTORY_TOKEN = token<DitoxFactoryFunctionSet<IHostedApplication>>('Collective value token for app factories');

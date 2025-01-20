@@ -3,7 +3,8 @@
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
     "implicitDependencies": [
-        "@shieldmaidengames/webgames-shared"
+        "@shieldmaidengames/webgames-shared",
+        "@shieldmaidengames/webgames-internal-shared"
     ],
     "tags": ["core", "artifact", "worker"]
 

@@ -1,0 +1,1 @@
+export { default as ICommandHandler} from './ICommandHandler.js';

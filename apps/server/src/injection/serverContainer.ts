@@ -1,7 +1,7 @@
 import * as serverShared from '@shieldmaidengames/webgames-internal-server-shared';
 import { createMultiFactory } from '@shieldmaidengames/webgames-internal-shared';
 
-import { createContainer } from 'ditox';
+import { createContainer, injectable} from 'ditox';
 import path from 'path';
 
 import * as serverTokens from './tokens.js';
@@ -26,7 +26,8 @@ serverContainer.bindFactory(
 
 serverContainer.bindFactory(
     serverTokens.SMG_APPLICATION_HOST,
-    (container) => new ApplicationHost(
-        container.resolve(serverShared.SMG_HOSTED_APPS_TOKEN)
+    injectable(
+        (hostedApps) => new ApplicationHost(hostedApps),
+        serverShared.SMG_HOSTED_APPS_TOKEN
     )
 );

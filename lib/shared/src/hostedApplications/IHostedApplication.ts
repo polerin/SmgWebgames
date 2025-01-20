@@ -1,10 +1,12 @@
-import { SmgHostedAppSlug } from '@shieldmaidengames/webgames-shared';
-import { HostedAppStatus } from '@shieldmaidengames/webgames-internal-shared';
 import { Container } from 'ditox';
+import { HostedAppStatus, SmgHostedAppDefinition } from './types.js';
 
 export default interface IHostedApplication {
-    get slug(): SmgHostedAppSlug;
+    get slug(): string;
     get status(): HostedAppStatus;
+    get definition(): SmgHostedAppDefinition;
+
+
     /**
      * Registration method that binds all dependencies including
      * routes and other such fun things.

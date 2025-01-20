@@ -60,7 +60,7 @@ The server code __MUST__ expose a function that registers a route factory via th
         * `FindGameCue` for "Please load the find game dom interface"
         * `PlayerDiedEvent` for "Hey just letting you know, this player died"
 * Message
-    * Reserved for EventBridge events and Websocket messages.  This are distinguised from DOM events as they are likely not actually derived from the `Event` base class.
+    * Reserved for EventBridge events, Websocket messages, and SharedWorker messages.  This are distinguised from DOM events as they are likely not actually derived from the `Event` base class.
     * EventBridge messages should be reserved for communication between systems.  Shared information, such as the list of current players, that is needed in multiple elements or sections of the application should be supplied via contexts.
 
 ## Data transport

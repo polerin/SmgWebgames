@@ -1,4 +1,5 @@
-import { SmgHostedAppDefinition, SmgUser } from './smg_core.js';
+import { SmgUser } from './smg_core.js';
+import { SmgHostedAppDefinition } from '../hostedApplications/types.js';
 
 export type GameInstance = {
     game: SmgHostedAppDefinition;

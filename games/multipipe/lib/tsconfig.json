@@ -1,0 +1,14 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "module": "nodeNext",
+        "moduleResolution": "node16",
+        "esModuleInterop": true,
+        "declaration": true,
+        "outDir": "./dist/esm",
+        "rootDir": "./src",
+        "lib": ["ESNext"]
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./dist"]
+}
