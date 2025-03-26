@@ -1,6 +1,8 @@
 import { SwapActivityCue, BaseInjectableController, LoggedInEvent, RegisteredActivity } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps } from './definitions.js';
 import ApplicationRoot from './application_root.js';
+import { AppMessageNames } from '@shieldmaidengames/webgames-shared';
+import type { LoginAttemptMessage } from '@shieldmaidengames/webgames-shared';
 
 export default class ApplicationRootController extends BaseInjectableController<ApplicationRootDeps> {
 
@@ -31,13 +33,18 @@ export default class ApplicationRootController extends BaseInjectableController<
 
 
     protected handleLoggedInEvent(e: Event): void {
-        console.log('in handle loggeadsfalsdkfjalj', e, this);
         if (!(e instanceof LoggedInEvent) || this.host === undefined) {
             return;
         }
 
         console.log("setting user", e.user);
-        this.sharedWorker.port.postMessage({yep: "Current user set to " + e.user.name});
+        
+        this.sharedWorker.port.postMessage(<LoginAttemptMessage>{
+            name: AppMessageNames.LoginAttempt, data: {user: {...e.user}}}
+        );
+
+        CURRENT WORK LOCATION, NEED TO MOVE THE BELOW TWO LINES INTO A LOGIN OUTCOME MESSAGE HANDLER
+
         this.host.currentUser = e.user;
 
         this.swapActivity('home');

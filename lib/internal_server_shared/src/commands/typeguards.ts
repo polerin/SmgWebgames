@@ -1,4 +1,4 @@
-import { coerceToNonEmpty, isNonEmptyString, isPaginatedImperative, isPaginatedOutcome } from '../utility/typeguards.js';
+import { coerceToNonEmpty, isNonEmptyString, isPaginatedImperative, isPaginatedOutcome } from '@shieldmaidengames/webgames-shared';
 import { BaseCommandDefinition, BaseCommandResult, PaginatedCommandDefinition, PaginatedCommandResult } from './types.js';
 
 export function isBaseCommandDefinition(subject: unknown): subject is BaseCommandDefinition<any> {

@@ -12,7 +12,7 @@
   "scripts": {
     "build": "nx run-many -t build --verbose --skipNxCache && yarn artifacts:copy",
     "clean": "yarn artifacts:clean && nx run-many -t clean && nx reset",
-    "start": "yarn build && yarn artifacts:copy yarn workspace @shieldmaidengames/webgames-server start",
+    "start": "yarn build && yarn artifacts:copy && yarn workspace @shieldmaidengames/webgames-server start",
     "start:dev": "yarn build && yarn artifacts:copy && concurrently 'yarn workspace @shieldmaidengames/webgames-server start:dev'",
     "watch": "yarn nx -- watch --all -- 'yarn build --verbose' && 'yarn artifacts:copy'",
     "artifacts:copy": "yarn run artifacts:clean; mkdir ./apps/server/artifacts; yarn artifacts:copy:all",

@@ -1,26 +1,14 @@
-import type { CoreApplicationState, FullStateUpdate } from '@shieldmaidengames/webgames-shared';
+import { createWorkerDependencyContainer } from './injection.js';
+import { WORKER_CONTROLLER_TOKEN } from './worker/index.js';
+
 /**
  * Entry point for the core application shared worker
  */
 console.info('Core shared worker loading');
-const appState: CoreApplicationState = {
-    currentUser: undefined
-};
+const container = createWorkerDependencyContainer();
+const workerController = container.resolve(WORKER_CONTROLLER_TOKEN);
 
-onconnect = (connectEvent: MessageEvent) => {
-    console.info('Shared worker onconnect');
-    const port = connectEvent.ports[0];
-
-    port.addEventListener('message', (message: MessageEvent) => {
-        const workerResult = `Hi this is from the worker! ${message.data.yep}`;
-
-        port.postMessage(workerResult);
-    });
-
-    port.start();
-    port.postMessage(new FullStateUpdate(appState));
-
-}
+onconnect = workerController.handleConnectEvent;
 
 onerror = (error: ErrorEvent) => {
     console.error('Error encountered inside of core SharedWorker', error);

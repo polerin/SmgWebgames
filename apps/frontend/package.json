@@ -10,7 +10,7 @@
     "build:index": "parcel build ./markup/index.html --no-cache --dist-dir ./dist --public-url /",
     "clean": "rm -rf ./dist",
     "artifacts:copy:package": "cp -r ./dist ../server/artifacts/frontend",
-    "test": "yarn run build && npx playwright test"
+    "test": "yarn build && npx playwright test"
   },
   "dependencies": {
     "@lit/context": "^1.1.3",

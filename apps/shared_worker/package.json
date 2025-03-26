@@ -8,7 +8,7 @@
   "source": "./src/index.ts",
   "main": "./dist/index.js",
   "scripts": {
-    "build:old": "parcel build --no-cache ./src/index.ts --dist-dir ./dist --public-url /",
+    "build:parcel": "parcel build --no-cache ./src/index.ts --dist-dir ./dist --public-url /",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "artifacts:copy:package": "cp -r ./dist ../server/artifacts/shared_worker",
     "test": "yarn run build && npx playwright test"
