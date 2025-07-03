@@ -26,7 +26,7 @@ export function isCoreApplicationState(subject: unknown): subject is CoreApplica
         return false;
     }
 
-    if (isSmgUser(state.currentUser)) {
+    if (state.currentUser === undefined || isSmgUser(state.currentUser)) {
         return true;
     }
 

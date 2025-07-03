@@ -1,7 +1,7 @@
-import { AppMessageNames, DetailedError, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase } from '@shieldmaidengames/webgames-shared';
-import type { CoordinatedMethodMap, CoreApplicationState, FullStateUpdateMessage, LoginOutcomeMessage, MessageBase } from '@shieldmaidengames/webgames-shared';
+import { AppMessageNames, DetailedError, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase, MessageMapHandler } from '@shieldmaidengames/webgames-shared';
+import type { CoordinatedMethodMap, CoreApplicationState, FullStateUpdateMessage, LoginOutcomeMessage, MessageBase, MappedSubjectBase, MappedMethodBase } from '@shieldmaidengames/webgames-shared';
 
-export default class WorkerController {
+export default class WorkerController implements MappedSubjectBase {
 
     protected _state: CoreApplicationState = {
         currentUser: undefined,
@@ -9,10 +9,7 @@ export default class WorkerController {
 
     protected currentPorts: MessagePort[] = [];
 
-    protected internalMessageMap: CoordinatedMethodMap<
-        typeof self,
-        (msg: MessageBase<any, any>) => Promise<void>
-    > = {
+    protected internalMessageMap: CoordinatedMethodMap<WorkerController> = {
         [AppMessageNames.LoginAttempt] : {
             beforeCallback: isLoginAttemptMessage,
             callback: 'handleLoginAttempt',
@@ -21,18 +18,18 @@ export default class WorkerController {
             beforeCallback: isFullStateUpdateMessage,
             callback:'handleFullStateUpdate',
         },
-    }
+    };
 
+    protected messageHandler: MessageMapHandler<WorkerController>;
 
-    public _constructor() {
-
+    public constructor() {
+        this.messageHandler = new MessageMapHandler(this, this.internalMessageMap);
     }
 
     public handleConnectEvent = (connectEvent: MessageEvent): void => {
         console.info('Shared worker onconnect');
         this.addPort(connectEvent.ports[0]);
     }
-
 
     protected addPort(port: MessagePort): void {
         port.addEventListener('message', this.catchIncomingMessage); 
@@ -53,16 +50,20 @@ export default class WorkerController {
     }
 
     protected async handleIncomingMessage(message: MessageEvent): Promise<void> {
-        if (!isMessageBase(message)) {
-            return Promise.reject(new DetailedError('Non-message base message received', message));
+        if (!isMessageBase(message.data)) {
+            throw new DetailedError('Non-message base message received', message);
         }
-
-        if (this.internalMessageMap[message.name] !== undefined) {
-            await this.internalMessageMap[message.name](message);
-        }
+        
+        const messageContents = message.data;
     
-        //@todo Redispatch?
-        return Promise.resolve();
+        try {
+            await this.messageHandler.handle(messageContents.name, messageContents.data);
+        
+            //@todo Redispatch?
+            return Promise.resolve();
+        } catch (handlerError) {
+            throw new DetailedError('Error encountered while handling message', { messageContents, handlerError });
+        }
     };
 
     protected async handleLoginAttempt(message: MessageBase<any, any> ): Promise<void> {
@@ -82,7 +83,7 @@ export default class WorkerController {
     }
 
     protected sendStateUpdate(port?: MessagePort): void {
-
+        console.info('Sending full state update', {port});
         const update: FullStateUpdateMessage = {name: AppMessageNames.FullStateUpdate, data: this._state};
 
         if (port !== undefined) {

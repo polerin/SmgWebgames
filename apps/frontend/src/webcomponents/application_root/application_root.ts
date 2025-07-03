@@ -1,6 +1,6 @@
 import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, userContext } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps, APPLICATION_ROOT_TOKEN } from './definitions.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
 import { html, LitElement, TemplateResult } from 'lit';
 import { activity_templates } from './activity_templates/index.js';
