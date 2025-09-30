@@ -1,6 +1,6 @@
 import { ComponentDependencies } from '../../../types/index.js';
 import { token } from 'ditox';
-import WelcomeController from './welcome_controller.js';
+import WelcomeController from './welcomeController.js';
 
 export type WelcomeMenuDeps = ComponentDependencies & {
     welcomeController: WelcomeController;

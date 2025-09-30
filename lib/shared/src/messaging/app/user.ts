@@ -14,8 +14,10 @@ export function isLoginAttemptMessage(subject: unknown): subject is LoginAttempt
     const msg = coerceToMessageType(subject, AppMessageNames.LoginAttempt);
 
     if (msg === false || !isLoginAttempt(msg.data)) {
+        console.info('Not a login attempt message!', {subject, msg});
         return false;
     }
+
     return true;
 }
 

@@ -6,6 +6,8 @@ import {
     MultipipeGameControllerToken,
     WelcomeController,
     WelcomeMenuToken,
+    UserMenuController,
+    UserMenuToken,
     SharedWorkerDeps,
     SMG_CORE_SHARED_WORKER
 } from '@shieldmaidengames/webgames-display-components';
@@ -16,6 +18,10 @@ export const FrontendContainer = createContainer();
 
 FrontendContainer.bindFactory(WelcomeMenuToken, () => ({
      welcomeController: new WelcomeController()
+}));
+
+FrontendContainer.bindFactory(UserMenuToken, () => ({
+    userMenuController: new UserMenuController()
 }));
 
 FrontendContainer.bindFactory(

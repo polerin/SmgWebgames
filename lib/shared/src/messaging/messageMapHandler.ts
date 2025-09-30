@@ -1,6 +1,6 @@
 import DetailedError from '../errors/detailed_error.js';
 import { CoordinatedMethodMap, CoordinatedMethodMapDetailedEntry, CoordinatedMethodMapEntry, MappedMethodBase, MappedSubjectBase } from '../types/index.js';
-import { isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry } from './typeguards.js';
+import { isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry, isMessageBase } from './typeguards.js';
 
 export default class MessageMapHandler<
     Subject extends MappedSubjectBase,
@@ -19,12 +19,54 @@ export default class MessageMapHandler<
         this.buildMapFunctions(subject, map);
     }
 
+
+    /**
+     * Utility method, able to serve as an event listener for MessageEvent objects
+     * 
+     * Remember to remove this listener to prevent memory leaks
+     */
+    public receiveMessageEvent = async (message: unknown): Promise<void> => {
+        if (!(message instanceof MessageEvent)) {
+            console.warn('Received a non-MessageEvent argument somehow');
+            return Promise.reject();
+        }
+
+        const messageContents = message.data;
+        if (!isMessageBase(messageContents)) {
+            console.warn('non-structured message event encoutered, skipping', message);
+            return Promise.reject();
+        }
+
+        void this.handle(messageContents.name, messageContents);
+    }
+
+    /**
+     * Utility method, able to receive non-event message objects ( from an event bridge)
+     * 
+     * Remmeber to remove this listener to prevent memory leaks
+     */
+    public receiveMessageObject= async (message: unknown): Promise<void>  => {
+        if (!isMessageBase(message)) {
+            console.warn('non-structured message object encoutered, skipping', message);
+            return Promise.reject();
+        }
+
+        void this.handle(message.name, message);
+    }
+
+
+    /**
+     * Build all map functions for a subject and set
+     */
     public buildMapFunctions(subject: Subject, map: MapType): void {
         for (const key in map) {
             this.addMapFunction(subject, key, map[key])
         }
     }
 
+    /**
+     * Build and add a single map function for a subject
+     */
     public addMapFunction(subject: Subject, messageName: string, handler: unknown): void {
         if (this.mapFns[messageName]) {
             throw new DetailedError('Attempting to add an entry with a key that is already in use', {messageName});
@@ -99,11 +141,6 @@ export default class MessageMapHandler<
         const callback = methodObject.callback;
         const beforeCallback = methodObject.beforeCallback ?? (() => true);
 
-        if (typeof callback === 'string' ) {
-            callback;
-            subject[callback]();
-        }
-
         if (typeof callback === 'function') {
             return ((...args: any[]) => {
                 if (beforeCallback(...args) === false) {
@@ -113,13 +150,13 @@ export default class MessageMapHandler<
                 }
                 
                 callback(...args);
-
             }) as MethodType;
         }
                    
         //build a handler function for the DetailEntry type 
         return ((...args: any[]) => {
             if (beforeCallback(...args) === false) {
+                console.info('String handler beforeCallback returned false', {methodObject, args})
                 // our before filter said not to execute this
                 return;
             }

@@ -32,7 +32,7 @@ export default class WorkerController implements MappedSubjectBase {
     }
 
     protected addPort(port: MessagePort): void {
-        port.addEventListener('message', this.catchIncomingMessage); 
+        port.addEventListener('message', this.messageHandler.receiveMessageEvent); 
         this.currentPorts.push(port);
 
         port.start();
@@ -42,36 +42,15 @@ export default class WorkerController implements MappedSubjectBase {
 
     protected removePort(portToRemove: MessagePort): void {
         this.currentPorts = this.currentPorts.filter((port) => port !== portToRemove);
-        portToRemove.removeEventListener('message', this.catchIncomingMessage);
+        portToRemove.removeEventListener('message', this.messageHandler.receiveMessageEvent);
     }
-
-    protected catchIncomingMessage = (message: MessageEvent): void => {
-        void this.handleIncomingMessage(message);
-    }
-
-    protected async handleIncomingMessage(message: MessageEvent): Promise<void> {
-        if (!isMessageBase(message.data)) {
-            throw new DetailedError('Non-message base message received', message);
-        }
-        
-        const messageContents = message.data;
-    
-        try {
-            await this.messageHandler.handle(messageContents.name, messageContents.data);
-        
-            //@todo Redispatch?
-            return Promise.resolve();
-        } catch (handlerError) {
-            throw new DetailedError('Error encountered while handling message', { messageContents, handlerError });
-        }
-    };
 
     protected async handleLoginAttempt(message: MessageBase<any, any> ): Promise<void> {
         if (!isLoginAttemptMessage(message)) {
+            console.error('Unknown message type passed to shared worker handleLoginAttempt()', message);
             return;
         }
-
-        this._state.currentUser = {name: message.name};
+        this._state.currentUser = { ...message.data.user};
 
         this.postToAllPorts(<LoginOutcomeMessage>{
             name: AppMessageNames.LoginOutcome,

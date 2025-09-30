@@ -5,9 +5,8 @@ import { html, PropertyValues, TemplateResult } from 'lit';
 import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { customElement, state } from 'lit/decorators.js';
 import { IInjectableController, IInjectableHost } from '../../../interfaces/index.js';
-import { SmgUser } from '@shieldmaidengames/webgames-shared';
 import { consume } from '@lit/context';
-import { userContext } from '../../../contexts/index.js';
+import { UserContext, userContext } from '../../../contexts/index.js';
 import { LogInCue } from '../../../events/index.js';
 
 @customElement('welcome-menu')
@@ -23,7 +22,7 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
 
     @consume({context: userContext, subscribe: true})
     @state()
-    public currentUser?: SmgUser;
+    public currentUser?: UserContext;
 
     protected nameInput: Ref<HTMLInputElement> = createRef();
 
@@ -54,7 +53,7 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
             return html`<div>No Menu Controller</div>`;
         }
 
-        if (this.currentUser === undefined) {
+        if (this.currentUser?.data === undefined) {
             return this.renderLoginMenu();
         }
 
@@ -69,7 +68,8 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
     }
 
     protected renderWelcomeChoices(): TemplateResult {
-        return html`<div>Currently logged in as: ${this.currentUser?.name}</div>`
+
+        return html`<div>Currently logged in as: ${this.currentUser?.data?.name}</div>`
     }
 
     protected override firstUpdated(_changedProperties: PropertyValues): void {

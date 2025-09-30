@@ -1,10 +1,9 @@
-import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, userContext } from '@shieldmaidengames/webgames-display-components';
+import { IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, userContext, UserContext } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps, APPLICATION_ROOT_TOKEN } from './definitions.js';
 import { customElement, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
 import { html, LitElement, TemplateResult } from 'lit';
-import { activity_templates } from './activity_templates/index.js';
-import { SmgUser } from '@shieldmaidengames/webgames-shared';
+import { activityTemplates } from './activityTemplates/index.js';
 
 @customElement('application-root')
 export default class ApplicationRoot 
@@ -20,7 +19,7 @@ export default class ApplicationRoot
     protected currentActivity: RegisteredActivity = 'welcome';
 
     @provide({ context: userContext })
-    public currentUser?: SmgUser;
+    public currentUser: UserContext = {data: undefined};
 
     public override connectedCallback(): void {
         super.connectedCallback();
@@ -54,9 +53,10 @@ export default class ApplicationRoot
     }
 
     protected override render(): TemplateResult {
-        const activity = activity_templates[this.currentActivity];
+        const activity = activityTemplates[this.currentActivity];
         return html`
             <h1>Application yay?</h1>
+            <menu-container></menu-container>
             <div class="activity activity--current">
                 ${activity(false)}
             </div>

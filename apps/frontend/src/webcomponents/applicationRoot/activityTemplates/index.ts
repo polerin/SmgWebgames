@@ -8,7 +8,7 @@ import welcome from './welcome.template.js';
 
 import { TemplateResult } from 'lit';
 
-const activity_templates: Record<RegisteredActivity, (props: any) => TemplateResult> = {
+const activityTemplates: Record<RegisteredActivity, (props: any) => TemplateResult> = {
     home,
     welcome,
     search_games,
@@ -17,4 +17,4 @@ const activity_templates: Record<RegisteredActivity, (props: any) => TemplateRes
     start_game
 };
 
-export { activity_templates };
+export { activityTemplates };

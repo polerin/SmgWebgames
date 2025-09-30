@@ -1,1 +1,1 @@
-export * from './application_root/index.js';
+export * from './applicationRoot/index.js';
