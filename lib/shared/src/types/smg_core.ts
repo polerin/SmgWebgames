@@ -14,8 +14,26 @@ export function isSmgUser(subject: unknown): subject is SmgUser {
     return false;
 }
 
+export type SmgUserContext = {
+    data: SmgUser | undefined;
+};
+
+export function isSmgUserContext(subject: unknown): subject is SmgUserContext {
+    const context = coerceToNonEmpty<SmgUserContext>(subject);
+
+    if (context === false) {
+        return false;
+    }
+
+    if (!('data' in context) || !(context.data === undefined || isSmgUser(context.data))) {
+        return false;
+    }
+
+    return true;
+}
+
 export type CoreApplicationState = {
-    currentUser: SmgUser | undefined,
+    currentUser: SmgUserContext,
     // connectedInstances?
 };
 
@@ -26,11 +44,11 @@ export function isCoreApplicationState(subject: unknown): subject is CoreApplica
         return false;
     }
 
-    if (state.currentUser === undefined || isSmgUser(state.currentUser)) {
-        return true;
+    if (!('currentUser' in state) || !isSmgUserContext(state.currentUser)) {
+        return false;
     }
 
-    return false;    
+    return true; 
 }
 
 /**

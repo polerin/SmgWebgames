@@ -6,8 +6,9 @@ import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { customElement, state } from 'lit/decorators.js';
 import { IInjectableController, IInjectableHost } from '../../../interfaces/index.js';
 import { consume } from '@lit/context';
-import { UserContext, userContext } from '../../../contexts/index.js';
+import { userContext } from '../../../contexts/index.js';
 import { LogInCue } from '../../../events/index.js';
+import { SmgUserContext } from '@shieldmaidengames/webgames-shared';
 
 @customElement('welcome-menu')
 export default class WelcomeMenu extends BaseMenu implements IInjectableHost<WelcomeMenuDeps> {
@@ -22,7 +23,7 @@ export default class WelcomeMenu extends BaseMenu implements IInjectableHost<Wel
 
     @consume({context: userContext, subscribe: true})
     @state()
-    public currentUser?: UserContext;
+    public currentUser?: SmgUserContext;
 
     protected nameInput: Ref<HTMLInputElement> = createRef();
 

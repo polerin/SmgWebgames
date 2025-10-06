@@ -88,7 +88,16 @@ export default class ApplicationRootController extends BaseInjectableController<
     protected handleFullStateUpdateMessage(message: FullStateUpdateMessage): void {
         console.info('Full state update received', {message});
         
-        this.currentApplicationState = {... message.data ?? {currentUser: undefined}};
+        if (this.host === undefined) {
+            return;
+        }
+
+        this.currentApplicationState = {... message.data };
+        this.host.currentUser = this.currentApplicationState.currentUser;
+
+        if (this.host.getActivity() === 'welcome') {
+            this.swapActivity('home');
+        }
 
         this.host?.dispatchEvent(new FullStateUpdateCue({...message.data}));
     }

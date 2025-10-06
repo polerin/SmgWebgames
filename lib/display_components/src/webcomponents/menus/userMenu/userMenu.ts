@@ -5,7 +5,8 @@ import { html, TemplateResult } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { IInjectableController, IInjectableHost } from '../../../interfaces/index.js';
 import { consume } from '@lit/context';
-import { UserContext, userContext } from '../../../contexts/index.js';
+import { userContext } from '../../../contexts/index.js';
+import { SmgUserContext } from '@shieldmaidengames/webgames-shared';
 
 @customElement('user-menu')
 export default class UserMenu extends BaseMenu implements IInjectableHost<UserMenuDeps> {
@@ -16,7 +17,7 @@ export default class UserMenu extends BaseMenu implements IInjectableHost<UserMe
 
     @consume({context: userContext, subscribe: true})
     @state()
-    public currentUser?: UserContext;
+    public currentUser?: SmgUserContext;
 
     public override connectedCallback(): void {
         super.connectedCallback();

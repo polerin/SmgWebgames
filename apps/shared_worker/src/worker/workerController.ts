@@ -1,10 +1,10 @@
-import { AppMessageNames, DetailedError, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase, MessageMapHandler } from '@shieldmaidengames/webgames-shared';
-import type { CoordinatedMethodMap, CoreApplicationState, FullStateUpdateMessage, LoginOutcomeMessage, MessageBase, MappedSubjectBase, MappedMethodBase } from '@shieldmaidengames/webgames-shared';
+import { AppMessageNames, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase, MessageMapHandler } from '@shieldmaidengames/webgames-shared';
+import type { CoordinatedMethodMap, CoreApplicationState, FullStateUpdateMessage, LoginOutcomeMessage, MessageBase, MappedSubjectBase, MappedMethodBase, LoginAttemptMessage } from '@shieldmaidengames/webgames-shared';
 
 export default class WorkerController implements MappedSubjectBase {
 
     protected _state: CoreApplicationState = {
-        currentUser: undefined,
+        currentUser: { data: undefined },
     };
 
     protected currentPorts: MessagePort[] = [];
@@ -45,17 +45,14 @@ export default class WorkerController implements MappedSubjectBase {
         portToRemove.removeEventListener('message', this.messageHandler.receiveMessageEvent);
     }
 
-    protected async handleLoginAttempt(message: MessageBase<any, any> ): Promise<void> {
-        if (!isLoginAttemptMessage(message)) {
-            console.error('Unknown message type passed to shared worker handleLoginAttempt()', message);
-            return;
-        }
-        this._state.currentUser = { ...message.data.user};
+    protected async handleLoginAttempt(message: LoginAttemptMessage ): Promise<void> {
+        this._state.currentUser = { data: { ...message.data.user}};
 
+        console.log('!!!!!!!! CurrentUser set login attempt blah blah', this._state);
         this.postToAllPorts(<LoginOutcomeMessage>{
             name: AppMessageNames.LoginOutcome,
             data: {
-                user: this._state.currentUser,
+                user: this._state.currentUser.data,
                 outcome: 'Success'
             }
         });

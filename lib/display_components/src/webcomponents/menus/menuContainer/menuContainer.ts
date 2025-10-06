@@ -1,14 +1,15 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { consume } from '@lit/context';
-import { UserContext, userContext } from '../../../contexts/index.js';
+import { userContext } from '../../../contexts/index.js';
+import { SmgUserContext } from '@shieldmaidengames/webgames-shared';
 
 @customElement('menu-container')
 export default class MenuContainer extends LitElement {
 
     @consume({context: userContext, subscribe: true})
     @state()
-    public currentUser?: UserContext;
+    public currentUser?: SmgUserContext;
 
     protected override render(): TemplateResult {
         const currentMenu = this.renderCurrentMenu();
