@@ -11,6 +11,6 @@ export function registerActivityContainers(): void {
     FindGameActivity.prototype;
 }
 
-export {default as BaseActivityContainer } from './base_activity_container.js';
+export {default as BaseActivityContainer } from './baseActivityContainer.js';
 
 export * from './find_game_activity/index.js';

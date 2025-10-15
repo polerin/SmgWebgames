@@ -2,11 +2,15 @@
 
 
 ## Applications
-### API
+### Server
 Express for the API/Game Cooridinator/File Server.  Games __MUST__ register themsevlves with it
 
 ### Frontend
 A Lit web component base for the frontend find/join game. Games __SHOULD__ register themselves with it (TBD).
+
+### Shared Worker
+The shared worker is a coordinating entity that helps communicate application state across any open tabs, windows, or OBS web
+views.
 
 
 ## Libraries

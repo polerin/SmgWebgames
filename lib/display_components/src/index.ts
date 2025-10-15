@@ -1,5 +1,6 @@
 import { registerActivityContainers, registerGameContainerElements, registerListElements, registerMenuElements } from './webcomponents/index.js';
 
+export * from './appActivitiyTemplates/index.js';
 export * from './contexts/index.js';
 export * from './events/index.js';
 export * from './util/index.js';

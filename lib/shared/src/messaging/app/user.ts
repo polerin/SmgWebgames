@@ -1,8 +1,8 @@
 
 import { isLoginAttempt, isLoginOutcome } from '../../types/index.js';
 import type { LoginOutcome, LoginAttempt } from '../../types/index.js';
-import { coerceToMessageType } from '../typeguards.js';
-import { MessageBase } from '../types/index.js';
+import { coerceToMessageType } from '../types/index.js';
+import type { MessageBase } from '../types/index.js';
 import { AppMessageNames } from './constants.js';
 
 /**

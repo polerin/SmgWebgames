@@ -1,16 +1,15 @@
 import { FindGameActivityDeps, FindGameActivityToken } from './definitions.js';
 import { injectDependencies } from '../../../util/index.js';
 import FindGameActivityController from './find_game_activity_controller.js';
-import { html, TemplateResult } from 'lit';
+import { html, LitElement, TemplateResult } from 'lit';
 // import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { IInjectableHost } from '../../../interfaces/index.js';
-import BaseActivityContainer from '../base_activity_container.js';
 import { GameInstance, SmgHostedAppDefinition, SmgUser } from '@shieldmaidengames/webgames-shared';
 
 @customElement('find-game-activity')
-export default class FindGameActivity extends BaseActivityContainer implements IInjectableHost<FindGameActivityDeps> {
-    protected override controller?: FindGameActivityController;
+export default class FindGameActivity extends LitElement implements IInjectableHost<FindGameActivityDeps> {
+    protected controller?: FindGameActivityController;
 
     @property()
     public gameDefinition?: SmgHostedAppDefinition;

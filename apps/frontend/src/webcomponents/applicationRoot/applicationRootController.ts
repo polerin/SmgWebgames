@@ -95,7 +95,7 @@ export default class ApplicationRootController extends BaseInjectableController<
         this.currentApplicationState = {... message.data };
         this.host.currentUser = this.currentApplicationState.currentUser;
 
-        if (this.host.getActivity() === 'welcome') {
+        if (this.host.currentActivity === 'welcome') {
             this.swapActivity('home');
         }
 

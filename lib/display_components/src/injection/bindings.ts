@@ -3,7 +3,6 @@ import { declareModule, optional } from 'ditox';
 import { SharedWorkerDefaultPath } from '../constants/index.js';
 import { SMG_CORE_SHARED_WORKER, SMG_CORE_SHARED_WORKER_URI } from './tokens.js';
 
-
 export const SharedWorkerDeps = declareModule({
     factory: (container) => {
         const uri = container.resolve(optional(SMG_CORE_SHARED_WORKER_URI, SharedWorkerDefaultPath));
@@ -20,4 +19,4 @@ export const SharedWorkerDeps = declareModule({
     exports: {
         sharedWorker: SMG_CORE_SHARED_WORKER,
     }
-})
+});

@@ -1,6 +1,7 @@
 import DetailedError from '../errors/detailed_error.js';
-import { CoordinatedMethodMap, CoordinatedMethodMapDetailedEntry, CoordinatedMethodMapEntry, MappedMethodBase, MappedSubjectBase } from '../types/index.js';
-import { isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry, isMessageBase } from './typeguards.js';
+import type { CoordinatedMethodMap, CoordinatedMethodMapDetailedEntry, CoordinatedMethodMapEntry, MappedMethodBase, MappedSubjectBase } from '../types/index.js';
+import { isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry } from '../types/index.js';
+import { isMessageBase } from './types/index.js';
 
 export default class MessageMapHandler<
     Subject extends MappedSubjectBase,
