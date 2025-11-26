@@ -1,10 +1,15 @@
-import { BaseActivityContainer, DefaultAppActivities, defaultAppActivityList, IInjectableController, IInjectableHost, injectDependencies, RegisteredActivity, userContext } from '@shieldmaidengames/webgames-display-components';
+import { BaseActivityContainer, DefaultAppActivities, IInjectableController, IInjectableHost, injectDependencies, userContext } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps, APPLICATION_ROOT_TOKEN } from './definitions.js';
 import { customElement, state } from 'lit/decorators.js';
 import { provide } from '@lit/context';
-import { html , TemplateResult } from 'lit';
+import { html, TemplateResult } from 'lit';
 import { SmgUserContext } from '@shieldmaidengames/webgames-shared';
 
+/**
+ * This is the base for the frontend application
+ * 
+ * @todo this probably needs to be an abstract that can be pulled in and registered by an implementing application
+ */
 @customElement('application-root')
 export default class ApplicationRoot 
     extends BaseActivityContainer<DefaultAppActivities>
