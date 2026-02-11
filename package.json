@@ -27,8 +27,7 @@
   },
   "workspaces": [
     "apps/*",
-    "lib/*",
-    "games/*/*"
+    "lib/*"
   ],
   "dependencies": {
     "@rollup/plugin-json": "^6.1.0",
