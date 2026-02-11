@@ -1,22 +1,23 @@
-import { declareModule, optional } from 'ditox';
+import { Container, optional } from 'ditox';
+import { TokenModule } from '@shieldmaidengames/webgames-internal-shared';
 
 import { SharedWorkerDefaultPath } from '../constants/index.js';
 import { SMG_CORE_SHARED_WORKER, SMG_CORE_SHARED_WORKER_URI } from './tokens.js';
 
-export const SharedWorkerDeps = declareModule({
-    factory: (container) => {
-        const uri = container.resolve(optional(SMG_CORE_SHARED_WORKER_URI, SharedWorkerDefaultPath));
+export const SharedWorkerDeps = new TokenModule([
+    {
+        token: SMG_CORE_SHARED_WORKER,
+        factory: (container: Container) => {
+            const uri = container.resolve(optional(SMG_CORE_SHARED_WORKER_URI, SharedWorkerDefaultPath));
 
-        console.log("firing a new shared worker with uri " + uri);
-        
-        const sharedWorker = new SharedWorker(uri);
-        sharedWorker.addEventListener('error', 
-            (error: ErrorEvent) => console.error('SharedWorker error received', error)
-        );
+            console.log("firing a new shared worker with uri " + uri);
+            
+            const sharedWorker = new SharedWorker(uri);
+            sharedWorker.addEventListener('error', 
+                (error: ErrorEvent) => console.error('SharedWorker error received', error)
+            );
 
-        return { sharedWorker };
-    },
-    exports: {
-        sharedWorker: SMG_CORE_SHARED_WORKER,
+            return sharedWorker;
+        }
     }
-});
+]);

@@ -16,5 +16,8 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./dist"
   },
+  "dependencies": {
+    "ditox": "^3.0.0"
+  },
   "devDependencies": {}
 }
