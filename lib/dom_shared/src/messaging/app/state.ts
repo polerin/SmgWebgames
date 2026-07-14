@@ -1,4 +1,4 @@
-import { CoreApplicationState, isCoreApplicationState } from '../../types/index.js';
+import { CoreApplicationState, isCoreApplicationState } from '@shieldmaidengames/webgames-shared';
 import { coerceToMessageType, MessageBase } from '../types/index.js';
 import { AppMessageNames } from './constants.js';
 

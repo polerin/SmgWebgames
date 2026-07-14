@@ -1,5 +1,6 @@
-import { AppMessageNames, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase, MessageMapHandler } from '@shieldmaidengames/webgames-shared';
-import type { CoordinatedMethodMap, CoreApplicationState, FullStateUpdateMessage, LoginOutcomeMessage, MessageBase, MappedSubjectBase, MappedMethodBase, LoginAttemptMessage } from '@shieldmaidengames/webgames-shared';
+import { AppMessageNames, isFullStateUpdateMessage, isLoginAttemptMessage, isMessageBase, MessageMapHandler } from '@shieldmaidengames/webgames-dom-shared';
+import type { FullStateUpdateMessage, LoginOutcomeMessage, MessageBase, LoginAttemptMessage } from '@shieldmaidengames/webgames-dom-shared';
+import type { CoordinatedMethodMap, CoreApplicationState, MappedSubjectBase } from '@shieldmaidengames/webgames-shared';
 
 export default class WorkerController implements MappedSubjectBase {
 

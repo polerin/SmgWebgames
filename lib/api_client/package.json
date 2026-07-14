@@ -15,5 +15,9 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./dist"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "@parcel/resolver-default": {
+    "packageExports": true,
+    "module": "Node16"
+  }
 }

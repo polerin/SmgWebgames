@@ -1,6 +1,6 @@
 
-import { isLoginAttempt, isLoginOutcome } from '../../types/index.js';
-import type { LoginOutcome, LoginAttempt } from '../../types/index.js';
+import { isLoginAttempt, isLoginOutcome } from '@shieldmaidengames/webgames-shared';
+import type { LoginOutcome, LoginAttempt } from '@shieldmaidengames/webgames-shared';
 import { coerceToMessageType } from '../types/index.js';
 import type { MessageBase } from '../types/index.js';
 import { AppMessageNames } from './constants.js';

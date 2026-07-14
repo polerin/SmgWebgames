@@ -3,8 +3,9 @@
     "compilerOptions": {
         "target": "es2020",
         "lib": ["es2024"], /* For node14, overwrite for newer node version. Don't include dom definitions */
-        "module": "Node16",
         "strict": true,
+        "module": "Node16",
+        "moduleResolution": "Node16",
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
@@ -12,7 +13,6 @@
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
-        "moduleResolution": "node16",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,

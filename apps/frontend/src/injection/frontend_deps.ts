@@ -8,7 +8,7 @@ import {
     defaultAppActivityRegistry
 } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootController, APPLICATION_ROOT_TOKEN, APPLICATION_ROOT_CONTROLLER_TOKEN, APPLICATION_ROOT_ACTIVITIES_TOKEN } from '../webcomponents/index.js';
-import { TokenModule } from '@shieldmaidengames/webgames-shared';
+import { TokenModule } from '@shieldmaidengames/webgames-internal-shared';
 
 
 export const FrontendBindings = new TokenModule([

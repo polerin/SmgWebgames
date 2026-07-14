@@ -1,4 +1,4 @@
-import { coerceToNonEmpty, isNonEmptyString } from '../../utility/index.js';
+import { coerceToNonEmpty, isNonEmptyString } from '@shieldmaidengames/webgames-shared';
 
 export type MessageBase<NameType extends string, DataType> = {
     readonly name: NameType;

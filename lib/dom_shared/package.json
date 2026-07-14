@@ -1,27 +1,28 @@
 {
-  "name": "@shieldmaidengames/webgames-shared",
+  "name": "@shieldmaidengames/webgames-dom-shared",
   "version": "0.0.0",
   "description": "",
   "license": "ISC",
   "author": "polerin <polerin@eclexia.net>",
   "type": "module",
-  "module": "./dist/esm/index.js",
   "exports": {
     "default": "./dist/esm/index.js",
     "import": "./dist/esm/index.js",
     "typescript": "./src/index.ts"
   },
+  "module": "./dist/esm/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf ./dist"
   },
   "dependencies": {
-    "ditox": "^3.0.0"
+    "ditox": "^3.0.0",
+    "@shieldmaidengames/webgames-shared": "0.0.0"
   },
-  "devDependencies": {},
   "@parcel/resolver-default": {
     "packageExports": true,
-    "module": "Node16"
+    "module": "Node16",
+    "moduleResolution": "Node16"
   }
 }

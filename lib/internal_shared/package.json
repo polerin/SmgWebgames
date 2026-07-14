@@ -11,6 +11,7 @@
     "import": "./dist/esm/index.js",
     "typescript": "./src/index.ts"
   },
+  "module": "./dist/esm/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
@@ -19,5 +20,9 @@
   "dependencies": {
     "ditox": "^3.0.0",
     "@shieldmaidengames/webgames-shared": "0.0.0"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true,
+    "module": "Node16"
   }
 }

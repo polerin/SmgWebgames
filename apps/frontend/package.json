@@ -6,8 +6,7 @@
   "type": "module",
   "author": "polerin (polerin@eclexia.net)",
   "scripts": {
-    "build": "concurrently 'yarn build:index'",
-    "build:index": "parcel build ./markup/index.html --no-cache --dist-dir ./dist --public-url /",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "clean": "rm -rf ./dist",
     "artifacts:copy:package": "cp -r ./dist ../server/artifacts/frontend",
     "test": "yarn build && npx playwright test"
@@ -15,18 +14,20 @@
   "dependencies": {
     "@lit/context": "^1.1.6",
     "@shieldmaidengames/webgames-display-components": "0.0.0",
+    "@shieldmaidengames/webgames-dom-shared": "0.0.0",
     "@shieldmaidengames/webgames-internal-shared": "0.0.0",
     "@shieldmaidengames/webgames-shared": "0.0.0",
     "ditox": "^3.0.0",
     "lit": "^3.2.1"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.13.3",
-    "@parcel/packager-ts": "^2.13.3",
-    "@parcel/transformer-typescript-tsc": "^2.13.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@parcel/config-default": "^2.16.4",
+    "@parcel/packager-ts": "^2.16.4",
+    "@parcel/transformer-typescript-tsc": "^2.16.4",
+    "@parcel/core": "^2.16.4",
     "@playwright/test": "^1.49.0",
-    "@types/node": "^22.10.0",
-    "parcel": "2.13.3",
-    "typescript": "5.7.2"
+    "parcel": "^2.16.4",
+    "typescript": "^6.0.3"
   }
 }

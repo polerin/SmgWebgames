@@ -1,6 +1,6 @@
-import DetailedError from '../errors/detailed_error.js';
-import type { CoordinatedMethodMap, CoordinatedMethodMapDetailedEntry, CoordinatedMethodMapEntry, MappedMethodBase, MappedSubjectBase } from '../types/index.js';
-import { isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry } from '../types/index.js';
+import { DetailedError, isCoordinatedMethod, isCoordinatedMethodMapDetailedEntry} from '@shieldmaidengames/webgames-shared';
+import type { CoordinatedMethodMap, CoordinatedMethodMapDetailedEntry, CoordinatedMethodMapEntry, MappedMethodBase, MappedSubjectBase } from '@shieldmaidengames/webgames-shared';
+
 import { isMessageBase } from './types/index.js';
 
 export default class MessageMapHandler<

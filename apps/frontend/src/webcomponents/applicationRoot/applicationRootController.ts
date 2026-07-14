@@ -1,8 +1,8 @@
 import { SwapActivityCue, BaseInjectableController, LogInCue, FullStateUpdateCue, RegisteredActivity } from '@shieldmaidengames/webgames-display-components';
 import { ApplicationRootDeps } from './definitions.js';
 import ApplicationRoot from './applicationRoot.js';
-import { AppMessageNames, isFullStateUpdateMessage, isLoginOutcomeMessage, buildIsCue, FullStateUpdateMessage, CoreApplicationState } from '@shieldmaidengames/webgames-shared';
-import { CoordinatedMethodMap, LoginAttemptMessage, LoginOutcomeMessage, MessageMapHandler } from '@shieldmaidengames/webgames-shared';
+import { AppMessageNames, isFullStateUpdateMessage, isLoginOutcomeMessage, buildIsCue, FullStateUpdateMessage, LoginAttemptMessage, LoginOutcomeMessage, MessageMapHandler } from '@shieldmaidengames/webgames-dom-shared';
+import { CoordinatedMethodMap, CoreApplicationState,} from '@shieldmaidengames/webgames-shared';
 
 export default class ApplicationRootController extends BaseInjectableController<ApplicationRootDeps> {
 

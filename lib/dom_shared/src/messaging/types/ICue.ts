@@ -1,4 +1,4 @@
-import { DetailedError } from '../../errors/index.js';
+import { DetailedError } from '@shieldmaidengames/webgames-shared';
 
 export type ICue = Event & { EVENT_NAME: string; };
 

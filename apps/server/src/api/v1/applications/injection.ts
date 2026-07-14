@@ -1,5 +1,5 @@
 import { ExtractorMap, IApiController } from '@shieldmaidengames/webgames-internal-server-shared';
-import { token, Container, declareModule, injectable } from 'ditox';
+import { token, Container, injectable } from 'ditox';
 import * as extractors from './extractors/index.js';
 import ApplicationApiController from './controller.js';
 

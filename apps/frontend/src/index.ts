@@ -3,10 +3,10 @@
  */
 
 import { InjectionCue, injectionResolverFactory, registerAllComponents } from '@shieldmaidengames/webgames-display-components';
-import { FrontendContainer } from './injection/index.js';
+import { frontendContainer } from './injection/index.js';
 import { ApplicationRoot, registerApplicationRoot } from './webcomponents/index.js';
 
-const resolver = injectionResolverFactory(FrontendContainer);
+const resolver = injectionResolverFactory(frontendContainer);
 registerAllComponents();
 registerApplicationRoot();
 

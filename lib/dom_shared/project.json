@@ -1,0 +1,10 @@
+{
+    "name": "@shieldmaidengames/webgames-dom-shared",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "implicitDependencies": [
+        "@shieldmaidengames/webgames-shared"
+    ],
+    "tags": ["library", "core"]
+
+}

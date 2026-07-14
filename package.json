@@ -14,6 +14,8 @@
     "clean": "yarn artifacts:clean && nx run-many -t clean && nx reset",
     "start": "yarn build && yarn artifacts:copy && yarn workspace @shieldmaidengames/webgames-server start",
     "start:dev": "yarn build && yarn artifacts:copy && concurrently 'yarn workspace @shieldmaidengames/webgames-server start:dev'",
+    "link:dev": "yarn build && concurrently 'yarn link'",
+    "unlink:dev": "concurrently 'yarn unlink'",
     "watch": "yarn nx -- watch --all -- 'yarn build --verbose' && 'yarn artifacts:copy'",
     "artifacts:copy": "yarn run artifacts:clean; mkdir ./apps/server/artifacts; yarn artifacts:copy:all",
     "artifacts:clean": "rm -rf ./apps/server/artifacts",
@@ -35,12 +37,12 @@
     "@rollup/plugin-typescript": "^12.1.2",
     "@rollup/plugin-url": "^8.0.2",
     "concurrently": "^9.1.1",
-    "lerna": "^8.1.9",
-    "nx": "^20.3.0",
+    "lerna": "^9.0.7",
+    "nx": "^22.7.1",
     "rollup": "^4.29.1",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@parcel/transformer-typescript-types": "^2.13.3"
+    "@parcel/transformer-typescript-types": "^2.16.4"
   }
 }
